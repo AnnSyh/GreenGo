@@ -40,6 +40,7 @@ export default function Home() {
                   className="underline"
                   href="https://locomotivemtl.github.io/locomotive-scroll/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Locomotive Scroll
                 </a>
@@ -577,6 +578,7 @@ export default function Home() {
                   className="underline"
                   href="https://tutsplus.com/authors/george-martsoukos"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   hands-on tutorials
                 </a>{" "}
