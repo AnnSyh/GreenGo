@@ -4,11 +4,7 @@ import Link from "next/link";
 
 export default function FirstSection({}) {
   return (
-    <section
-      id="intro"
-      className="h-screen flex items-center justify-center text-center bg-green-200"
-      data-scroll-section
-    >
+    <section id="intro" data-scroll-section>
       <Box
         sx={(theme) => ({
           minHeight: "691px",
@@ -31,18 +27,17 @@ export default function FirstSection({}) {
           alignItems="center"
         >
           <video autoPlay muted loop id="video">
-            {/* <source src={"../../images/electric-car.mp4"} type="video/mp4" /> */}
+            <source src={"../../images/electric-car.mp4"} type="video/mp4" />
           </video>
           <Box
             className="fadeIn"
             sx={{
+              // border: "1px solid red",
               position: "fixed",
               bottom: 0,
+              left: 0,
               height: "90%",
-              padding: {
-                xs: "30px 10px",
-                lg: "30px 50px",
-              },
+              padding: "30px 10px",
             }}
           >
             <Typography
@@ -55,10 +50,7 @@ export default function FirstSection({}) {
                   xs: "none",
                   lg: "46px",
                 },
-                textAlign: {
-                  xs: "center",
-                  lg: "left",
-                },
+                textAlign: "left",
               })}
             >
               Software development
@@ -66,13 +58,13 @@ export default function FirstSection({}) {
 
             <Box
               sx={(theme) => ({
-                backgroundImage: `url('/images/profile.jpg')`,
+                backgroundImage: `url('/images/logo-1.png')`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "contain",
-                height: 200,
-                width: 200,
+                backgroundPosition: "center",
+                height: 150,
                 textAlign: {
-                  xs: "center",
+                  xs: "left",
                   lg: "left",
                 },
                 margin: {
@@ -89,7 +81,7 @@ export default function FirstSection({}) {
                 color: "white",
                 marginTop: "18px",
                 textAlign: {
-                  xs: "center",
+                  xs: "left",
                   lg: "left",
                 },
               })}
@@ -106,7 +98,7 @@ export default function FirstSection({}) {
                 color: "white",
                 margin: "18px 0 0",
                 textAlign: {
-                  xs: "center",
+                  xs: "left",
                   lg: "left",
                 },
               })}
@@ -127,7 +119,7 @@ export default function FirstSection({}) {
                 display: "flex",
                 flexFlow: "row nowrap",
                 justifyContent: {
-                  xs: "center",
+                  xs: "start",
                   lg: "start",
                 },
               })}
@@ -136,7 +128,7 @@ export default function FirstSection({}) {
                 variant="contained"
                 sx={(theme) => ({
                   margin: {
-                    xs: "45px auto",
+                    xs: "45px 0",
                     lg: "45px 0",
                   },
                 })}

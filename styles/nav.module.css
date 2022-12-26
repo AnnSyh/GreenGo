@@ -1,5 +1,6 @@
 .active {
-  color: red;
+  color: #00b398;
+  font-weight: 400;
 }
 .link {
   padding: 0 10px;

@@ -50,7 +50,13 @@ const ThirdSection = ({}) => {
           })}
         >
           <Grid container>
-            <Grid item md={5}>
+            <Grid
+              item
+              md={5}
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="-2"
+            >
               <div
                 className="text-5xl font-extrabold"
                 data-scroll
@@ -61,7 +67,13 @@ const ThirdSection = ({}) => {
                 <Typography variant="h1">Продукты ZEVS</Typography>
               </div>
             </Grid>
-            <Grid item md={7}>
+            <Grid
+              item
+              md={7}
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="2"
+            >
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
                 corporis deserunt commodi magni modi quas earum aut saepe

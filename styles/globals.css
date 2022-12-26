@@ -80,7 +80,7 @@
 }
 html,
 body {
-  color: green;
+  color: #00b398;
   padding: 0;
   margin: 0;
   font-family: "Roadradio", Arial, sans-serif;
@@ -106,10 +106,6 @@ a {
   html {
     color-scheme: dark;
   }
-}
-
-section {
-  border: 1px solid red;
 }
 
 #intro {

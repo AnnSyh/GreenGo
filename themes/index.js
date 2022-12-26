@@ -5,7 +5,7 @@ import { red } from "@mui/material/colors";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#556cd6",
+      main: "#00b398",
     },
     secondary: {
       main: "#19857b",
@@ -23,6 +23,7 @@ const theme = createTheme({
       },
       styleOverrides: {
         root: ({ o, theme }) => ({
+          color: "#fff",
           fontSize: "1rem",
           boxShadow: "none",
           borderRadius: "0",
@@ -37,7 +38,7 @@ const theme = createTheme({
     },
   },
   radius: {
-    default: "25px",
+    default: "0",
   },
 });
 
@@ -61,6 +62,15 @@ theme.typography.h3 = {
   fontSize: "52px",
   color: "#454545",
   fontWeight: 200,
+};
+theme.typography.subtitle2 = {
+  fontFamily: "Roadradio,Arial,sans-serif",
+  fontSize: "42px",
+  textAlign: "center",
+  lineHeight: 1,
+  color: "#454545",
+  fontWeight: 200,
+  paddingBottom: "20px",
 };
 // theme.typography.body1 = {
 //   border: "1px solid red",

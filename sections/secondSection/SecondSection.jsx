@@ -54,6 +54,9 @@ const SecondSection = ({}) => {
             {items.map((item) => (
               <Grid
                 item
+                data-scroll
+                data-scroll-direction="vertical"
+                data-scroll-speed="1"
                 key={item.title}
                 sx={(theme) => ({
                   flexGrow: 0,
@@ -61,8 +64,8 @@ const SecondSection = ({}) => {
                   minWidth: "337px",
                   flexBasis: "calc(33.3333% - 42px)",
                   margin: "0 auto",
-                  border: "1px solid #007FFF",
-                  borderRadius: "25px",
+                  border: "1px solid #00b398",
+                  borderRadius: theme.radius.default,
                 })}
               >
                 <Box
@@ -74,9 +77,10 @@ const SecondSection = ({}) => {
                     backgroundColor: theme.palette.common.white,
                     borderRadius: theme.radius.default,
                     position: "relative",
+                    paddingTop: "20px",
                   })}
                 >
-                  <Box
+                  {/* <Box
                     sx={(theme) => ({
                       position: "relative",
                       backgroundColor: theme.palette.primary.main,
@@ -86,7 +90,7 @@ const SecondSection = ({}) => {
                       height: "79px",
                       top: "-25px",
                     })}
-                  ></Box>
+                  ></Box> */}
                   <Typography
                     variant="subtitle2"
                     component="div"
