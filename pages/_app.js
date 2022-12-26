@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import { useRef } from "react";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 
-import "locomotive-scroll/dist/locomotive-scroll.css";
 import "../styles/locomotive-scroll.css";
 import "../public/fonts/fonts.css";
 import "../styles/globals.css";
