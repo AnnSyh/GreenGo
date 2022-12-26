@@ -3,13 +3,14 @@ import { useRef } from "react";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 
 import "locomotive-scroll/dist/locomotive-scroll.css";
+import "../styles/locomotive-scroll.css";
 import "../public/fonts/fonts.css";
 import "../styles/globals.css";
 
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { CacheProvider } from "@emotion/react";
-import theme from "../config/theme.js";
+import theme from "../themes/index";
 import createEmotionCache from "../config/createEmotionCache";
 
 // Client-side cache, shared for the whole session of the user in the browser.
@@ -26,9 +27,7 @@ function MyApp({
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
         <LocomotiveScrollProvider
-          options={{
-            smooth: true,
-          }}
+          options={{ smooth: true }}
           watch={[]}
           location={asPath}
           onLocationChange={(scroll) =>
