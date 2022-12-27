@@ -12,7 +12,8 @@ import { TopArrow } from "../components/TopArrow";
 import { useRouter } from "next/router";
 import { Button } from "@mui/material";
 
-import { ru, en } from "../translations";
+import { ru } from "../locales/ru";
+import { en } from "../locales/en";
 
 const siteTitle = "GreenGo";
 
@@ -23,7 +24,7 @@ export default function Home({ title = siteTitle }) {
 
   const router = useRouter();
   const { locale } = router;
-  const t = locale === "ru" ? "ru" : "en";
+  const t = locale === "ru" ? ru : en;
 
   const handelLanguageToggle = () => {
     switch (locale) {
