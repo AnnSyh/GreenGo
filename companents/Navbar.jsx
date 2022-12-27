@@ -6,11 +6,13 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "../styles/nav.module.css";
 import { Box } from "@mui/system";
+import Switch from "@mui/material/Switch";
 
 const nav = [
   { id: 1, title: "home", path: "/" },
   { id: 2, title: "contacts", path: "/contacts" },
 ];
+const label = { inputProps: { "aria-label": "Switch demo" } };
 
 function Navbar({ onMenuIconClick }) {
   const { pathname } = useRouter(); //подсвечиваем акт ссылку
@@ -44,6 +46,10 @@ function Navbar({ onMenuIconClick }) {
         </Typography>
 
         {/* <Button color="inherit">Login</Button> */}
+        <div>
+          рус/англ
+          <Switch {...label} defaultChecked />
+        </div>
         <Box
           className="navbar-ul"
           sx={{

@@ -55,7 +55,7 @@ const ThirdSection = ({}) => {
               md={5}
               data-scroll
               data-scroll-direction="horizontal"
-              data-scroll-speed="-2"
+              data-scroll-speed="-1"
             >
               <div
                 className="text-5xl font-extrabold"
@@ -72,7 +72,7 @@ const ThirdSection = ({}) => {
               md={7}
               data-scroll
               data-scroll-direction="horizontal"
-              data-scroll-speed="2"
+              data-scroll-speed="1"
             >
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus

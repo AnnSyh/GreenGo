@@ -5,6 +5,7 @@ import Navbar from "../companents/Navbar";
 import FirstSection from "../sections/firstSection/FirstSection";
 import { SecondSection } from "../sections/secondSection/SecondSection";
 import { ThirdSection } from "../sections/thirdSection/ThirdSection";
+import { FormSection } from "../sections/FormSection/FormSection";
 import { TopArrow } from "../companents/TopArrow";
 
 import Menu from "../sections/menu/Menu";
@@ -35,6 +36,8 @@ export default function Home({ title = siteTitle }) {
       <SecondSection />
 
       <ThirdSection />
+
+      <FormSection />
 
       <TopArrow />
     </div>
