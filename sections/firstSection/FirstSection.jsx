@@ -11,15 +11,6 @@ export default function FirstSection({}) {
           backgroundColor: theme.palette.grey.background,
         })}
       >
-        <Box
-          sx={(theme) => ({
-            width: "100%",
-          })}
-          m={1}
-          display="flex"
-          justifyContent="flex-end"
-          alignItems="flex-end"
-        ></Box>
         <Grid
           container
           direction="row"
@@ -27,7 +18,7 @@ export default function FirstSection({}) {
           alignItems="center"
         >
           <video autoPlay muted loop id="video">
-            <source src={"../../images/electric-car.mp4"} type="video/mp4" />
+            {/* <source src={"../../images/electric-car.mp4"} type="video/mp4" /> */}
           </video>
           <Box
             className="fadeIn"
@@ -44,7 +35,7 @@ export default function FirstSection({}) {
               variant="subtitleCompany"
               component="div"
               textTransform="uppercase"
-              sx={(theme) => ({
+              sx={() => ({
                 color: "white",
                 marginTop: {
                   xs: "none",
@@ -57,7 +48,7 @@ export default function FirstSection({}) {
             </Typography>
 
             <Box
-              sx={(theme) => ({
+              sx={(heme) => ({
                 backgroundImage: `url('/images/logo-1.png')`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "contain",
@@ -77,7 +68,7 @@ export default function FirstSection({}) {
 
             <Typography
               variant="body1"
-              sx={(theme) => ({
+              sx={() => ({
                 color: "white",
                 marginTop: "18px",
                 textAlign: {
@@ -94,7 +85,7 @@ export default function FirstSection({}) {
             <Typography
               variant="caption"
               display="block"
-              sx={(theme) => ({
+              sx={() => ({
                 color: "white",
                 margin: "18px 0 0",
                 textAlign: {
@@ -114,7 +105,7 @@ export default function FirstSection({}) {
               </Typography>
             </Typography>
             <Box
-              sx={(theme) => ({
+              sx={() => ({
                 width: "100%",
                 display: "flex",
                 flexFlow: "row nowrap",
@@ -126,7 +117,7 @@ export default function FirstSection({}) {
             >
               <Button
                 variant="contained"
-                sx={(theme) => ({
+                sx={() => ({
                   margin: {
                     xs: "45px 0",
                     lg: "45px 0",

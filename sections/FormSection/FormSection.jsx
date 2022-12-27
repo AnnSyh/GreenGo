@@ -69,7 +69,7 @@ const FormSection = ({}) => {
       >
         <Box
           id="form"
-          sx={(theme) => ({
+          sx={() => ({
             width: "100%",
             maxWidth: "1140px",
             margin: "0 auto",
@@ -93,9 +93,6 @@ const FormSection = ({}) => {
                   xs: 0,
                   lg: 2,
                 }}
-                sx={(theme) => ({
-                  // justifyContent: 'space-between',
-                })}
               >
                 {["name", "email"].map((item) => (
                   <Grid

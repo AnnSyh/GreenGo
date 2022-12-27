@@ -9,6 +9,10 @@ import { FormSection } from "../sections/FormSection/FormSection";
 import { TopArrow } from "../companents/TopArrow";
 
 import Menu from "../sections/menu/Menu";
+import { useRouter } from "next/router";
+import { Button } from "@mui/material";
+
+import { ru, en } from "../translations";
 
 const siteTitle = "GreenGo";
 
@@ -19,6 +23,23 @@ export default function Home({ title = siteTitle }) {
 
   const openMenu = () => setMenuOpen(true);
 
+  const router = useRouter();
+  const { locale } = router;
+
+  const t = locale === "ru" ? "ru" : "en";
+
+  const handelLanguageToggle = () => {
+    console.log("handelLanguageToggle");
+    switch (locale) {
+      case "ru":
+        router.push("/", "/", { locale: "en" });
+        break;
+      case "ru":
+        router.push("/", "/", { locale: "ru" });
+        break;
+    }
+  };
+
   return (
     <div className="o-scroll" id="js-scroll" data-scroll-container>
       <Head>
@@ -28,12 +49,24 @@ export default function Home({ title = siteTitle }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Menu close={closeMenu} isOpen={isMenuOpen} />
+      <Menu close={closeMenu} isOpen={isMenuOpen}></Menu>
       <Navbar onMenuIconClick={openMenu} />
 
       <FirstSection />
 
       <SecondSection />
+
+      <section className={{ textAlign: "center" }} data-scroll-section>
+        <h1>2222{t.welcome}222</h1>
+
+        <Button
+          className="test"
+          onClick={() => console.log("handelLanguageToggle")}
+          variant="outlined"
+        >
+          1111 {locale} 1111
+        </Button>
+      </section>
 
       <ThirdSection />
 

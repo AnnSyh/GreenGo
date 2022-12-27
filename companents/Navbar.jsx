@@ -34,9 +34,7 @@ function Navbar({ onMenuIconClick }) {
           color="inherit"
           aria-label="menu"
           sx={{ mr: 2 }}
-          onClick={() => {
-            onMenuIconClick();
-          }}
+          onClick={onMenuIconClick}
         >
           <MenuIcon />
         </IconButton>
@@ -47,8 +45,23 @@ function Navbar({ onMenuIconClick }) {
 
         {/* <Button color="inherit">Login</Button> */}
         <div>
-          рус/англ
-          <Switch {...label} defaultChecked />
+          {/* <FormControl variant="outlined" className={classes.formControl}>
+        <InputLabel htmlFor="outlined-lang-native-simple">lang</InputLabel>
+          <Select
+          native
+          value={state.lang}
+          onChange={handleChange}
+          label="lang"
+          inputProps={{
+            name: 'язык',
+            id: 'outlined-lang-native-simple',
+          }}
+        >
+          <option aria-label="None" value="" />
+          <option value={10}>Рус</option>
+          <option value={20}>Англ</option>
+        </Select>
+        </FormControl> */}
         </div>
         <Box
           className="navbar-ul"

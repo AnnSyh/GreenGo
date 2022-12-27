@@ -3,7 +3,7 @@ import { Box, InputBase, Stack, Typography } from "@mui/material";
 export const Input = ({ label, setValue, value, ...props }) => {
   return (
     <Box
-      sx={(theme) => ({
+      sx={() => ({
         flex: "column nowrap",
         height: "auto",
         width: "100%",
