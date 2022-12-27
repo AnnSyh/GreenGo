@@ -15,12 +15,16 @@
     "@mui/material": "^5.11.1",
     "@mui/material-next": "^6.0.0-alpha.67",
     "@next/font": "13.1.0",
+    "axios": "^1.2.1",
     "eslint": "8.30.0",
     "eslint-config-next": "13.1.0",
+    "formik": "^2.2.9",
     "locomotive-scroll": "^4.1.4",
     "next": "13.1.0",
+    "nodemailer": "^6.8.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-locomotive-scroll": "^0.2.2"
+    "react-locomotive-scroll": "^0.2.2",
+    "yup": "^0.32.11"
   }
 }

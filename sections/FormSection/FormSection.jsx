@@ -1,58 +1,62 @@
 import * as React from "react";
-import { Grid, Typography, Button, CircularProgress } from "@mui/material";
+import {
+  Grid,
+  Typography,
+  Button,
+  CircularProgress,
+  TextField,
+  Snackbar,
+} from "@mui/material";
 import { Box, padding } from "@mui/system";
 import { Input } from "../../companents/input/input";
 import { TextArea } from "../../companents/textarea/textarea";
 import { useState } from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import axios from "axios";
 
 const FormSection = ({}) => {
   const [loader, setLoader] = React.useState(false);
-  const [isSnackOpen, setSnackOpen] = useState(false);
-  const [statusSnack, setStatusSnack] = useState("success");
+  const [checkForm, setCheckForm] = useState(true);
+  const [snakbar, setSnakbar] = useState(false);
 
   const styles = {
     form: {
       width: "100%",
     },
   };
-
-  const [values, setValues] = React.useState({
-    name: "",
-    email: "",
-    message: "",
+  const handleClose = () => setSnakbar(false);
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required("Required"),
+      email: Yup.string().email("Must be a valid email").required("Required"),
+      message: Yup.string().required("Required"),
+    }),
+    onSubmit: (values) => {
+      setLoader(true);
+      fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      }).then((res) => {
+        if (res.status === 200) {
+          setLoader(false);
+          setCheckForm(false);
+          setSnakbar(true);
+        } else {
+          setLoader(false);
+        }
+      });
+    },
   });
-
-  const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoader(true);
-
-    await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(values),
-    }).then((res) => {
-      if (res.status === 200) {
-        setLoader(false);
-        setSnackOpen(true);
-        setValues({
-          name: "",
-          email: "",
-          message: "",
-        });
-      } else {
-        setLoader(false);
-        setStatusSnack("error");
-        setSnackOpen(true);
-      }
-    });
-  };
   return (
     <section
       id="form-section"
@@ -79,8 +83,8 @@ const FormSection = ({}) => {
             position: "relative",
           })}
         >
-          <form onSubmit={handleSubmit} style={styles.form}>
-            <Grid container>
+          {checkForm && (
+            <form onSubmit={formik.handleSubmit} style={styles.form}>
               <Grid item md={12}>
                 <Typography variant="h1" sx={{ textAlign: "center" }}>
                   форма подписки
@@ -97,45 +101,94 @@ const FormSection = ({}) => {
                   // justifyContent: 'space-between',
                 })}
               >
-                {["name", "email"].map((item) => (
-                  <Grid
-                    item
-                    xs={12}
-                    lg={6}
-                    key={item}
-                    sx={() => ({
-                      padding: 0,
-                      marginBottom: {
-                        xs: "20px",
-                        lg: "50px",
+                <Grid
+                  item
+                  xs={12}
+                  lg={6}
+                  sx={{
+                    p: 0,
+                    mb: {
+                      xs: "20px",
+                      lg: "50px",
+                    },
+                  }}
+                >
+                  <Typography sx={{ color: "#00b398" }}>name</Typography>
+                  <TextField
+                    sx={{
+                      ".MuiOutlinedInput-input": {
+                        background: "#f5f5f5",
                       },
-                    })}
-                  >
-                    <Input
-                      value={values[item]}
-                      label={item}
-                      placeholder={`Enter your ${item}`}
-                      setValue={handleChange(item)}
-                    />
-                  </Grid>
-                ))}
+                      "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
+                        {
+                          borderColor: "#f5f5f5",
+                        },
+                    }}
+                    value={formik.values.name}
+                    onChange={formik.handleChange}
+                    id="name"
+                    fullWidth
+                    name="name"
+                    placeholder={`Enter your name`}
+                    error={formik.touched.name && Boolean(formik.errors.name)}
+                    helperText={formik.touched.name && formik.errors.name}
+                  />
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  lg={6}
+                  sx={{
+                    p: 0,
+                    mb: {
+                      xs: "20px",
+                      lg: "50px",
+                    },
+                  }}
+                >
+                  <Typography sx={{ color: "#00b398" }}>email</Typography>
+                  <TextField
+                    sx={{
+                      "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
+                        {
+                          borderColor: "#f5f5f5",
+                        },
+                      ".MuiOutlinedInput-input": {
+                        background: "#f5f5f5",
+                      },
+                    }}
+                    value={formik.values.email}
+                    onChange={formik.handleChange}
+                    fullWidth
+                    id="email"
+                    name="email"
+                    placeholder={`Enter your email`}
+                    error={formik.touched.email && Boolean(formik.errors.email)}
+                    helperText={formik.touched.email && formik.errors.email}
+                  />
+                </Grid>
               </Grid>
 
               <Grid item md={12}>
                 <TextArea
-                  value={values.message}
+                  value={formik.values.message}
+                  onChange={formik.handleChange}
                   label="Message"
                   placeholder="Text..."
-                  required
                   minRows={6}
-                  onChange={handleChange("message")}
+                  id="message"
+                  name="message"
+                  error={
+                    formik.touched.message && Boolean(formik.errors.message)
+                  }
+                  helperText={formik.touched.message && formik.errors.message}
                 />
               </Grid>
               <Grid item md={12}>
                 <Button
                   variant="contained"
-                  type="submit"
                   disabled={loader ? true : false}
+                  onClick={formik.handleSubmit}
                   sx={(theme) => ({
                     margin: "45px auto",
                   })}
@@ -147,9 +200,21 @@ const FormSection = ({}) => {
                   )}
                 </Button>
               </Grid>
-            </Grid>
-          </form>
+            </form>
+          )}
         </Box>
+        <Snackbar
+          open={snakbar}
+          autoHideDuration={3000}
+          onClose={handleClose}
+          message="Message sent"
+          sx={{
+            ".MuiPaper-root": {
+              background: "#00b398",
+              minWidth: "10px",
+            },
+          }}
+        />
       </Box>
     </section>
   );
