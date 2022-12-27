@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import Navbar from "../companents/Navbar";
+import Navbar from "../components/Navbar";
 
 import FirstSection from "../sections/firstSection/FirstSection";
 import { SecondSection } from "../sections/secondSection/SecondSection";
 import { ThirdSection } from "../sections/thirdSection/ThirdSection";
 import { FormSection } from "../sections/FormSection/FormSection";
-import { TopArrow } from "../companents/TopArrow";
+import { TopArrow } from "../components/TopArrow";
 
 // import Menu from "../sections/menu/Menu";
 import { useRouter } from "next/router";

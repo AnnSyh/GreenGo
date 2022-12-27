@@ -8,8 +8,8 @@ import {
   Snackbar,
 } from "@mui/material";
 import { Box, padding } from "@mui/system";
-import { Input } from "../../companents/input/input";
-import { TextArea } from "../../companents/textarea/textarea";
+import { Input } from "../../components/input/input";
+import { TextArea } from "../../components/textarea/textarea";
 import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
