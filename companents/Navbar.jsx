@@ -6,7 +6,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "../styles/nav.module.css";
 import { Box } from "@mui/system";
-import Switch from "@mui/material/Switch";
+import Menu from "../sections/menu/Menu";
+import { PropaneSharp } from "@mui/icons-material";
 
 const nav = [
   { id: 1, title: "home", path: "/" },
@@ -14,7 +15,7 @@ const nav = [
 ];
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
-function Navbar({ onMenuIconClick }) {
+function Navbar({ onMenuIconClick, close, isOpen }) {
   const { pathname } = useRouter(); //подсвечиваем акт ссылку
 
   return (
@@ -27,6 +28,7 @@ function Navbar({ onMenuIconClick }) {
         position: "absolute",
       }}
     >
+      <Menu close={close} isOpen={isOpen}></Menu>
       <Toolbar>
         <IconButton
           size="large"

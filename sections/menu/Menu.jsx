@@ -28,12 +28,7 @@ export default function Menu(props) {
 
   return (
     <>
-      <Drawer
-        anchor="left"
-        open={props.isOpen}
-        onClose={props.close}
-        classes={{}}
-      >
+      <Drawer anchor="left" open={props.isOpen} onClose={props.close}>
         <Box
           sx={{
             width: 200,

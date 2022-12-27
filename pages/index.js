@@ -8,7 +8,7 @@ import { ThirdSection } from "../sections/thirdSection/ThirdSection";
 import { FormSection } from "../sections/FormSection/FormSection";
 import { TopArrow } from "../companents/TopArrow";
 
-import Menu from "../sections/menu/Menu";
+// import Menu from "../sections/menu/Menu";
 import { useRouter } from "next/router";
 import { Button } from "@mui/material";
 
@@ -49,8 +49,11 @@ export default function Home({ title = siteTitle }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Menu close={closeMenu} isOpen={isMenuOpen}></Menu>
-      <Navbar onMenuIconClick={openMenu} />
+      <Navbar
+        onMenuIconClick={openMenu}
+        close={closeMenu}
+        isOpen={isMenuOpen}
+      />
 
       <FirstSection />
 
