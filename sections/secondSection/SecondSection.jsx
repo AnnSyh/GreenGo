@@ -24,7 +24,7 @@ const SecondSection = ({}) => {
   ];
 
   return (
-    <section id="about-us" data-scroll-section>
+    <section id="products-section" data-scroll-section>
       <Box
         component="section"
         sx={(theme) => ({

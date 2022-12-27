@@ -2,7 +2,7 @@ import * as React from "react";
 import { Grid, Typography, Button, CircularProgress } from "@mui/material";
 import { Box, padding } from "@mui/system";
 import { Input } from "../../companents/input/input";
-import { TextArea } from "../../companents/TextArea/textarea";
+import { TextArea } from "../../companents/textarea/textarea";
 import { useState } from "react";
 
 const FormSection = ({}) => {
