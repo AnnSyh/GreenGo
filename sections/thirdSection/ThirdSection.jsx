@@ -1,27 +1,10 @@
 import { Grid, Typography } from "@mui/material";
 import { Box, padding } from "@mui/system";
 import * as React from "react";
+import { useTranslation } from "next-i18next";
 
 const ThirdSection = ({}) => {
-  const items = [
-    {
-      title: "Web development",
-      image: `url('/images/icons/linux.svg')`,
-      desc: `The building and maintenance of websites.
-             It's the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience.`,
-    },
-    {
-      title: "Devops",
-      image: `url('/images/icons/www.svg')`,
-      desc: `The combination of cultural philosophies, practices,
-             and tools that increases an organization's ability to deliver applications and services at high velocity.`,
-    },
-    {
-      title: "Design ",
-      image: `url('/images/icons/design.svg')`,
-      desc: `Building a design from scratch or refinement of the current one. The embodiment of ideas and inspiration, filled with the latest trends and innovations.`,
-    },
-  ];
+  const { t } = useTranslation("common");
 
   return (
     <section
@@ -63,7 +46,7 @@ const ThirdSection = ({}) => {
                 data-scroll-sticky
                 data-scroll-target="#about"
               >
-                <Typography variant="h1">Продукты ZEVS</Typography>
+                <Typography variant="h1">{t("products")}</Typography>
               </div>
             </Grid>
             <Grid
@@ -73,36 +56,13 @@ const ThirdSection = ({}) => {
               data-scroll-direction="horizontal"
               data-scroll-speed="1"
             >
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-                corporis deserunt commodi magni modi quas earum aut saepe
-                inventore, corrupti optio in autem alias molestiae labore rerum
-                soluta tenetur quo.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-                corporis deserunt commodi magni modi quas earum aut saepe
-                inventore, corrupti optio in autem alias molestiae labore rerum
-                soluta tenetur quo.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-                corporis deserunt commodi magni modi quas earum aut saepe
-                inventore, corrupti optio in autem alias molestiae labore rerum
-                soluta tenetur quo.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-                corporis deserunt commodi magni modi quas earum aut saepe
-                inventore, corrupti optio in autem alias molestiae labore rerum
-                soluta tenetur quo.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-                corporis deserunt commodi magni modi quas earum aut saepe
-                inventore, corrupti optio in autem alias molestiae labore rerum
-                soluta tenetur quo.
-              </p>
+              <p>{t("lorem_ipsum")}</p>
+              <p>{t("lorem_ipsum")}</p>
+              <p>{t("lorem_ipsum")}</p>
+              <p>{t("lorem_ipsum")}</p>
+              <p>{t("lorem_ipsum")}</p>
+              <p>{t("lorem_ipsum")}</p>
+              <p>{t("lorem_ipsum")}</p>
             </Grid>
           </Grid>
         </Box>

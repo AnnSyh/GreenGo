@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import { useRef } from "react";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import { appWithTranslation } from "next-i18next";
+import nextI18NextConfig from "../next-i18next.config.js";
 
 import "../styles/locomotive-scroll.css";
 import "../public/fonts/fonts.css";
@@ -44,4 +46,4 @@ function MyApp({
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp, nextI18NextConfig);
