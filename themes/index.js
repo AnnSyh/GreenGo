@@ -75,6 +75,24 @@ theme.typography.subtitle2 = {
   fontWeight: 200,
   paddingBottom: "20px",
 };
+theme.typography.subtitle1 = {
+  fontFamily: "Roadradio,Arial,sans-serif",
+  fontSize: "30px",
+  lineHeight: 1,
+  color: "#454545",
+  fontWeight: 200,
+  paddingBottom: "30px",
+};
+theme.typography.subtitle1_text = {
+  fontFamily: "Roadradio,Arial,sans-serif",
+  fontSize: "16px",
+  lineHeight: 2.5,
+  color: "black",
+  fontWeight: 200,
+  display: "flex",
+  alignItems: "center",
+};
+
 // theme.typography.body1 = {
 //   border: "1px solid red",
 //   fontFamily: "Roadradio,Arial,sans-serif",

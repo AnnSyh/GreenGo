@@ -49,12 +49,27 @@ export default function Home({ title = siteTitle }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar
-        onMenuIconClick={openMenu}
-        close={closeMenu}
-        isOpen={isMenuOpen}
-        languageToggle={handelLanguageToggle}
-      />
+      <section
+        // data-scroll-section=""
+        data-scroll-section-id="products-section"
+        // data-scroll-section-inview=""
+      >
+        <Navbar
+          onMenuIconClick={openMenu}
+          close={closeMenu}
+          isOpen={isMenuOpen}
+          languageToggle={handelLanguageToggle}
+          sx={{
+            backgroundColor: "transparent",
+            color: "#fff",
+            zIndex: "1",
+            position: "absolute",
+            // backgroundColor: "violet",
+            // filter: "grayscale(0.1) blur(1px)",
+            filter: "grayscale(0.5)",
+          }}
+        />
+      </section>
       <div className="o-scroll" id="js-scroll" data-scroll-container>
         <FirstSection />
         <SecondSection />

@@ -18,5 +18,9 @@
   "message": "Сообщение",
   "submit": "Отправить",
   "trash": "Мусор",
-  "all_mail": "Все сообщения"
+  "all_mail": "Все сообщения",
+  "contacts_title": "Служба поддержки водителей",
+  "contacts_title1": "Коммерческий отдел",
+  "contacts_title2": "Пресс-служба",
+  "contacts_telegramm": "Телеграм-бот"
 }
