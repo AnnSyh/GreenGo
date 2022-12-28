@@ -1,6 +1,7 @@
 import * as React from "react";
 import { FormControl, Select, InputLabel } from "@mui/material";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 const FormControlSelect = ({ languageToggle }) => {
   const [state, setState] = useState({
@@ -16,13 +17,31 @@ const FormControlSelect = ({ languageToggle }) => {
     languageToggle();
   };
 
+  const router = useRouter();
+  const [locale, setLocale] = React.useState("en");
+
+  useEffect(() => {
+    if (router.locale == "ru") {
+      setLocale("ru");
+    } else if (router.locale == "en") {
+      setLocale("en");
+    }
+  }, []);
+
+  const handleSelectLang = (lang) => {
+    router.push(`${router.pathname}`, "/", { locale: lang });
+  };
+
   return (
     <>
       <FormControl variant="outlined">
         <Select
           native
-          value={state.lang}
-          onChange={handleChange}
+          value={locale}
+          onChange={(e) => {
+            setLocale(e.target.value);
+            handleSelectLang(e.target.value);
+          }}
           inputProps={{
             name: "lang",
           }}

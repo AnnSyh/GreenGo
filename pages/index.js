@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
+import Link from "next/link";
 
 import FirstSection from "../sections/firstSection/FirstSection";
 import { SecondSection } from "../sections/secondSection/SecondSection";
 import { ThirdSection } from "../sections/thirdSection/ThirdSection";
 import { FormSection } from "../sections/FormSection/FormSection";
+import { FormControlSelect } from "../sections/FormSection/FormControlSelect";
 import { TopArrow } from "../components/TopArrow";
 
 import { useRouter } from "next/router";
-// import { Button } from "@mui/material";
 
-import { ru } from "../locales/ru";
-import { en } from "../locales/en";
-import { FormControlSelect } from "../sections/FormSection/FormControlSelect";
+import { useTranslation, Trans } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const siteTitle = "GreenGo";
 
@@ -24,18 +24,13 @@ export default function Home({ title = siteTitle }) {
 
   const router = useRouter();
   const { locale } = router;
-  const t = locale === "ru" ? ru : en;
 
-  const handelLanguageToggle = () => {
-    switch (locale) {
-      case "ru":
-        router.push("/", "/", { locale: "en" });
-        break;
-      case "en":
-        router.push("/", "/", { locale: "ru" });
-        break;
-    }
+  const handelLanguageToggle = (newLocale) => {
+    const { pathname, asPath, query } = router;
+    router.push({ pathname, query }, asPath, { locale: newLocale });
   };
+
+  const changeTo = router.locale === "ru" ? "en" : "ru";
 
   return (
     <>
@@ -53,19 +48,21 @@ export default function Home({ title = siteTitle }) {
       />
       <div className="o-scroll" id="js-scroll" data-scroll-container>
         <FirstSection />
-
         <SecondSection />
 
         <section className={{ textAlign: "center" }} data-scroll-section>
-          <h1>welcome = {t.welcome}</h1>
+          {/* <h1>222222 {t("h1")} 222222</h1> */}
         </section>
 
         <ThirdSection />
-
         <FormSection />
-
         <TopArrow />
       </div>
     </>
   );
 }
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});

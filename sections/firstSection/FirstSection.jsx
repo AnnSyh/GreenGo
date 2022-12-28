@@ -1,8 +1,11 @@
 import * as React from "react";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 export default function FirstSection({}) {
+  const { t } = useTranslation("common");
+  console.log("t=", t("welcome"));
   return (
     <section id="intro" data-scroll-section>
       <Box
@@ -31,6 +34,7 @@ export default function FirstSection({}) {
               padding: "30px 10px",
             }}
           >
+            <h1> {t("welcome")} </h1>
             <Typography
               variant="subtitleCompany"
               component="div"
