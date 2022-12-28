@@ -11,8 +11,8 @@ import { FormControlSelect } from "../sections/FormSection/FormControlSelect";
 import { useTranslation } from "next-i18next";
 
 const nav = [
-  { id: 1, title: "menu_home", path: "/" },
-  { id: 2, title: "menu_contacts", path: "/contacts" },
+  { id: 1, title: `homepage`, path: "/" },
+  { id: 2, title: `contacts`, path: "/contacts" },
 ];
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
@@ -49,25 +49,7 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle }) {
 
         {/* <Button color="inherit">Login</Button> */}
         <FormControlSelect languageToggle={languageToggle} />
-        <div>
-          {/* <FormControl variant="outlined" className={classes.formControl}>
-        <InputLabel htmlFor="outlined-lang-native-simple">lang</InputLabel>
-          <Select
-          native
-          value={state.lang}
-          onChange={handleChange}
-          label="lang"
-          inputProps={{
-            name: 'язык',
-            id: 'outlined-lang-native-simple',
-          }}
-        >
-          <option aria-label="None" value="" />
-          <option value={10}>Рус</option>
-          <option value={20}>Англ</option>
-        </Select>
-        </FormControl> */}
-        </div>
+
         <Box
           className="navbar-ul"
           sx={{

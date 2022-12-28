@@ -8,17 +8,17 @@ const SecondSection = ({}) => {
 
   const items = [
     {
-      title: "web_development",
+      title: `web_development`,
       image: `url('/images/icons/linux.svg')`,
       desc: `web_development_txt`,
     },
     {
-      title: "devops",
+      title: `devops`,
       image: `url('/images/icons/www.svg')`,
       desc: `devops_txt`,
     },
     {
-      title: "design",
+      title: `design`,
       image: `url('/images/icons/design.svg')`,
       desc: `design_txt`,
     },

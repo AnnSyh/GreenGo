@@ -18,11 +18,11 @@ export default function Menu(props) {
   const { t } = useTranslation("common");
   const menuItems = [
     {
-      pageName: "homepage",
+      pageName: `homepage`,
       link: "/",
     },
     {
-      pageName: "contacts",
+      pageName: `contacts`,
       link: "/contacts",
     },
   ];
