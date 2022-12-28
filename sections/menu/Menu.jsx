@@ -12,15 +12,17 @@ import {
 } from "@mui/material";
 import InboxIcon from "@mui/icons-material/Inbox";
 import MailIcon from "@mui/icons-material/Mail";
+import { useTranslation } from "next-i18next";
 
 export default function Menu(props) {
+  const { t } = useTranslation("common");
   const menuItems = [
     {
-      pageName: "Homepage",
+      pageName: `homepage`,
       link: "/",
     },
     {
-      pageName: "Contacts",
+      pageName: `contacts`,
       link: "/contacts",
     },
   ];
@@ -47,7 +49,8 @@ export default function Menu(props) {
                   <ListItemIcon sx={{ color: "#A6B828" }}>
                     {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                   </ListItemIcon>
-                  <ListItemText primary={item.pageName} />
+                  {/* <ListItemText primary={item.pageName} /> */}
+                  <ListItemText primary={t(item.pageName)} />
                 </ListItemButton>
               </ListItem>
             ))}

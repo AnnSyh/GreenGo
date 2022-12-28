@@ -7,15 +7,17 @@ import { useRouter } from "next/router";
 import styles from "../styles/nav.module.css";
 import { Box } from "@mui/system";
 import Menu from "../sections/menu/Menu";
-import { PropaneSharp } from "@mui/icons-material";
+import { FormControlSelect } from "../sections/FormSection/FormControlSelect";
+import { useTranslation } from "next-i18next";
 
 const nav = [
-  { id: 1, title: "home", path: "/" },
-  { id: 2, title: "contacts", path: "/contacts" },
+  { id: 1, title: `homepage`, path: "/" },
+  { id: 2, title: `contacts`, path: "/contacts" },
 ];
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
-function Navbar({ onMenuIconClick, close, isOpen }) {
+function Navbar({ onMenuIconClick, close, isOpen, languageToggle }) {
+  const { t } = useTranslation("common");
   const { pathname } = useRouter(); //подсвечиваем акт ссылку
 
   return (
@@ -46,25 +48,8 @@ function Navbar({ onMenuIconClick, close, isOpen }) {
         </Typography>
 
         {/* <Button color="inherit">Login</Button> */}
-        <div>
-          {/* <FormControl variant="outlined" className={classes.formControl}>
-        <InputLabel htmlFor="outlined-lang-native-simple">lang</InputLabel>
-          <Select
-          native
-          value={state.lang}
-          onChange={handleChange}
-          label="lang"
-          inputProps={{
-            name: 'язык',
-            id: 'outlined-lang-native-simple',
-          }}
-        >
-          <option aria-label="None" value="" />
-          <option value={10}>Рус</option>
-          <option value={20}>Англ</option>
-        </Select>
-        </FormControl> */}
-        </div>
+        <FormControlSelect languageToggle={languageToggle} />
+
         <Box
           className="navbar-ul"
           sx={{
@@ -78,7 +63,8 @@ function Navbar({ onMenuIconClick, close, isOpen }) {
               href={path}
               className={pathname === path ? styles.active : styles.link}
             >
-              {title}
+              {/* {title} */}
+              {t(title)}
             </Link>
           ))}
         </Box>
