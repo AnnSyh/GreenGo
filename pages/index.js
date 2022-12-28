@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
@@ -10,6 +10,8 @@ import { FormSection } from "../sections/FormSection/FormSection";
 import { FormControlSelect } from "../sections/FormSection/FormControlSelect";
 import { TopArrow } from "../components/TopArrow";
 
+import Menu from "../sections/menu/Menu";
+import { Box, CircularProgress } from "@mui/material";
 import { useRouter } from "next/router";
 
 import { useTranslation, Trans } from "next-i18next";
@@ -19,9 +21,16 @@ const siteTitle = "GreenGo";
 
 export default function Home({ title = siteTitle }) {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [loader, setLoader] = useState(true);
+
   const closeMenu = () => setMenuOpen(false);
   const openMenu = () => setMenuOpen(true);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setLoader(false);
+    }
+  }, []);
   const router = useRouter();
   const { locale } = router;
 
