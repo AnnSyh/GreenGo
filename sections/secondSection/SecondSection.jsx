@@ -8,21 +8,19 @@ const SecondSection = ({}) => {
 
   const items = [
     {
-      title: "Web development",
+      title: "web_development",
       image: `url('/images/icons/linux.svg')`,
-      desc: `The building and maintenance of websites.
-             It's the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience.`,
+      desc: `web_development_txt`,
     },
     {
-      title: "Devops",
+      title: "devops",
       image: `url('/images/icons/www.svg')`,
-      desc: `The combination of cultural philosophies, practices,
-             and tools that increases an organization's ability to deliver applications and services at high velocity.`,
+      desc: `devops_txt`,
     },
     {
-      title: "Design ",
+      title: "design",
       image: `url('/images/icons/design.svg')`,
-      desc: `Building a design from scratch or refinement of the current one. The embodiment of ideas and inspiration, filled with the latest trends and innovations.`,
+      desc: `design_txt`,
     },
   ];
 
@@ -100,7 +98,8 @@ const SecondSection = ({}) => {
                     sx={(theme) => ({})}
                   >
                     {/* {item.title} */}
-                    {t("design")}
+                    {/* {t("design")} */}
+                    {t(item.title)}
                   </Typography>
                   <Typography
                     variant="body"
@@ -113,7 +112,8 @@ const SecondSection = ({}) => {
                     })}
                   >
                     {/* {item.desc} */}
-                    {t("design_txt")}
+                    {t(item.desc)}
+                    {/* {t("design_txt")} */}
                   </Typography>
                 </Box>
               </Grid>

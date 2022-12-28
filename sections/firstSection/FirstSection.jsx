@@ -27,7 +27,7 @@ export default function FirstSection({}) {
           <Box
             className="fadeIn"
             sx={{
-              minWidth: "452px",
+              maxWidth: "452px",
               position: "fixed",
               bottom: 0,
               left: 0,
