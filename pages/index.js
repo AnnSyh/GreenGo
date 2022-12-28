@@ -8,12 +8,12 @@ import { ThirdSection } from "../sections/thirdSection/ThirdSection";
 import { FormSection } from "../sections/FormSection/FormSection";
 import { TopArrow } from "../components/TopArrow";
 
-// import Menu from "../sections/menu/Menu";
 import { useRouter } from "next/router";
-import { Button } from "@mui/material";
+// import { Button } from "@mui/material";
 
 import { ru } from "../locales/ru";
 import { en } from "../locales/en";
+import { FormControlSelect } from "../sections/FormSection/FormControlSelect";
 
 const siteTitle = "GreenGo";
 
@@ -49,6 +49,7 @@ export default function Home({ title = siteTitle }) {
         onMenuIconClick={openMenu}
         close={closeMenu}
         isOpen={isMenuOpen}
+        languageToggle={handelLanguageToggle}
       />
       <div className="o-scroll" id="js-scroll" data-scroll-container>
         <FirstSection />
@@ -57,10 +58,6 @@ export default function Home({ title = siteTitle }) {
 
         <section className={{ textAlign: "center" }} data-scroll-section>
           <h1>welcome = {t.welcome}</h1>
-
-          <Button variant="contained" onClick={() => handelLanguageToggle()}>
-            1111 {locale} 1111
-          </Button>
         </section>
 
         <ThirdSection />

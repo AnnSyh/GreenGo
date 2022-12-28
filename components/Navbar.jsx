@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import styles from "../styles/nav.module.css";
 import { Box } from "@mui/system";
 import Menu from "../sections/menu/Menu";
-import { PropaneSharp } from "@mui/icons-material";
+import { FormControlSelect } from "../sections/FormSection/FormControlSelect";
 
 const nav = [
   { id: 1, title: "home", path: "/" },
@@ -15,7 +15,7 @@ const nav = [
 ];
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
-function Navbar({ onMenuIconClick, close, isOpen }) {
+function Navbar({ onMenuIconClick, close, isOpen, languageToggle }) {
   const { pathname } = useRouter(); //подсвечиваем акт ссылку
 
   return (
@@ -46,6 +46,7 @@ function Navbar({ onMenuIconClick, close, isOpen }) {
         </Typography>
 
         {/* <Button color="inherit">Login</Button> */}
+        <FormControlSelect languageToggle={languageToggle} />
         <div>
           {/* <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel htmlFor="outlined-lang-native-simple">lang</InputLabel>
