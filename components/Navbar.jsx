@@ -8,14 +8,16 @@ import styles from "../styles/nav.module.css";
 import { Box } from "@mui/system";
 import Menu from "../sections/menu/Menu";
 import { FormControlSelect } from "../sections/FormSection/FormControlSelect";
+import { useTranslation } from "next-i18next";
 
 const nav = [
-  { id: 1, title: "home", path: "/" },
-  { id: 2, title: "contacts", path: "/contacts" },
+  { id: 1, title: "menu_home", path: "/" },
+  { id: 2, title: "menu_contacts", path: "/contacts" },
 ];
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
 function Navbar({ onMenuIconClick, close, isOpen, languageToggle }) {
+  const { t } = useTranslation("common");
   const { pathname } = useRouter(); //подсвечиваем акт ссылку
 
   return (
@@ -79,7 +81,8 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle }) {
               href={path}
               className={pathname === path ? styles.active : styles.link}
             >
-              {title}
+              {/* {title} */}
+              {t(title)}
             </Link>
           ))}
         </Box>

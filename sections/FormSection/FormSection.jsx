@@ -14,8 +14,10 @@ import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import { useTranslation } from "next-i18next";
 
 const FormSection = ({}) => {
+  const { t } = useTranslation("common");
   const [loader, setLoader] = React.useState(false);
   const [checkForm, setCheckForm] = useState(true);
   const [snakbar, setSnakbar] = useState(false);
@@ -87,7 +89,7 @@ const FormSection = ({}) => {
             <form onSubmit={formik.handleSubmit} style={styles.form}>
               <Grid item md={12}>
                 <Typography variant="h1" sx={{ textAlign: "center" }}>
-                  форма подписки
+                  {t("subscription_form")}
                 </Typography>
               </Grid>
 
@@ -110,7 +112,9 @@ const FormSection = ({}) => {
                     },
                   }}
                 >
-                  <Typography sx={{ color: "#00b398" }}>name</Typography>
+                  <Typography sx={{ color: "#00b398" }}>
+                    {t("subscription_form_input_one")}
+                  </Typography>
                   <TextField
                     sx={{
                       ".MuiOutlinedInput-input": {
@@ -170,7 +174,7 @@ const FormSection = ({}) => {
                 <TextArea
                   value={formik.values.message}
                   onChange={formik.handleChange}
-                  label="Message"
+                  label={t("message")}
                   placeholder="Text..."
                   minRows={6}
                   id="message"
@@ -193,7 +197,7 @@ const FormSection = ({}) => {
                   {loader ? (
                     <CircularProgress sx={{ color: "#fff" }} />
                   ) : (
-                    "Submit"
+                    `${t("submit")}`
                   )}
                 </Button>
               </Grid>

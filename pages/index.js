@@ -50,10 +50,6 @@ export default function Home({ title = siteTitle }) {
         <FirstSection />
         <SecondSection />
 
-        <section className={{ textAlign: "center" }} data-scroll-section>
-          {/* <h1>222222 {t("h1")} 222222</h1> */}
-        </section>
-
         <ThirdSection />
         <FormSection />
         <TopArrow />

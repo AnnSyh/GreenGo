@@ -1,8 +1,11 @@
 import { Grid, Typography } from "@mui/material";
 import { Box, padding } from "@mui/system";
 import * as React from "react";
+import { useTranslation } from "next-i18next";
 
 const SecondSection = ({}) => {
+  const { t } = useTranslation("common");
+
   const items = [
     {
       title: "Web development",
@@ -96,7 +99,8 @@ const SecondSection = ({}) => {
                     component="div"
                     sx={(theme) => ({})}
                   >
-                    {item.title}
+                    {/* {item.title} */}
+                    {t("design")}
                   </Typography>
                   <Typography
                     variant="body"
@@ -108,7 +112,8 @@ const SecondSection = ({}) => {
                       color: "black",
                     })}
                   >
-                    {item.desc}
+                    {/* {item.desc} */}
+                    {t("design_txt")}
                   </Typography>
                 </Box>
               </Grid>

@@ -1,3 +1,22 @@
 {
-  "welcome": "welcome"
+  "welcome": "welcome",
+  "software_development": "Software development",
+  "lorem_ipsum": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "caption_text": "caption text",
+  "contacts": "Contacts",
+  "web_development": "Web development",
+  "web_development_txt": "The building and maintenance of websites. It's the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience.",
+  "design": "Design",
+  "design_txt": "Building a design from scratch or refinement of the current one. The embodiment of ideas and inspiration, filled with the latest trends and innovations.",
+  "devops": "Devops",
+  "devops_txt": "The combination of cultural philosophies, practices, and tools that increases an organization's ability to deliver applications and services at high velocity.",
+  "products": "Products",
+  "products_txt": "Products text",
+  "subscription_form": "Subscription form",
+  "subscription_form_input_one": "Name",
+  "homepage": "Home",
+  "message": "Message",
+  "submit": "Submit",
+  "trash": "Trash",
+  "all_mail": "All mail"
 }

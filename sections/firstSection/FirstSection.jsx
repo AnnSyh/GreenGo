@@ -5,7 +5,8 @@ import { useTranslation } from "next-i18next";
 
 export default function FirstSection({}) {
   const { t } = useTranslation("common");
-  console.log("t=", t("welcome"));
+  // console.log("t=", t("welcome"));
+
   return (
     <section id="intro" data-scroll-section>
       <Box
@@ -26,7 +27,7 @@ export default function FirstSection({}) {
           <Box
             className="fadeIn"
             sx={{
-              // border: "1px solid red",
+              minWidth: "452px",
               position: "fixed",
               bottom: 0,
               left: 0,
@@ -34,7 +35,7 @@ export default function FirstSection({}) {
               padding: "30px 10px",
             }}
           >
-            <h1> {t("welcome")} </h1>
+            {/* <h1> {t("welcome")} </h1> */}
             <Typography
               variant="subtitleCompany"
               component="div"
@@ -48,7 +49,8 @@ export default function FirstSection({}) {
                 textAlign: "left",
               })}
             >
-              Software development
+              {/* Software development */}
+              {t("software_development")}
             </Typography>
 
             <Box
@@ -81,10 +83,11 @@ export default function FirstSection({}) {
                 },
               })}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod
               <br />
-              tempor incididunt ut labore et dolore magna aliqua.
+              tempor incididunt ut labore et dolore magna aliqua. */}
+              {t("lorem_ipsum")}
             </Typography>
             <Typography
               variant="caption"
@@ -98,14 +101,15 @@ export default function FirstSection({}) {
                 },
               })}
             >
-              caption text{" "}
+              {t("caption_text")}
               <Typography
                 variant="caption"
                 component="span"
                 sx={{ textDecoration: "underline", color: "white" }}
               >
                 {" "}
-                caption text{" "}
+                {/* caption text{" "} */}
+                {t("caption_text")}
               </Typography>
             </Typography>
             <Box
@@ -128,7 +132,7 @@ export default function FirstSection({}) {
                   },
                 })}
               >
-                <Link href="/contacts">Contacts</Link>
+                <Link href="/contacts">{t("contacts")}</Link>
               </Button>
             </Box>
           </Box>
