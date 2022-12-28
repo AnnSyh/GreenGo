@@ -18,7 +18,7 @@ const FourthSection = ({}) => {
         })}
       >
         <Box
-          sx={(theme) => ({
+          sx={() => ({
             width: "100%",
             maxWidth: "1140px",
             margin: "0 auto",

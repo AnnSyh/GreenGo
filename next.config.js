@@ -4,16 +4,6 @@ const nextConfig = {
   i18n: {
     locales: ["ru", "en"],
     defaultLocale: "ru",
-    // domains: [
-    //   {
-    //     domain: "example.ru",
-    //     defaultLocale: "rus",
-    //   },
-    //   {
-    //     domain: "example.en",
-    //     defaultLocale: "en",
-    //   },
-    // ],
   },
 };
 

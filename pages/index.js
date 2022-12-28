@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
-import Navbar from "../companents/Navbar";
+import Navbar from "../components/Navbar";
 
 import FirstSection from "../sections/firstSection/FirstSection";
 import { SecondSection } from "../sections/secondSection/SecondSection";
 import { ThirdSection } from "../sections/thirdSection/ThirdSection";
 import { FormSection } from "../sections/FormSection/FormSection";
-import { TopArrow } from "../companents/TopArrow";
-
+import { TopArrow } from "../components/TopArrow";
 import Menu from "../sections/menu/Menu";
 import { Box, CircularProgress } from "@mui/material";
+import { useRouter } from "next/router";
+import { Button } from "@mui/material";
+
+import { ru, en } from "../translations";
 
 const siteTitle = "GreenGo";
 
@@ -26,6 +29,23 @@ export default function Home({ title = siteTitle }) {
       setLoader(false);
     }
   }, []);
+  const router = useRouter();
+  const { locale } = router;
+
+  const t = locale === "ru" ? "ru" : "en";
+
+  const handelLanguageToggle = () => {
+    console.log("handelLanguageToggle");
+    switch (locale) {
+      case "ru":
+        router.push("/", "/", { locale: "en" });
+        break;
+      case "ru":
+        router.push("/", "/", { locale: "ru" });
+        break;
+    }
+  };
+
   return (
     <Box>
       {loader ? (
@@ -53,12 +73,28 @@ export default function Home({ title = siteTitle }) {
               <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Menu close={closeMenu} isOpen={isMenuOpen} />
-            <Navbar onMenuIconClick={openMenu} />
+            <Navbar
+              onMenuIconClick={openMenu}
+              close={closeMenu}
+              isOpen={isMenuOpen}
+            />
 
             <FirstSection />
 
             <SecondSection />
+
+            <ThirdSection />
+            <section className={{ textAlign: "center" }} data-scroll-section>
+              <h1>2222{t.welcome}222</h1>
+
+              <Button
+                className="test"
+                onClick={() => console.log("handelLanguageToggle")}
+                variant="outlined"
+              >
+                1111 {locale} 1111
+              </Button>
+            </section>
 
             <ThirdSection />
 
@@ -71,3 +107,8 @@ export default function Home({ title = siteTitle }) {
     </Box>
   );
 }
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common']),
+  },
+})

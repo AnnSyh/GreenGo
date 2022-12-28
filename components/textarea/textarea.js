@@ -1,9 +1,9 @@
-import { Box, InputBase, Stack, Typography } from "@mui/material";
+import { Box, InputBase, Typography } from "@mui/material";
 
-export const Input = ({ label, setValue, value, ...props }) => {
+export const TextArea = ({ label, ...props }) => {
   return (
     <Box
-      sx={(theme) => ({
+      sx={() => ({
         flex: "column nowrap",
         height: "auto",
         width: "100%",
@@ -11,21 +11,17 @@ export const Input = ({ label, setValue, value, ...props }) => {
     >
       <Typography
         sx={() => ({
-          textTransform: "capitalize",
           width: "100%",
         })}
       >
         {label}
       </Typography>
       <InputBase
-        value={value}
-        onChange={setValue}
-        required
+        multiline
         {...props}
         sx={(theme) => ({
           padding: "10px",
           backgroundColor: theme.palette.grey[100],
-          height: "45px",
           width: "100%",
         })}
       />

@@ -8,8 +8,8 @@ import {
   Snackbar,
 } from "@mui/material";
 import { Box, padding } from "@mui/system";
-import { Input } from "../../companents/input/input";
-import { TextArea } from "../../companents/textarea/textarea";
+import { Input } from "../../components/input/input";
+import { TextArea } from "../../components/textarea/textarea";
 import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -73,7 +73,7 @@ const FormSection = ({}) => {
       >
         <Box
           id="form"
-          sx={(theme) => ({
+          sx={() => ({
             width: "100%",
             maxWidth: "1140px",
             margin: "0 auto",
@@ -97,9 +97,6 @@ const FormSection = ({}) => {
                   xs: 0,
                   lg: 2,
                 }}
-                sx={(theme) => ({
-                  // justifyContent: 'space-between',
-                })}
               >
                 <Grid
                   item
@@ -131,7 +128,7 @@ const FormSection = ({}) => {
                     name="name"
                     placeholder={`Enter your name`}
                     error={formik.touched.name && Boolean(formik.errors.name)}
-                    helperText={formik.touched.name && formik.errors.name}
+                    helpertext={formik.touched.name && formik.errors.name}
                   />
                 </Grid>
                 <Grid
@@ -164,7 +161,7 @@ const FormSection = ({}) => {
                     name="email"
                     placeholder={`Enter your email`}
                     error={formik.touched.email && Boolean(formik.errors.email)}
-                    helperText={formik.touched.email && formik.errors.email}
+                    helpertext={formik.touched.email && formik.errors.email}
                   />
                 </Grid>
               </Grid>
@@ -181,7 +178,7 @@ const FormSection = ({}) => {
                   error={
                     formik.touched.message && Boolean(formik.errors.message)
                   }
-                  helperText={formik.touched.message && formik.errors.message}
+                  helpertext={formik.touched.message && formik.errors.message}
                 />
               </Grid>
               <Grid item md={12}>

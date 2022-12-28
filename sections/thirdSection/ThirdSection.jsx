@@ -39,7 +39,7 @@ const ThirdSection = ({}) => {
       >
         <Box
           id="about"
-          sx={(theme) => ({
+          sx={() => ({
             width: "100%",
             maxWidth: "1140px",
             margin: "0 auto",
@@ -63,7 +63,6 @@ const ThirdSection = ({}) => {
                 data-scroll-sticky
                 data-scroll-target="#about"
               >
-                333 About
                 <Typography variant="h1">Продукты ZEVS</Typography>
               </div>
             </Grid>

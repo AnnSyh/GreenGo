@@ -34,7 +34,7 @@ const SecondSection = ({}) => {
         })}
       >
         <Box
-          sx={(theme) => ({
+          sx={() => ({
             width: "100%",
             maxWidth: "1140px",
             margin: "0 auto",
@@ -102,7 +102,7 @@ const SecondSection = ({}) => {
                     variant="body"
                     gutterBottom
                     textAlign="center"
-                    sx={(theme) => ({
+                    sx={() => ({
                       marginTop: "20px",
                       padding: "0 30px 30px",
                       color: "black",
