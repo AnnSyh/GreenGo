@@ -16,22 +16,23 @@ const nav = [
 ];
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
-function Navbar({ onMenuIconClick, close, isOpen, languageToggle }) {
+function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
   const { t } = useTranslation("common");
   const { pathname } = useRouter(); //подсвечиваем акт ссылку
 
   return (
-    <AppBar
-      position="static"
-      sx={{
-        backgroundColor: "transparent",
-        color: "#fff",
-        zIndex: "1",
-        position: "absolute",
-      }}
-    >
+    <AppBar position="fixed" sx={sx}>
       <Menu close={close} isOpen={isOpen}></Menu>
-      <Toolbar>
+      <Toolbar
+        sx={{
+          width: "100%",
+          maxWidth: "1300px",
+          margin: "0 auto",
+          display: "flex",
+          flexFlow: "row wrap",
+          position: "relative",
+        }}
+      >
         <IconButton
           size="large"
           edge="start"
@@ -48,13 +49,21 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle }) {
         </Typography>
 
         {/* <Button color="inherit">Login</Button> */}
-        <FormControlSelect languageToggle={languageToggle} />
+        <FormControlSelect
+          languageToggle={languageToggle}
+          sx={{
+            // color: "#00b398",
+            margin: "10px",
+          }}
+        />
 
         <Box
           className="navbar-ul"
           sx={{
             display: "flex",
+            justifyContent: "space-between",
             flexFlow: "row nowrap",
+            minWidth: "170px",
           }}
         >
           {nav.map(({ id, title, path }) => (
@@ -63,7 +72,6 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle }) {
               href={path}
               className={pathname === path ? styles.active : styles.link}
             >
-              {/* {title} */}
               {t(title)}
             </Link>
           ))}

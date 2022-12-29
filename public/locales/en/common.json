@@ -18,5 +18,9 @@
   "message": "Message",
   "submit": "Submit",
   "trash": "Trash",
-  "all_mail": "All mail"
+  "all_mail": "All mail",
+  "contacts_title": "Driver Support",
+  "contacts_title1": "Sales department",
+  "contacts_title2": "Press service",
+  "contacts_telegramm": "Telegramm bot"
 }

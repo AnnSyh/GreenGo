@@ -1,4 +1,19 @@
+import { useRef, useLayoutEffect } from "react";
+
 const TopArrow = () => {
+  // const arrowTop = document.querySelector(".back-to-top");
+
+  // console.log("arrowTop = ", arrowTop);
+
+  // window.addEventListener('scroll', function(evt) {
+
+  //   if (window.scrollY > 200){
+  //     arrowTop.classList.add('arrow-top__visible');
+  //   } else {
+  //     arrowTop.classList.remove('arrow-top__visible');
+  //   }
+  // });
+
   return (
     <a
       className="back-to-top"

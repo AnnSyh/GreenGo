@@ -3,7 +3,7 @@ import { FormControl, Select, InputLabel } from "@mui/material";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
-const FormControlSelect = ({ languageToggle }) => {
+const FormControlSelect = ({ languageToggle, sx }) => {
   const [state, setState] = useState({
     lang: "ru",
   });
@@ -45,9 +45,7 @@ const FormControlSelect = ({ languageToggle }) => {
           inputProps={{
             name: "lang",
           }}
-          sx={{
-            margin: "10px",
-          }}
+          sx={sx}
         >
           <option value={"ru"}>rus</option>
           <option value={"en"}>eng</option>
