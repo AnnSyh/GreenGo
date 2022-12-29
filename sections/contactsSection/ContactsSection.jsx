@@ -11,23 +11,23 @@ import { useTranslation } from "next-i18next";
 const ContactsSection = ({}) => {
   const { t } = useTranslation("common");
 
-  const items = [
-    {
-      title: `web_development`,
-      image: `url('/images/icons/linux.svg')`,
-      desc: `web_development_txt`,
-    },
-    {
-      title: `devops`,
-      image: `url('/images/icons/www.svg')`,
-      desc: `devops_txt`,
-    },
-    {
-      title: `design`,
-      image: `url('/images/icons/design.svg')`,
-      desc: `design_txt`,
-    },
-  ];
+  // const items = [
+  //   {
+  //     title: `web_development`,
+  //     image: `url('/images/icons/linux.svg')`,
+  //     desc: `web_development_txt`,
+  //   },
+  //   {
+  //     title: `devops`,
+  //     image: `url('/images/icons/www.svg')`,
+  //     desc: `devops_txt`,
+  //   },
+  //   {
+  //     title: `design`,
+  //     image: `url('/images/icons/design.svg')`,
+  //     desc: `design_txt`,
+  //   },
+  // ];
 
   const contacts = [
     {
