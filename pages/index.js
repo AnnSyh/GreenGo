@@ -41,15 +41,37 @@ export default function Home({ title = siteTitle }) {
 
   const changeTo = router.locale === "ru" ? "en" : "ru";
 
+  const [header, setHeader] = useState("headerColor");
+
+  const listenScrollEvent = (event) => {
+    console.log("listenScrollEvent = ", window.scrollY);
+
+    const bgColorChanged = 373;
+
+    if (window.scrollY < bgColorChanged) {
+      return setHeader("headerColor");
+    } else if (window.scrollY > bgColorChanged) {
+      return setHeader("headerColor2");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+
+    return () => window.removeEventListener("scroll", listenScrollEvent);
+  }, []);
+
   return (
     <Box
-      sx={{
-        // border: "10px solid red",
-        paddingTop: {
-          xs: "75px",
-          lg: "0px",
-        },
-      }}
+      sx={
+        {
+          // border: "10px solid red",
+          // paddingTop: {
+          // xs: "75px",
+          //   lg: "0px",
+          // },
+        }
+      }
     >
       <Head>
         <title>{title} | GreenGo </title>
@@ -58,19 +80,22 @@ export default function Home({ title = siteTitle }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar
-        onMenuIconClick={openMenu}
-        close={closeMenu}
-        isOpen={isMenuOpen}
-        languageToggle={handelLanguageToggle}
-        sx={{
-          backgroundColor: "transparent",
-          color: "#fff",
-          // backgroundColor: "violet",
-          // filter: "grayscale(0.1) blur(1px)",
-          // filter: "grayscale(0.5)",
-        }}
-      />
+      <Box className={header}>
+        <Navbar
+          className={header}
+          onMenuIconClick={openMenu}
+          close={closeMenu}
+          isOpen={isMenuOpen}
+          languageToggle={handelLanguageToggle}
+          sx={{
+            backdropFilter: "blur(8px)",
+            backgroundColor: "transparent",
+            color: "#fff",
+            // color: "#5e7688",
+          }}
+        />
+      </Box>
+
       <div className="o-scroll" id="js-scroll" data-scroll-container>
         <Box>
           <FirstSection />
