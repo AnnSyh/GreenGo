@@ -7,11 +7,7 @@ const ThirdSection = ({}) => {
   const { t } = useTranslation("common");
 
   return (
-    <section
-      id="about-section"
-      className="py-40 bg-green-50"
-      data-scroll-section
-    >
+    <section id="about-section" data-scroll-section>
       <Box
         component="section"
         sx={(theme) => ({
