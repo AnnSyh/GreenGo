@@ -24,14 +24,26 @@ export default function Home({ title = siteTitle }) {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [loader, setLoader] = useState(true);
 
+  const [clientWindowHeight, setClientWindowHeight] = useState("");
+
+  const handleScroll = () => {
+    console.log(2222);
+    setClientWindowHeight(window.scrollY);
+  };
+  console.log("clientWindowHeight", clientWindowHeight);
+  useEffect(() => {
+    console.log(1111);
+    window.addEventListener("scroll", handleScroll());
+    return () => window.removeEventListener("scroll", handleScroll());
+  });
   const closeMenu = () => setMenuOpen(false);
   const openMenu = () => setMenuOpen(true);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setLoader(false);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     setLoader(false);
+  //   }
+  // }, []);
   const router = useRouter();
   const { locale } = router;
 
@@ -39,8 +51,6 @@ export default function Home({ title = siteTitle }) {
     const { pathname, asPath, query } = router;
     router.push({ pathname, query }, asPath, { locale: newLocale });
   };
-
-  const changeTo = router.locale === "ru" ? "en" : "ru";
 
   const [header, setHeader] = useState("headerColor");
 

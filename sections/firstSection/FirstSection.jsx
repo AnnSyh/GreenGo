@@ -3,7 +3,7 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 
-export default function FirstSection({}) {
+export default function FirstSection({ }) {
   const { t } = useTranslation("common");
   // console.log("t=", t("welcome"));
 
@@ -137,17 +137,19 @@ export default function FirstSection({}) {
                   },
                 })}
               >
-                <Button
-                  variant="contained"
-                  sx={() => ({
-                    margin: {
-                      xs: "45px 0",
-                      lg: "45px 0",
-                    },
-                  })}
-                >
-                  <Link href="/contacts">{t("contacts")}</Link>
-                </Button>
+                <Link href="/contacts">
+                  <Button
+                    variant="contained"
+                    sx={() => ({
+                      margin: {
+                        xs: "45px 0",
+                        lg: "45px 0",
+                      },
+                    })}
+                  >
+                    {t("contacts")}
+                  </Button>
+                </Link>
               </Box>
             </Box>
           </Box>

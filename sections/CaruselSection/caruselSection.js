@@ -74,7 +74,7 @@ export const CaruselSection = ({}) => {
       <Box
         component="section"
         sx={(theme) => ({
-          backgroundColor: theme.palette.grey.background,
+          backgroundColor: theme.palette.common.white,
           width: "100%",
           position: "relative",
           display: "flex",

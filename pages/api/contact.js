@@ -18,7 +18,8 @@ export default async function (req, res) {
     text: "test",
     html: `<div>Email: ${req.body.email}</div>
             <div>Name: ${req.body.name}</div>
-            <div>Message: ${req.body.message}</div>`,
+            <div>Message: ${req.body.message}</div>
+            <div>Phone number: ${req.body.phoneNumber}</div>`,
   };
 
   transporter.sendMail(mailData, function (err, info) {

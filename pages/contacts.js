@@ -56,7 +56,7 @@ export default function Contacts({ title = siteTitle }) {
         languageToggle={handelLanguageToggle}
         // sx={{ border: "1px solid red" }}
       />
-      <Box sx={{ paddingTop: "50px" }}>
+      <Box sx={{ paddingTop: "150px" }}>
         <ContactsSection />
         {/* <TopArrow /> */}
       </Box>

@@ -9,8 +9,6 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
-  --swiper-theme-color: red;
-
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
     #16abff33 0deg,
@@ -143,7 +141,6 @@ a {
 }
 
 .headerColor2 header {
-  /* #5e7688 */
   background-color: rgba(94, 118, 136, 0.7);
 }
 .headerColor2 a,
