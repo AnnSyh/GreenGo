@@ -1,5 +1,5 @@
 import * as React from "react";
-import { FormControl, Select, InputLabel } from "@mui/material";
+import { FormControl, Select, InputLabel, MenuItem, Box } from "@mui/material";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
@@ -36,19 +36,24 @@ const FormControlSelect = ({ languageToggle, sx }) => {
     <>
       <FormControl variant="outlined">
         <Select
-          native
           value={locale}
           onChange={(e) => {
             setLocale(e.target.value);
             handleSelectLang(e.target.value);
           }}
-          inputProps={{
-            name: "lang",
-          }}
-          sx={sx}
+          sx={{ mr: 1, textTransform: 'uppercase', color: '#fff', width: '110px' }}
+          renderValue={(selected) => selected}
         >
-          <option value={"ru"}>rus</option>
-          <option value={"en"}>eng</option>
+          <MenuItem sx={{ textTransform: 'uppercase', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} value="ru">ru
+            <Box sx={{ mt: '3px' }}>
+              <img src="images/rus.png" />
+            </Box>
+          </MenuItem>
+          <MenuItem sx={{ textTransform: 'uppercase', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} value={"en"}>en
+            <Box sx={{ mt: '3px' }}>
+              <img src="images/en.png" />
+            </Box>
+          </MenuItem>
         </Select>
       </FormControl>
     </>

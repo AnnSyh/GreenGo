@@ -13,14 +13,17 @@ import { TextArea } from "../../components/textarea/textarea";
 import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import axios from "axios";
 import { useTranslation } from "next-i18next";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/bootstrap.css";
 
-const FormSection = ({}) => {
+const FormSection = ({ }) => {
   const { t } = useTranslation("common");
   const [loader, setLoader] = React.useState(false);
   const [checkForm, setCheckForm] = useState(true);
   const [snakbar, setSnakbar] = useState(false);
+  const [phoneNumber, setPhoneNumber] = React.useState("");
+  const [errorPhoneNumber, setErrorPhoneNumber] = React.useState(false);
 
   const styles = {
     form: {
@@ -41,13 +44,20 @@ const FormSection = ({}) => {
     }),
     onSubmit: (values) => {
       setLoader(true);
+      const data = {
+        name: values.name,
+        email: values.email,
+        message: values.message,
+        phoneNumber: `+${phoneNumber}`,
+      }
       fetch("/api/contact", {
         method: "POST",
         headers: {
           Accept: "application/json, text/plain, */*",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(values),
+
+        body: JSON.stringify(data),
       }).then((res) => {
         if (res.status === 200) {
           setLoader(false);
@@ -59,6 +69,11 @@ const FormSection = ({}) => {
       });
     },
   });
+  const handleErrPhoneNumber = () => {
+    if (phoneNumber) {
+      setErrorPhoneNumber(false)
+    } else setErrorPhoneNumber(true)
+  }
   return (
     <section
       id="form-section"
@@ -102,8 +117,7 @@ const FormSection = ({}) => {
               >
                 <Grid
                   item
-                  xs={12}
-                  lg={6}
+                  xs={12} md={4}
                   sx={{
                     p: 0,
                     mb: {
@@ -121,9 +135,9 @@ const FormSection = ({}) => {
                         background: "#f5f5f5",
                       },
                       "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
-                        {
-                          borderColor: "#f5f5f5",
-                        },
+                      {
+                        borderColor: "#f5f5f5",
+                      },
                     }}
                     value={formik.values.name}
                     onChange={formik.handleChange}
@@ -131,14 +145,14 @@ const FormSection = ({}) => {
                     fullWidth
                     name="name"
                     placeholder={`Enter your name`}
-                    error={formik.touched.name && Boolean(formik.errors.name)}
-                    helpertext={formik.touched.name && formik.errors.name}
+                  // error={formik.touched.name && Boolean(formik.errors.name)}
+                  // helpertext={formik.touched.name && formik.errors.name}
                   />
+                  <Typography sx={{ color: "red" }}>{formik.touched.name && formik.errors.name}</Typography>
                 </Grid>
                 <Grid
                   item
-                  xs={12}
-                  lg={6}
+                  xs={12} md={4}
                   sx={{
                     p: 0,
                     mb: {
@@ -150,26 +164,48 @@ const FormSection = ({}) => {
                   <Typography sx={{ color: "#00b398" }}>email</Typography>
                   <TextField
                     sx={{
-                      "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
-                        {
-                          borderColor: "#f5f5f5",
-                        },
                       ".MuiOutlinedInput-input": {
                         background: "#f5f5f5",
+                      },
+                      "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
+                      {
+                        borderColor: "#f5f5f5",
                       },
                     }}
                     value={formik.values.email}
                     onChange={formik.handleChange}
-                    fullWidth
                     id="email"
+                    fullWidth
                     name="email"
                     placeholder={`Enter your email`}
-                    error={formik.touched.email && Boolean(formik.errors.email)}
-                    helpertext={formik.touched.email && formik.errors.email}
+                  // error={formik.touched.email && Boolean(formik.errors.email)}
+                  // helpertext={formik.touched.email && formik.errors.email}
                   />
+                  <Typography sx={{ color: "red" }}>{formik.touched.email && formik.errors.email}</Typography>
+                </Grid>
+                <Grid item xs={12} md={4} sx={{
+                  p: 0,
+                  mb: {
+                    xs: "20px",
+                    lg: "50px",
+                  },
+                }}>
+                  <Typography sx={{ color: "#00b398" }}>Phone number</Typography>
+                  <PhoneInput
+                    country={"ru"}
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e)}
+                    name="phoneNumber"
+                    inputClass={
+                      errorPhoneNumber
+                        ? "containerInput errorBorder hover:shadow"
+                        : "containerInput hover:shadow"
+                    }
+                    dropdownClass="btnDropdown"
+                  />
+                  {errorPhoneNumber && <Typography sx={{ color: "red" }}>Required</Typography>}
                 </Grid>
               </Grid>
-
               <Grid item md={12}>
                 <TextArea
                   value={formik.values.message}
@@ -189,7 +225,10 @@ const FormSection = ({}) => {
                 <Button
                   variant="contained"
                   disabled={loader ? true : false}
-                  onClick={formik.handleSubmit}
+                  onClick={() => {
+                    formik.handleSubmit();
+                    handleErrPhoneNumber()
+                  }}
                   sx={(theme) => ({
                     margin: "45px auto",
                   })}
