@@ -21,7 +21,7 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
   const { pathname } = useRouter(); //подсвечиваем акт ссылку
 
   return (
-    <AppBar position="static" sx={sx}>
+    <AppBar position="fixed" sx={sx}>
       <Menu close={close} isOpen={isOpen}></Menu>
       <Toolbar
         sx={{

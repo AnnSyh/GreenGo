@@ -15,7 +15,6 @@ export default function FirstSection({}) {
           backgroundColor: theme.palette.grey.background,
           width: "100%",
           display: "flex",
-          zIndex: "100",
         })}
       >
         <Grid
