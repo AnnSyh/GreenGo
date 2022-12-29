@@ -8,6 +8,7 @@ import { SecondSection } from "../sections/secondSection/SecondSection";
 import { ThirdSection } from "../sections/thirdSection/ThirdSection";
 import { FormSection } from "../sections/FormSection/FormSection";
 import { CaruselSection } from "../sections/CaruselSection/caruselSection";
+import { Footer } from "../footer/Footer";
 import { FormControlSelect } from "../sections/FormSection/FormControlSelect";
 import { TopArrow } from "../components/TopArrow";
 
@@ -104,10 +105,11 @@ export default function Home({ title = siteTitle }) {
 
           <ThirdSection />
 
-          <FormSection />
-
           <CaruselSection />
 
+          <FormSection />
+
+          <Footer />
           <TopArrow />
         </Box>
       </div>

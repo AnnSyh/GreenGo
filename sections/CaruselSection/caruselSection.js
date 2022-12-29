@@ -66,11 +66,7 @@ export const CaruselSection = ({}) => {
   ];
 
   return (
-    <section
-      id="carusel-section"
-      className="py-40 bg-green-50"
-      data-scroll-section
-    >
+    <section id="carusel-section" data-scroll-section>
       <Box
         component="section"
         sx={(theme) => ({
