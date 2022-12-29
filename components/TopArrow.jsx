@@ -1,22 +1,29 @@
-import { useRef, useLayoutEffect } from "react";
+import { useEffect, useState } from "react";
 
 const TopArrow = () => {
-  // const arrowTop = document.querySelector(".back-to-top");
+  const [header, setHeader] = useState("hide-arrow");
 
-  // console.log("arrowTop = ", arrowTop);
+  const listenScrollEvent = (event) => {
+    console.log("listenScrollEvent = ", window.scrollY);
 
-  // window.addEventListener('scroll', function(evt) {
+    const visibleArrow = 100;
 
-  //   if (window.scrollY > 200){
-  //     arrowTop.classList.add('arrow-top__visible');
-  //   } else {
-  //     arrowTop.classList.remove('arrow-top__visible');
-  //   }
-  // });
+    if (window.scrollY >= visibleArrow) {
+      return setHeader("visible-arrow");
+    } else if (window.scrollY < visibleArrow) {
+      return setHeader("hide-arrow");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+
+    return () => window.removeEventListener("scroll", listenScrollEvent);
+  }, []);
 
   return (
     <a
-      className="back-to-top"
+      className={header + " back-to-top"}
       href="#intro"
       role="button"
       aria-label="Back to top"

@@ -66,9 +66,8 @@ export const CaruselSection = ({}) => {
   ];
 
   return (
-    <section id="carusel-section" data-scroll-section>
+    <section id="carusel-section">
       <Box
-        component="section"
         sx={(theme) => ({
           backgroundColor: theme.palette.common.white,
           width: "100%",

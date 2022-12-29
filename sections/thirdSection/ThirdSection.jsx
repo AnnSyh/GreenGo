@@ -7,9 +7,8 @@ const ThirdSection = ({}) => {
   const { t } = useTranslation("common");
 
   return (
-    <section id="about-section" data-scroll-section>
+    <section id="about-section">
       <Box
-        component="section"
         sx={(theme) => ({
           backgroundColor: theme.palette.common.white,
           width: "100%",

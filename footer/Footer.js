@@ -2,10 +2,10 @@ import { Box, Grid, Typography, Button } from "@mui/material";
 
 export const Footer = ({}) => {
   return (
-    <footer>
-      <section id="footer-section" data-scroll-section>
+    <Box sx={{ position: "relative", zIndex: 1 }}>
+      <footer>
         <Box
-          sx={(theme) => ({
+          sx={() => ({
             minHeight: "100px",
             backgroundColor: "#f5f5f5",
             width: "100%",
@@ -22,7 +22,7 @@ export const Footer = ({}) => {
             © All Rights Reserved
           </Typography>
         </Box>
-      </section>
-    </footer>
+      </footer>
+    </Box>
   );
 };

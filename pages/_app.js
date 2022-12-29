@@ -1,10 +1,8 @@
 import { useRouter } from "next/router";
 import { useRef } from "react";
-import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { appWithTranslation } from "next-i18next";
 import nextI18NextConfig from "../next-i18next.config.js";
 
-import "../styles/locomotive-scroll.css";
 import "../public/fonts/fonts.css";
 import "../styles/globals.css";
 
@@ -27,20 +25,10 @@ function MyApp({
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
-        <LocomotiveScrollProvider
-          options={{ smooth: true }}
-          watch={[]}
-          location={asPath}
-          onLocationChange={(scroll) =>
-            scroll.scrollTo(0, { duration: 0, disableLerp: true })
-          }
-          containerRef={containerRef}
-        >
-          <div data-scroll-container ref={containerRef}>
-            <CssBaseline />
-            <Component {...pageProps} />;
-          </div>
-        </LocomotiveScrollProvider>
+        <div ref={containerRef}>
+          <CssBaseline />
+          <Component {...pageProps} />;
+        </div>
       </ThemeProvider>
     </CacheProvider>
   );

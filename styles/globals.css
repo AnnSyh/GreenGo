@@ -86,7 +86,7 @@ body {
   font-family: "Roadradio", Arial, sans-serif;
   font-weight: 200;
   font-size: 14px;
-  /* text-transform: lowercase; */
+  height: 100%;
 }
 
 .fill-current {
@@ -131,6 +131,7 @@ a {
   bottom: 24px;
   right: 4px;
   cursor: pointer;
+  z-index: 10;
 }
 
 @media screen and (max-width: 1170px) {
@@ -152,3 +153,10 @@ a {
 /* .headerColor2 select > div {
   border-color: red;
 } */
+
+.hide-arrow {
+  visibility: hidden;
+}
+.visible-arrow {
+  visibility: visible;
+}

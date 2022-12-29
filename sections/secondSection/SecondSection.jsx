@@ -25,9 +25,8 @@ const SecondSection = ({}) => {
   ];
 
   return (
-    <section id="products-section" data-scroll-section>
+    <section id="products-section">
       <Box
-        component="section"
         sx={(theme) => ({
           backgroundColor: theme.palette.common.white,
           width: "100%",

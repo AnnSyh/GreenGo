@@ -75,9 +75,8 @@ const FormSection = ({}) => {
     } else setErrorPhoneNumber(true);
   };
   return (
-    <section id="form-section" data-scroll-section>
+    <section id="form-section">
       <Box
-        component="section"
         sx={(theme) => ({
           backgroundColor: theme.palette.common.white,
           width: "100%",

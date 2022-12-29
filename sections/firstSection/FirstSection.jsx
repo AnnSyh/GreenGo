@@ -3,12 +3,12 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 
-export default function FirstSection({ }) {
+export default function FirstSection({}) {
   const { t } = useTranslation("common");
   // console.log("t=", t("welcome"));
 
   return (
-    <section id="intro" data-scroll-section>
+    <section id="intro">
       <Box
         sx={(theme) => ({
           minHeight: "100vh",

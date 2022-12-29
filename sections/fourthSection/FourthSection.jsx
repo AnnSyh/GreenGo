@@ -4,11 +4,7 @@ import * as React from "react";
 
 const FourthSection = ({}) => {
   return (
-    <section
-      id="services"
-      className="relative py-60 bg-green-50"
-      data-scroll-section
-    >
+    <section id="services" className="relative py-60 bg-green-50">
       <Box
         component="div"
         sx={(theme) => ({
