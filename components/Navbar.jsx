@@ -20,6 +20,9 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
   const { t } = useTranslation("common");
   const { pathname } = useRouter(); //подсвечиваем акт ссылку
 
+  console.log("isOpen = ", isOpen);
+  console.log("sx = ", sx);
+
   return (
     <AppBar position="fixed" sx={sx}>
       <Menu close={close} isOpen={isOpen}></Menu>
@@ -38,7 +41,7 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
           edge="start"
           color="inherit"
           aria-label="menu"
-          sx={{ mr: 2 }}
+          sx={{ mr: 2, color: "#fff" }}
           onClick={onMenuIconClick}
         >
           <MenuIcon />
@@ -64,6 +67,7 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
             justifyContent: "space-between",
             flexFlow: "row nowrap",
             minWidth: "170px",
+            color: "#fff",
           }}
         >
           {nav.map(({ id, title, path }) => (
@@ -71,6 +75,7 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
               key={id}
               href={path}
               className={pathname === path ? styles.active : styles.link}
+              color="inherit"
             >
               {t(title)}
             </Link>

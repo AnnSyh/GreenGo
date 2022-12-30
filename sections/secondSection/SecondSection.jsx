@@ -3,13 +3,17 @@ import { Box, fontSize, padding } from "@mui/system";
 import * as React from "react";
 import { useTranslation } from "next-i18next";
 
+import imgUrl from "../../public/images/icons/icon-clock.svg";
+import MailIcon from "@mui/icons-material/Mail";
+import Avatar from "@mui/material";
+
 const SecondSection = ({}) => {
   const { t } = useTranslation("common");
 
   const items = [
     {
       title: `web_development`,
-      image: `url('/images/icons/linux.svg')`,
+      image: `url('../../public/images/icons/icon-clock.svg')`,
       desc: `web_development_txt`,
     },
     {
@@ -57,17 +61,6 @@ const SecondSection = ({}) => {
                     borderRadius: theme.radius.default,
                   })}
                 >
-                  {/* <Box
-                    sx={(theme) => ({
-                      position: "relative",
-                      backgroundColor: theme.palette.primary.main,
-                      backgroundImage: item.image,
-                      borderRadius: theme.shape.borderRadius,
-                      width: "79px",
-                      height: "79px",
-                      top: "-25px",
-                    })}
-                  ></Box> */}
                   <Typography
                     variant="subtitle2"
                     component="h2"
@@ -75,6 +68,14 @@ const SecondSection = ({}) => {
                   >
                     {t(item.title)}
                   </Typography>
+                  {/* <Typography>
+                    <MailIcon color="#fff" sx={{ border: "1px solid red" }} />
+                    <Image src={imgUrl}></Image>
+                    <Avatar
+                      alt="Remy Sharp"
+                      src="../../public/images/icons/icon-clock.svg"
+                    />
+                  </Typography> */}
                   <Typography
                     variant="body"
                     gutterBottom

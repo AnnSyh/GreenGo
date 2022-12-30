@@ -74,6 +74,7 @@ const ContactsSection = ({}) => {
                 flexBasis: "calc(33.3333% - 42px)",
                 margin: "0 auto",
                 marginBottom: "60px",
+                marginLeft: "0px",
               })}
             >
               <Box

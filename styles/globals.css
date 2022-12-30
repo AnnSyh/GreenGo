@@ -142,7 +142,10 @@ a {
 }
 
 .headerColor2 header {
-  background-color: rgba(94, 118, 136, 0.7);
+  background-color: rgba(0, 179, 152, 0.7);
+}
+.headerColor2 header a {
+  color: #fff !important;
 }
 .headerColor2 a,
 .headerColor2 button,
