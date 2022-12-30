@@ -1,5 +1,5 @@
 import { Grid, Typography } from "@mui/material";
-import { Box, padding } from "@mui/system";
+import { Box, fontSize, padding } from "@mui/system";
 import * as React from "react";
 import { useTranslation } from "next-i18next";
 
@@ -25,28 +25,18 @@ const SecondSection = ({}) => {
   ];
 
   return (
-    <section id="products-section">
+    <section id="products-section" className="section">
       <Box
         sx={(theme) => ({
           backgroundColor: theme.palette.common.white,
-          width: "100%",
           position: "relative",
         })}
       >
-        <Box
-          sx={() => ({
-            width: "100%",
-            maxWidth: "1140px",
-            margin: "0 auto",
-            display: "flex",
-            flexFlow: "row wrap",
-            position: "relative",
-          })}
-        >
+        <Box className="container-box">
           <Grid
             container
-            justifyContent="space-between"
             sx={() => ({
+              justifyContent: "space-between",
               position: "relative",
               top: "-30px",
             })}
@@ -54,30 +44,17 @@ const SecondSection = ({}) => {
             {items.map((item) => (
               <Grid
                 item
-                data-scroll
-                data-scroll-direction="vertical"
-                data-scroll-speed="1"
+                className="card"
                 key={item.title}
                 sx={(theme) => ({
-                  flexGrow: 0,
-                  flexShrink: 0,
-                  minWidth: "337px",
-                  flexBasis: "calc(33.3333% - 42px)",
-                  margin: "0 auto",
-                  border: "1px solid #00b398",
                   borderRadius: theme.radius.default,
                 })}
               >
                 <Box
+                  className="card-inner"
                   sx={(theme) => ({
-                    minHeight: "345px",
-                    display: "flex",
-                    flexFlow: "column nowrap",
-                    alignItems: "center",
                     backgroundColor: theme.palette.common.white,
                     borderRadius: theme.radius.default,
-                    position: "relative",
-                    paddingTop: "20px",
                   })}
                 >
                   {/* <Box
@@ -93,11 +70,9 @@ const SecondSection = ({}) => {
                   ></Box> */}
                   <Typography
                     variant="subtitle2"
-                    component="div"
-                    sx={(theme) => ({})}
+                    component="h2"
+                    fontSize={{ xs: "25px", md: "42px" }}
                   >
-                    {/* {item.title} */}
-                    {/* {t("design")} */}
                     {t(item.title)}
                   </Typography>
                   <Typography
@@ -110,9 +85,7 @@ const SecondSection = ({}) => {
                       color: "black",
                     })}
                   >
-                    {/* {item.desc} */}
                     {t(item.desc)}
-                    {/* {t("design_txt")} */}
                   </Typography>
                 </Box>
               </Grid>

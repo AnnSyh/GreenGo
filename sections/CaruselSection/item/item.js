@@ -23,8 +23,8 @@ export const Item = ({ item }) => {
           alignItems: "center",
           position: "relative",
           borderRadius: theme.radius.default,
-          minHeight: "435px",
-          maxHeight: "435px",
+          // minHeight: "435px",
+          // maxHeight: "435px",
           padding: {
             xs: "30px 10px",
             lg: "30px",

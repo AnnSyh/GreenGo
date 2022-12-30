@@ -75,7 +75,7 @@ const FormSection = ({}) => {
     } else setErrorPhoneNumber(true);
   };
   return (
-    <section id="form-section">
+    <section id="form-section" className="section">
       <Box
         sx={(theme) => ({
           backgroundColor: theme.palette.common.white,
@@ -98,7 +98,11 @@ const FormSection = ({}) => {
           {checkForm && (
             <form onSubmit={formik.handleSubmit} style={styles.form}>
               <Grid item md={12}>
-                <Typography variant="h1" sx={{ textAlign: "center" }}>
+                <Typography
+                  variant="h1"
+                  sx={{ textAlign: "center" }}
+                  fontSize={{ xs: "35px", md: "52px" }}
+                >
                   {t("subscription_form")}
                 </Typography>
               </Grid>
@@ -197,7 +201,8 @@ const FormSection = ({}) => {
                   }}
                 >
                   <Typography sx={{ color: "#00b398" }}>
-                    Phone number
+                    {/* Phone number */}
+                    {t("phone_number")}
                   </Typography>
                   <PhoneInput
                     country={"ru"}

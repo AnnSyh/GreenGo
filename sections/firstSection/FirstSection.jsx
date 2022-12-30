@@ -8,7 +8,7 @@ export default function FirstSection({}) {
   // console.log("t=", t("welcome"));
 
   return (
-    <section id="intro">
+    <section id="intro" className="section">
       <Box
         sx={(theme) => ({
           minHeight: "100vh",
@@ -27,15 +27,9 @@ export default function FirstSection({}) {
             <source src={"../../images/car-6mb.mp4"} type="video/mp4" />
           </video>
           <Box
+            className="container-box"
             sx={{
-              width: "100%",
               height: "100%",
-              maxWidth: "1140px",
-              margin: "0 auto",
-              display: "flex",
-              flexFlow: "row wrap",
-              position: "relative",
-              // border: "10px solid red",
             }}
           >
             <Box
@@ -138,15 +132,7 @@ export default function FirstSection({}) {
                 })}
               >
                 <Link href="/contacts">
-                  <Button
-                    variant="contained"
-                    sx={() => ({
-                      margin: {
-                        xs: "45px 0",
-                        lg: "45px 0",
-                      },
-                    })}
-                  >
+                  <Button className="btn-contacts" variant="contained">
                     {t("contacts")}
                   </Button>
                 </Link>

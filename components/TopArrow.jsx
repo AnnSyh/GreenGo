@@ -4,8 +4,6 @@ const TopArrow = () => {
   const [header, setHeader] = useState("hide-arrow");
 
   const listenScrollEvent = (event) => {
-    console.log("listenScrollEvent = ", window.scrollY);
-
     const visibleArrow = 100;
 
     if (window.scrollY >= visibleArrow) {
@@ -24,10 +22,9 @@ const TopArrow = () => {
   return (
     <a
       className={header + " back-to-top"}
-      href="#intro"
+      href="#top-page"
       role="button"
       aria-label="Back to top"
-      data-scroll-to="true"
     >
       <svg
         className="fill-current"

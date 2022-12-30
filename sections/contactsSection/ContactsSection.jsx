@@ -33,6 +33,7 @@ const ContactsSection = ({}) => {
   return (
     <Box
       component="section"
+      className="section"
       sx={(theme) => ({
         backgroundColor: theme.palette.common.white,
         width: "100%",

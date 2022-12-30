@@ -9,8 +9,6 @@ import { ContactsSection } from "../sections/contactsSection/ContactsSection";
 import { TopArrow } from "../components/TopArrow";
 import { Footer } from "../footer/Footer";
 
-// import Menu from "../sections/menu/Menu";
-// import { Box, CircularProgress } from "@mui/material";
 import { useRouter } from "next/router";
 
 import { useTranslation, Trans } from "next-i18next";
@@ -44,8 +42,6 @@ export default function Contacts({ title = siteTitle }) {
   const [header, setHeader] = useState("headerColor");
 
   const listenScrollEvent = (event) => {
-    // console.log("listenScrollEvent = ", window.scrollY);
-
     const bgColorChanged = 373;
 
     if (window.scrollY < bgColorChanged) {
@@ -75,10 +71,10 @@ export default function Contacts({ title = siteTitle }) {
       </Box>
 
       <Box sx={{ height: "calc(100vh - 64px)" }}>
+        <div id="top-page" />
         <ContactsSection />
 
         <Footer />
-
         <TopArrow />
       </Box>
     </Box>

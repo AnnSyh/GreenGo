@@ -7,7 +7,7 @@ const ThirdSection = ({}) => {
   const { t } = useTranslation("common");
 
   return (
-    <section id="about-section">
+    <section id="about-section" className="section">
       <Box
         sx={(theme) => ({
           backgroundColor: theme.palette.common.white,
@@ -17,40 +17,20 @@ const ThirdSection = ({}) => {
       >
         <Box
           id="about"
+          className="container-box"
           sx={() => ({
-            width: "100%",
-            maxWidth: "1140px",
-            margin: "0 auto",
-            display: "flex",
-            flexFlow: "row wrap",
             alignItems: "flex-top",
-            position: "relative",
           })}
         >
           <Grid container>
-            <Grid
-              item
-              md={5}
-              data-scroll
-              data-scroll-direction="horizontal"
-              data-scroll-speed="-1"
-            >
-              <div
-                className="text-5xl font-extrabold"
-                data-scroll
-                data-scroll-sticky
-                data-scroll-target="#about"
-              >
-                <Typography variant="h1">{t("products")}</Typography>
+            <Grid item md={5}>
+              <div className="text-5xl font-extrabold">
+                <Typography variant="h1" fontSize={{ xs: "35px", md: "52px" }}>
+                  {t("products")}
+                </Typography>
               </div>
             </Grid>
-            <Grid
-              item
-              md={7}
-              data-scroll
-              data-scroll-direction="horizontal"
-              data-scroll-speed="1"
-            >
+            <Grid item md={7}>
               <p>{t("lorem_ipsum")}</p>
               <p>{t("lorem_ipsum")}</p>
               <p>{t("lorem_ipsum")}</p>

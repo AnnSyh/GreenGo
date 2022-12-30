@@ -66,7 +66,7 @@ export const CaruselSection = ({}) => {
   ];
 
   return (
-    <section id="carusel-section">
+    <section id="carusel-section" className="section">
       <Box
         sx={(theme) => ({
           backgroundColor: theme.palette.common.white,
@@ -96,10 +96,18 @@ export const CaruselSection = ({}) => {
               alignItems: "center",
             })}
           >
-            <Typography variant="h1" sx={{ textAlign: "center" }}>
+            <Typography
+              variant="h1"
+              sx={{ textAlign: "center" }}
+              fontSize={{ xs: "35px", md: "52px" }}
+            >
               Почему GreenGo
             </Typography>
-            <Typography variant="subtitle2" component="div">
+            <Typography
+              variant="subtitle2"
+              component="div"
+              fontSize={{ xs: "25px", md: "42px" }}
+            >
               Мы решаем проблемы:
             </Typography>
             <Box
@@ -117,7 +125,7 @@ export const CaruselSection = ({}) => {
                 justifyContent="space-between"
                 display={{ xs: "none", lg: "block" }}
                 sx={() => ({
-                  marginTop: "55px",
+                  // marginTop: "55px",
                   position: "relative",
                 })}
               >
@@ -144,7 +152,7 @@ export const CaruselSection = ({}) => {
                 justifyContent="space-between"
                 display={{ xs: "block", lg: "none" }}
                 sx={() => ({
-                  marginTop: "55px",
+                  // marginTop: "55px",
                   position: "relative",
                 })}
               >

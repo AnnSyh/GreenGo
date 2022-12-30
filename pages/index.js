@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
-import Link from "next/link";
 
 import FirstSection from "../sections/firstSection/FirstSection";
 import { SecondSection } from "../sections/secondSection/SecondSection";
@@ -9,10 +8,8 @@ import { ThirdSection } from "../sections/thirdSection/ThirdSection";
 import { FormSection } from "../sections/FormSection/FormSection";
 import { CaruselSection } from "../sections/CaruselSection/caruselSection";
 import { Footer } from "../footer/Footer";
-import { FormControlSelect } from "../sections/FormSection/FormControlSelect";
 import { TopArrow } from "../components/TopArrow";
 
-import Menu from "../sections/menu/Menu";
 import { Box, CircularProgress } from "@mui/material";
 import { useRouter } from "next/router";
 
@@ -27,24 +24,9 @@ export default function Home({ title = siteTitle }) {
 
   const [clientWindowHeight, setClientWindowHeight] = useState("");
 
-  // const handleScroll = () => {
-  //   console.log(2222);
-  //   setClientWindowHeight(window.scrollY);
-  // };
-  // console.log("clientWindowHeight", clientWindowHeight);
-  // useEffect(() => {
-  //   console.log(1111);
-  //   window.addEventListener("scroll", handleScroll());
-  //   return () => window.removeEventListener("scroll", handleScroll());
-  // });
   const closeMenu = () => setMenuOpen(false);
   const openMenu = () => setMenuOpen(true);
 
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     setLoader(false);
-  //   }
-  // }, []);
   const router = useRouter();
   const { locale } = router;
 
@@ -56,8 +38,6 @@ export default function Home({ title = siteTitle }) {
   const [header, setHeader] = useState("headerColor");
 
   const listenScrollEvent = (event) => {
-    // console.log("listenScrollEvent = ", window.scrollY);
-
     const bgColorChanged = 373;
 
     if (window.scrollY < bgColorChanged) {
@@ -84,7 +64,6 @@ export default function Home({ title = siteTitle }) {
 
       <Box className={header}>
         <Navbar
-          className={header}
           onMenuIconClick={openMenu}
           close={closeMenu}
           isOpen={isMenuOpen}
@@ -98,6 +77,7 @@ export default function Home({ title = siteTitle }) {
       </Box>
 
       <Box sx={{ height: "calc(100vh - 64px)" }}>
+        <div id="top-page" />
         <FirstSection />
 
         <SecondSection />

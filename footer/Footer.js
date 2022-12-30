@@ -1,6 +1,9 @@
 import { Box, Grid, Typography, Button } from "@mui/material";
+import { useTranslation } from "next-i18next";
 
 export const Footer = ({}) => {
+  const { t } = useTranslation("common");
+
   return (
     <Box sx={{ position: "relative", zIndex: 1 }}>
       <footer>
@@ -19,7 +22,7 @@ export const Footer = ({}) => {
             GreenGo
           </Typography>
           <Typography component="div" align="center">
-            © All Rights Reserved
+            {/* © All Rights Reserved */}© {t("all_rights")}
           </Typography>
         </Box>
       </footer>
