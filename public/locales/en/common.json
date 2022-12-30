@@ -24,5 +24,8 @@
   "contacts_title2": "Press service",
   "contacts_telegramm": "Telegramm bot",
   "all_rights": "All Rights Reserved",
-  "phone_number": "Phone number"
+  "phone_number": "Phone number",
+  "enter_your_name": "Enter your name",
+  "enter_your_email": "Enter your email",
+  "enter_your_message": "Enter your message"
 }

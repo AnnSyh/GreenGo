@@ -49,7 +49,6 @@ export default function Menu(props) {
                   <ListItemIcon sx={{ color: "#fff" }}>
                     {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                   </ListItemIcon>
-                  {/* <ListItemText primary={item.pageName} /> */}
                   <ListItemText primary={t(item.pageName)} />
                 </ListItemButton>
               </ListItem>

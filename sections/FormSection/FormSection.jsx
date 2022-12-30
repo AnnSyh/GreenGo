@@ -113,7 +113,7 @@ const FormSection = ({}) => {
                     id="name"
                     fullWidth
                     name="name"
-                    placeholder={`Enter your name`}
+                    placeholder={t("enter_your_name")}
                     // error={formik.touched.name && Boolean(formik.errors.name)}
                     // helpertext={formik.touched.name && formik.errors.name}
                   />
@@ -122,7 +122,7 @@ const FormSection = ({}) => {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={4}>
-                  <Typography variant="colorGreen">email</Typography>
+                  <Typography variant="colorGreen">Email</Typography>
                   <TextField
                     className={style.textField}
                     value={formik.values.email}
@@ -130,7 +130,7 @@ const FormSection = ({}) => {
                     id="email"
                     fullWidth
                     name="email"
-                    placeholder={`Enter your email`}
+                    placeholder={t("enter_your_email")}
                     // error={formik.touched.email && Boolean(formik.errors.email)}
                     // helpertext={formik.touched.email && formik.errors.email}
                   />
@@ -160,7 +160,7 @@ const FormSection = ({}) => {
                   className={style.textArea}
                   value={formik.values.message}
                   onChange={formik.handleChange}
-                  placeholder="Text..."
+                  placeholder={t("enter_your_message")}
                   minRows={6}
                   id="message"
                   name="message"
