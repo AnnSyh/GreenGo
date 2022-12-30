@@ -76,7 +76,7 @@ export default function Home({ title = siteTitle }) {
         />
       </Box>
 
-      <Box sx={{ height: "calc(100vh - 64px)" }}>
+      <Box className="index-page" sx={{ height: "calc(100vh - 64px)" }}>
         <div id="top-page" />
         <FirstSection />
 

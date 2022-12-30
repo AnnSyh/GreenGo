@@ -15,7 +15,6 @@ export const CaruselSection = ({}) => {
       desc: "сложность доступа к станциям (большое количество приложений)",
       position: "Для владельцев электромобилей",
       photo: "./images/car.png",
-      // contact: "email",
     },
     {
       desc: "сложность поиска, бронирования станций и маршрутизации к ним",
@@ -77,7 +76,7 @@ export const CaruselSection = ({}) => {
         })}
       >
         <Box
-          sx={(theme) => ({
+          sx={() => ({
             width: "100%",
             maxWidth: "1150px",
             margin: "0 auto",
@@ -87,7 +86,7 @@ export const CaruselSection = ({}) => {
           })}
         >
           <Box
-            sx={(theme) => ({
+            sx={() => ({
               width: "100%",
               margin: "0 auto",
               display: "flex",
@@ -125,7 +124,6 @@ export const CaruselSection = ({}) => {
                 justifyContent="space-between"
                 display={{ xs: "none", lg: "block" }}
                 sx={() => ({
-                  // marginTop: "55px",
                   position: "relative",
                 })}
               >
@@ -152,7 +150,6 @@ export const CaruselSection = ({}) => {
                 justifyContent="space-between"
                 display={{ xs: "block", lg: "none" }}
                 sx={() => ({
-                  // marginTop: "55px",
                   position: "relative",
                 })}
               >

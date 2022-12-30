@@ -16,6 +16,7 @@ import * as Yup from "yup";
 import { useTranslation } from "next-i18next";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
+import style from "../../styles/FormSection.module.css";
 
 const FormSection = ({}) => {
   const { t } = useTranslation("common");
@@ -84,61 +85,29 @@ const FormSection = ({}) => {
         })}
       >
         <Box
+          className="container-box"
           id="form"
           sx={() => ({
-            width: "100%",
-            maxWidth: "1140px",
-            margin: "0 auto",
-            display: "flex",
-            flexFlow: "row wrap",
             alignItems: "flex-top",
-            position: "relative",
           })}
         >
           {checkForm && (
             <form onSubmit={formik.handleSubmit} style={styles.form}>
-              <Grid item md={12}>
-                <Typography
-                  variant="h1"
-                  sx={{ textAlign: "center" }}
-                  fontSize={{ xs: "35px", md: "52px" }}
-                >
-                  {t("subscription_form")}
-                </Typography>
-              </Grid>
-
-              <Grid
-                container
-                spacing={{
-                  xs: 0,
-                  lg: 2,
-                }}
+              <Typography
+                variant="h1"
+                sx={{ textAlign: "center" }}
+                fontSize={{ xs: "35px", md: "52px" }}
               >
-                <Grid
-                  item
-                  xs={12}
-                  md={4}
-                  sx={{
-                    p: 0,
-                    mb: {
-                      xs: "20px",
-                      lg: "50px",
-                    },
-                  }}
-                >
-                  <Typography sx={{ color: "#00b398" }}>
+                {t("subscription_form")}
+              </Typography>
+
+              <Grid container spacing={2} marginBottom="30px">
+                <Grid item xs={12} md={4}>
+                  <Typography variant="colorGreen">
                     {t("subscription_form_input_one")}
                   </Typography>
                   <TextField
-                    sx={{
-                      ".MuiOutlinedInput-input": {
-                        background: "#f5f5f5",
-                      },
-                      "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
-                        {
-                          borderColor: "#f5f5f5",
-                        },
-                    }}
+                    className={style.textField}
                     value={formik.values.name}
                     onChange={formik.handleChange}
                     id="name"
@@ -152,29 +121,10 @@ const FormSection = ({}) => {
                     {formik.touched.name && formik.errors.name}
                   </Typography>
                 </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  md={4}
-                  sx={{
-                    p: 0,
-                    mb: {
-                      xs: "20px",
-                      lg: "50px",
-                    },
-                  }}
-                >
-                  <Typography sx={{ color: "#00b398" }}>email</Typography>
+                <Grid item xs={12} md={4}>
+                  <Typography variant="colorGreen">email</Typography>
                   <TextField
-                    sx={{
-                      ".MuiOutlinedInput-input": {
-                        background: "#f5f5f5",
-                      },
-                      "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
-                        {
-                          borderColor: "#f5f5f5",
-                        },
-                    }}
+                    className={style.textField}
                     value={formik.values.email}
                     onChange={formik.handleChange}
                     id="email"
@@ -188,33 +138,16 @@ const FormSection = ({}) => {
                     {formik.touched.email && formik.errors.email}
                   </Typography>
                 </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  md={4}
-                  sx={{
-                    p: 0,
-                    mb: {
-                      xs: "20px",
-                      lg: "50px",
-                    },
-                  }}
-                >
-                  <Typography sx={{ color: "#00b398" }}>
-                    {/* Phone number */}
+                <Grid item xs={12} md={4}>
+                  <Typography variant="colorGreen">
                     {t("phone_number")}
                   </Typography>
                   <PhoneInput
+                    className={style.reactTelInput}
                     country={"ru"}
                     value={phoneNumber}
                     onChange={(e) => setPhoneNumber(e)}
                     name="phoneNumber"
-                    inputClass={
-                      errorPhoneNumber
-                        ? "containerInput errorBorder hover:shadow"
-                        : "containerInput hover:shadow"
-                    }
-                    dropdownClass="btnDropdown"
                   />
                   {errorPhoneNumber && (
                     <Typography sx={{ color: "red" }}>Required</Typography>
@@ -222,10 +155,11 @@ const FormSection = ({}) => {
                 </Grid>
               </Grid>
               <Grid item md={12}>
+                <label htmlFor="message">{t("message")}</label>
                 <TextArea
+                  className={style.textArea}
                   value={formik.values.message}
                   onChange={formik.handleChange}
-                  label={t("message")}
                   placeholder="Text..."
                   minRows={6}
                   id="message"

@@ -46,7 +46,7 @@ export default function Menu(props) {
             {menuItems.map((item, index) => (
               <ListItem key={index} disablePadding>
                 <ListItemButton component="a" href={item.link}>
-                  <ListItemIcon sx={{ color: "#A6B828" }}>
+                  <ListItemIcon sx={{ color: "#fff" }}>
                     {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                   </ListItemIcon>
                   {/* <ListItemText primary={item.pageName} /> */}
@@ -55,7 +55,7 @@ export default function Menu(props) {
               </ListItem>
             ))}
           </List>
-          <Divider />
+          {/* <Divider />
           <List>
             {["All mail", "Trash", "Spam"].map((text, index) => (
               <ListItem key={text} disablePadding>
@@ -67,7 +67,7 @@ export default function Menu(props) {
                 </ListItemButton>
               </ListItem>
             ))}
-          </List>
+          </List> */}
         </Box>
       </Drawer>
     </>

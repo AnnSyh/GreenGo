@@ -48,6 +48,9 @@ const theme = createTheme({
 // Create a theme elements.
 
 // Typography
+theme.typography.colorGreen = {
+  color: "#00b398",
+};
 theme.typography.h1 = {
   fontFamily: "Roadradio,Arial,sans-serif",
   fontSize: "52px",

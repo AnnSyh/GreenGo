@@ -40,14 +40,8 @@ const ContactsSection = ({}) => {
       })}
     >
       <Box
+        className="container-box"
         sx={() => ({
-          width: "100%",
-          maxWidth: "1140px",
-          margin: "0 auto",
-          display: "flex",
-          justifyContent: "center",
-          flexFlow: "row wrap",
-          position: "relative",
           paddingTop: "150px",
         })}
       >
@@ -73,12 +67,13 @@ const ContactsSection = ({}) => {
               item
               key={item.title}
               sx={(theme) => ({
+                borderRadius: theme.radius.default,
                 flexGrow: 0,
                 flexShrink: 0,
                 minWidth: "337px",
                 flexBasis: "calc(33.3333% - 42px)",
                 margin: "0 auto",
-                borderRadius: theme.radius.default,
+                marginBottom: "60px",
               })}
             >
               <Box
@@ -87,11 +82,15 @@ const ContactsSection = ({}) => {
                   flexFlow: "column nowrap",
                   backgroundColor: theme.palette.common.white,
                   borderRadius: theme.radius.default,
-                  position: "relative",
-                  paddingTop: "20px",
+
+                  // border: "1px solid red",
                 })}
               >
-                <Typography variant="subtitle1" component="div">
+                <Typography
+                  variant="subtitle1"
+                  component="div"
+                  fontSize={{ xs: "20px", md: "30px" }}
+                >
                   {t(item.title)}
                 </Typography>
 
