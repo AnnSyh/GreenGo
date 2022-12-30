@@ -11,24 +11,6 @@ import { useTranslation } from "next-i18next";
 const ContactsSection = ({}) => {
   const { t } = useTranslation("common");
 
-  // const items = [
-  //   {
-  //     title: `web_development`,
-  //     image: `url('/images/icons/linux.svg')`,
-  //     desc: `web_development_txt`,
-  //   },
-  //   {
-  //     title: `devops`,
-  //     image: `url('/images/icons/www.svg')`,
-  //     desc: `devops_txt`,
-  //   },
-  //   {
-  //     title: `design`,
-  //     image: `url('/images/icons/design.svg')`,
-  //     desc: `design_txt`,
-  //   },
-  // ];
-
   const contacts = [
     {
       title: `contacts_title`,
@@ -54,7 +36,6 @@ const ContactsSection = ({}) => {
       sx={(theme) => ({
         backgroundColor: theme.palette.common.white,
         width: "100%",
-        position: "relative",
       })}
     >
       <Box
@@ -66,6 +47,7 @@ const ContactsSection = ({}) => {
           justifyContent: "center",
           flexFlow: "row wrap",
           position: "relative",
+          paddingTop: "150px",
         })}
       >
         <Typography
@@ -82,6 +64,7 @@ const ContactsSection = ({}) => {
           sx={() => ({
             position: "relative",
             top: "30px",
+            minHeight: "calc(100vh - 160px - 150px)",
           })}
         >
           {contacts.map((item) => (
@@ -94,16 +77,13 @@ const ContactsSection = ({}) => {
                 minWidth: "337px",
                 flexBasis: "calc(33.3333% - 42px)",
                 margin: "0 auto",
-                // border: "1px solid #00b398",
                 borderRadius: theme.radius.default,
               })}
             >
               <Box
                 sx={(theme) => ({
-                  minHeight: "345px",
                   display: "flex",
                   flexFlow: "column nowrap",
-                  // alignItems: "center",
                   backgroundColor: theme.palette.common.white,
                   borderRadius: theme.radius.default,
                   position: "relative",
