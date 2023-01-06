@@ -5,7 +5,6 @@ import { useTranslation } from "next-i18next";
 
 export default function FirstSection({}) {
   const { t } = useTranslation("common");
-  // console.log("t=", t("welcome"));
 
   return (
     <section id="intro" className="section">
@@ -80,24 +79,14 @@ export default function FirstSection({}) {
                 })}
               ></Box>
 
-              <Typography
-                variant="body1"
-                sx={() => ({
-                  color: "white",
-                  marginTop: "18px",
-                  textAlign: {
-                    xs: "left",
-                    lg: "left",
-                  },
-                })}
-              >
-                {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod
-              <br />
-              tempor incididunt ut labore et dolore magna aliqua. */}
-                {t("lorem_ipsum")}
+              <Typography variant="body2">
+                {t("provides_stable_technical_solutions")}
               </Typography>
-              <Typography
+              <Typography variant="body2">
+                {t("provide_most_effective_service")}
+              </Typography>
+              <Typography variant="body2">{t("simplify_process")}</Typography>
+              {/* <Typography
                 variant="caption"
                 display="block"
                 sx={() => ({
@@ -116,10 +105,9 @@ export default function FirstSection({}) {
                   sx={{ textDecoration: "underline", color: "white" }}
                 >
                   {" "}
-                  {/* caption text{" "} */}
                   {t("caption_text")}
                 </Typography>
-              </Typography>
+              </Typography> */}
               <Box
                 sx={() => ({
                   width: "100%",

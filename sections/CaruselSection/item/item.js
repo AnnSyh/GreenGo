@@ -1,10 +1,34 @@
-import { Avatar, Box, Grid, Typography } from "@mui/material";
+import { useState, useStyles } from "react";
+import { Box, Grid, Typography, Paper, Avatar } from "@mui/material";
+import ModalWindow from "../../../components/modalWindow/slider";
+import { styled } from "@mui/material-next/styles";
 
-export const Item = ({ item }) => {
+const item = styled(Paper)(({ theme }) => ({
+  backgroundColor: "#007FFF",
+  ...theme.typography.body2,
+  borderRadius: "15px",
+  padding: theme.spacing(1),
+  textAlign: "center",
+  color: "white",
+  fontSize: "1rem",
+}));
+
+export const Item = ({ item, i }) => {
+  // console.log("item = ", item);
+
+  const [open, setOpen] = useState(false);
+  const handleClickOpen = () => {
+    // console.log("handleClickOpen setOpen = ", open);
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Grid
       item
-      key={item.name}
+      key={item.id}
       xs={12}
       lg={3}
       sx={(theme) => ({
@@ -16,24 +40,24 @@ export const Item = ({ item }) => {
       })}
     >
       <Box
+        onClick={handleClickOpen}
         sx={(theme) => ({
           display: "flex",
           flexFlow: "column nowrap",
           backgroundColor: theme.palette.common.white,
           alignItems: "center",
           position: "relative",
-          borderRadius: theme.radius.default,
-          // minHeight: "435px",
-          // maxHeight: "435px",
-          padding: {
-            xs: "30px 10px",
-            lg: "30px",
+          borderRadius: "20px",
+          paddingTop: "15px",
+          cursor: "pointer",
+          "&:hover": {
+            backgroundColor: theme.palette.grey.A100,
           },
         })}
       >
         <Avatar
           alt="Remy Sharp"
-          src={item.photo}
+          src={item.image}
           sx={(theme) => ({
             width: 180,
             height: 180,
@@ -66,6 +90,7 @@ export const Item = ({ item }) => {
           {item.position}
         </Typography>
       </Box>
+      <ModalWindow open={open} handleClose={handleClose} project={item} />
     </Grid>
   );
 };

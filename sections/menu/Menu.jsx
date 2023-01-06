@@ -13,6 +13,7 @@ import {
 import InboxIcon from "@mui/icons-material/Inbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { useTranslation } from "next-i18next";
+import { Avatar, Image } from "@mui/material";
 
 export default function Menu(props) {
   const { t } = useTranslation("common");
@@ -20,6 +21,7 @@ export default function Menu(props) {
     {
       pageName: `homepage`,
       link: "/",
+      iconsrc: "/images/icons/icon-electric-car-3.svg",
     },
     {
       pageName: `contacts`,
@@ -47,7 +49,21 @@ export default function Menu(props) {
               <ListItem key={index} disablePadding>
                 <ListItemButton component="a" href={item.link}>
                   <ListItemIcon sx={{ color: "#fff" }}>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                    {index % 2 === 0 ? (
+                      <Avatar
+                        alt={item.pageName}
+                        src={item.iconsrc}
+                        sx={() => ({
+                          fill: "#fff",
+                          width: 25,
+                          height: 25,
+                          borderRadius: 0,
+                        })}
+                      />
+                    ) : (
+                      // <MailIcon sx={{ width: 25, height: 25, fill: "red" }} />
+                      <MailIcon sx={{ width: 25, height: 25 }} />
+                    )}
                   </ListItemIcon>
                   <ListItemText primary={t(item.pageName)} />
                 </ListItemButton>

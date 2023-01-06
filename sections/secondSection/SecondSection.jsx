@@ -4,8 +4,8 @@ import * as React from "react";
 import { useTranslation } from "next-i18next";
 
 import imgUrl from "../../public/images/icons/icon-clock.svg";
-import MailIcon from "@mui/icons-material/Mail";
-import Avatar from "@mui/material";
+// import MailIcon from "@mui/icons-material/Mail";
+import { Avatar, Image } from "@mui/material";
 
 const SecondSection = ({}) => {
   const { t } = useTranslation("common");
@@ -13,17 +13,20 @@ const SecondSection = ({}) => {
   const items = [
     {
       title: `web_development`,
-      image: `url('../../public/images/icons/icon-clock.svg')`,
+      image: `url('/images/icons/icon-clock.svg')`,
+      iconsrc: "/images/icons/icon-electric-car-1.svg",
       desc: `web_development_txt`,
     },
     {
       title: `devops`,
       image: `url('/images/icons/www.svg')`,
+      iconsrc: "/images/icons/icon-electric-car-2.svg",
       desc: `devops_txt`,
     },
     {
       title: `design`,
       image: `url('/images/icons/design.svg')`,
+      iconsrc: "/images/icons/icon-electric-car-3.svg",
       desc: `design_txt`,
     },
   ];
@@ -68,14 +71,17 @@ const SecondSection = ({}) => {
                   >
                     {t(item.title)}
                   </Typography>
-                  {/* <Typography>
-                    <MailIcon color="#fff" sx={{ border: "1px solid red" }} />
-                    <Image src={imgUrl}></Image>
-                    <Avatar
-                      alt="Remy Sharp"
-                      src="../../public/images/icons/icon-clock.svg"
-                    />
-                  </Typography> */}
+
+                  <Avatar
+                    alt={item.title}
+                    src={item.iconsrc}
+                    sx={() => ({
+                      width: 180,
+                      height: 180,
+                      borderRadius: 0,
+                    })}
+                  />
+
                   <Typography
                     variant="body"
                     gutterBottom

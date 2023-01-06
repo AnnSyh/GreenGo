@@ -19,9 +19,7 @@ const label = { inputProps: { "aria-label": "Switch demo" } };
 function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
   const { t } = useTranslation("common");
   const { pathname } = useRouter(); //подсвечиваем акт ссылку
-
-  console.log("isOpen = ", isOpen);
-  console.log("sx = ", sx);
+  // console.log("sx = ", sx);
 
   return (
     <AppBar position="fixed" sx={sx}>

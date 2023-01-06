@@ -205,6 +205,8 @@ a {
   align-items: center;
   position: relative;
   padding-top: 20px;
+  justify-content: space-between;
+  height: 100%;
 }
 @media screen and (max-width: 480px) {
   .card-inner {
