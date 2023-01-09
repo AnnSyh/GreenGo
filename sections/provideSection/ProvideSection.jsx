@@ -78,17 +78,13 @@ const ProvideSection = ({}) => {
                       }}
                     ></Box>
                     <Box className="back">
-                      <CheckCircleOutlineIcon
-                        sx={() => ({
-                          width: 120,
-                          height: 120,
-                        })}
-                      />
+                      <CheckCircleOutlineIcon />
 
                       <Typography
                         variant="body"
                         gutterBottom
                         textAlign="center"
+                        fontSize={{ xs: "12px", md: "18px" }}
                         sx={() => ({
                           marginTop: "20px",
                           padding: "0 13px 30px",

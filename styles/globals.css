@@ -356,6 +356,21 @@ ul {
   /* background-color: #bdbdbd; */
   transform: rotateY(180deg);
 }
+.back svg {
+  width: 120px;
+  height: 120px;
+}
+@media screen and (max-width: 600px) {
+  .back {
+    flex-direction: column;
+  }
+
+  .back svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 .card:hover .front {
   transform: rotateY(180deg); /*Переворачиваем карточку*/
 }
