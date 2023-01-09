@@ -328,6 +328,9 @@ ul {
   perspective: 1000px; /*Добавляем глубину, чтобы при повороти карточки был эффект 3D*/
   border: 4px solid transparent !important;
 }
+.wrap .card:hover {
+  cursor: pointer;
+}
 .front,
 .back {
   position: absolute;
@@ -345,18 +348,22 @@ ul {
   transition: 1s all ease;
   backface-visibility: hidden; /*скрываем тыльную часть карточки, это нужно что бы не видеть тыльную часть после поворота на 180 градусов*/
   border-radius: 20px;
+
+  transform-style: preserve-3d;
+  transition: all 0.8s cubic-bezier(0.34, 1.45, 0.7, 1) 0s;
 }
 .front {
   background-color: #fff;
   border: 4px solid #00b398;
-  background-color: #00b398;
+  /* background-color: #00b398; */
+  background-color: rgb(0, 179, 152, 0.5);
 }
 .back {
   border: 4px solid #00b398;
   /* background-color: #bdbdbd; */
   transform: rotateY(180deg);
 }
-.back svg {
+.front svg {
   width: 90px;
   height: 90px;
 }
@@ -365,7 +372,7 @@ ul {
     flex-direction: column;
   }
 
-  .back svg {
+  .front svg {
     width: 50px;
     height: 50px;
   }
@@ -378,4 +385,14 @@ ul {
   transform: rotateY(
     360deg
   ); /*Т.к уже перевернута на 180, то при наведении переворачиваем на 360*/
+}
+
+.material-symbols-rounded {
+  color: #fff;
+  /* background-color: rgba(0, 179, 152, 0.5);
+  border-radius: 50%;
+  padding: 20px; */
+
+  position: absolute;
+  top: 20px;
 }

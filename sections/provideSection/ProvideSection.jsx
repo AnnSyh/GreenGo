@@ -40,6 +40,10 @@ const ProvideSection = ({}) => {
 
   return (
     <section id="provide-section" className="section">
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
+      />
       <Box
         sx={(theme) => ({
           backgroundColor: theme.palette.common.white,
@@ -68,23 +72,17 @@ const ProvideSection = ({}) => {
               >
                 <Box className="wrap">
                   <Box className="card">
-                    <Box
-                      className="front"
-                      sx={{
-                        backgroundImage: `${item.image}`,
-                        backgroundSize: "contain",
-                        backgroundRepeat: "no-repeat",
-                        backgroundPosition: "center",
-                      }}
-                    ></Box>
-                    <Box className="back">
+                    <Box className="front">
                       <CheckCircleOutlineIcon />
+                      <span className="material-symbols-rounded">
+                        touch_app
+                      </span>
 
                       <Typography
                         variant="body"
                         gutterBottom
                         textAlign="center"
-                        fontSize={{ xs: "12px", md: "18px" }}
+                        fontSize={{ xs: "12px", md: "13px" }}
                         sx={() => ({
                           marginTop: "20px",
                           padding: "0 13px 30px",
@@ -94,6 +92,17 @@ const ProvideSection = ({}) => {
                         {t(item.desc)}
                       </Typography>
                     </Box>
+
+                    <Box
+                      className="back"
+                      sx={{
+                        backgroundSize: "cover",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        backgroundColor: "rgb(0, 179, 152, 0.5)",
+                        backgroundImage: `${item.image}`,
+                      }}
+                    ></Box>
                   </Box>
                 </Box>
               </Grid>
