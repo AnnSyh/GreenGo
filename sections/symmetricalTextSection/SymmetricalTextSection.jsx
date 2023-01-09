@@ -24,7 +24,15 @@ const SymmetricalTextSection = ({}) => {
             alignItems: "flex-top",
           })}
         >
-          <Grid container>
+          <Grid
+            container
+            sx={{
+              flexDirection: {
+                xs: "column-reverse",
+                md: "column",
+              },
+            }}
+          >
             <Grid item md={7}>
               <Box
                 sx={() => ({

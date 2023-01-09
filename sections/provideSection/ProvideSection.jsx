@@ -13,29 +13,28 @@ const ProvideSection = ({}) => {
 
   const items = [
     {
-      image: `url('/images/icons/icon-clock.svg')`,
-      iconsrc: "/images/icons/icon-electric-car-1.svg",
+      image: `url('/images/provide/img-1.jpg')`,
       desc: `Определение занятости парковочного места у зарядной станции`,
     },
     {
-      image: `url('/images/icons/www.svg')`,
-      iconsrc: "/images/icons/icon-electric-car-2.svg",
+      image: `url('/images/provide/img-2.jpg')`,
       desc: `Определение правомерности занятости парковочного места по типу размещенного ТС`,
     },
     {
-      image: `url('/images/icons/design.svg')`,
-      iconsrc: "/images/icons/icon-electric-car-3.svg",
+      image: `url('/images/provide/img-3.jpg')`,
       desc: `Уведомление уполномоченного органа о правонарушении с отправкой фотоданных (опционально)`,
     },
     {
-      image: `url('/images/icons/www.svg')`,
-      iconsrc: "/images/icons/icon-electric-car-2.svg",
+      image: `url('/images/provide/img-4.jpg')`,
       desc: `Интеллектуальное планирование маршрута, стоимости и бронирования станции исходя из дорожной обстановки из мобильного приложения`,
     },
     {
-      image: `url('/images/icons/design.svg')`,
-      iconsrc: "/images/icons/icon-electric-car-3.svg",
+      image: `url('/images/provide/img-5.jpg')`,
       desc: `Автоматическая детекция пользователя и старта сессии при подключении к ЭЗС - «подключился и ушел» (через считывание госномера или персональное мобильный гаджет)`,
+    },
+    {
+      image: `url('/images/provide/img-6.jpg')`,
+      desc: `Автоматическое уведомление при освобождении зарядной станции для планирования старта сессии`,
     },
   ];
 
@@ -55,43 +54,51 @@ const ProvideSection = ({}) => {
           >
             Предоставляем
           </Typography>
+
           <Grid container>
             {items.map((item, i) => (
               <Grid
                 item
-                className="card"
+                className="card card-provide"
                 key={i}
                 sx={(theme) => ({
                   borderRadius: theme.radius.default,
+                  // borderColor: "transporent",
                 })}
               >
-                <Box
-                  className="card-inner"
-                  sx={(theme) => ({
-                    backgroundColor: theme.palette.common.white,
-                    borderRadius: theme.radius.default,
-                    minHeight: "255px !important",
-                  })}
-                >
-                  <CheckCircleOutlineIcon
-                    sx={() => ({
-                      width: 120,
-                      height: 120,
-                    })}
-                  />
+                <Box className="wrap">
+                  <Box className="card">
+                    <Box
+                      className="front"
+                      sx={{
+                        backgroundImage: `${item.image}`,
+                        backgroundSize: "contain",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                      }}
+                    ></Box>
+                    <Box className="back">
+                      <CheckCircleOutlineIcon
+                        sx={() => ({
+                          width: 120,
+                          height: 120,
+                        })}
+                      />
 
-                  <Typography
-                    variant="body"
-                    gutterBottom
-                    textAlign="center"
-                    sx={() => ({
-                      marginTop: "20px",
-                      padding: "0 30px 30px",
-                      color: "black",
-                    })}
-                  >
-                    {t(item.desc)}
-                  </Typography>
+                      <Typography
+                        variant="body"
+                        gutterBottom
+                        textAlign="center"
+                        sx={() => ({
+                          marginTop: "20px",
+                          padding: "0 13px 30px",
+                          color: "black",
+                        })}
+                      >
+                        {t(item.desc)}
+                      </Typography>
+                    </Box>
+                  </Box>
                 </Box>
               </Grid>
             ))}
