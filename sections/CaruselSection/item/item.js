@@ -84,7 +84,7 @@ export const Item = ({ item, i }) => {
           variant="subtitle2"
           sx={{
             fontSize: "16px",
-            color: "#454545",
+            color: "#000",
           }}
         >
           {item.position}

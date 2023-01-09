@@ -57,36 +57,36 @@ theme.typography.colorGreen = {
 
 theme.typography.h1 = {
   fontSize: "52px",
-  color: "#454545",
+  color: "#000",
   fontWeight: 600,
 };
 theme.typography.h2 = {
   fontSize: "52px",
-  color: "#454545",
+  color: "#000",
   fontWeight: 400,
 };
 theme.typography.h3 = {
   fontSize: "52px",
-  color: "#454545",
+  color: "#000",
   fontWeight: 200,
 };
 theme.typography.subtitle2 = {
   fontSize: "42px",
   textAlign: "center",
   lineHeight: 1,
-  color: "#454545",
+  color: "#000",
   fontWeight: 200,
   paddingBottom: "20px",
 };
 theme.typography.subtitle1 = {
   fontSize: "30px",
   lineHeight: 1,
-  color: "#454545",
+  color: "#000",
   fontWeight: 200,
   paddingBottom: "30px",
 };
 theme.typography.subtitle1_text = {
-  fontSize: "16px",
+  fontSize: "18px",
   lineHeight: 2.5,
   color: "black",
   fontWeight: 200,
@@ -95,19 +95,19 @@ theme.typography.subtitle1_text = {
 };
 
 theme.typography.body1 = {
-  fontSize: "16px",
+  fontSize: "18px",
   fontWeight: 400,
 };
 theme.typography.body2 = {
-  fontSize: "16px",
+  fontSize: "18px",
   color: "#fff",
   fontWeight: 400,
   marginTop: "40px",
 };
 
 theme.typography.p = {
-  fontSize: "16px",
-  color: "#454545",
+  fontSize: "18px",
+  color: "#000",
   fontWeight: 400,
 };
 

@@ -26,7 +26,7 @@ export default function FirstSection({}) {
             <source src={"../../images/car-6mb.mp4"} type="video/mp4" />
           </video>
           <Box
-            className="container-box"
+            className="container-box fadeIn"
             sx={{
               height: "100%",
             }}
@@ -44,13 +44,12 @@ export default function FirstSection({}) {
             >
               {/* <h1> {t("welcome")} </h1> */}
               <Typography
-                variant="subtitleCompany"
+                variant="body2"
                 component="div"
                 textTransform="uppercase"
                 sx={() => ({
                   color: "white",
                   marginTop: {
-                    xs: "none",
                     lg: "46px",
                   },
                   textAlign: "left",
@@ -106,7 +105,7 @@ export default function FirstSection({}) {
                 sx={{
                   marginTop: {
                     xs: "15px",
-                    sm: "40px",
+                    sm: "30px",
                   },
                 }}
               >
@@ -128,12 +127,12 @@ export default function FirstSection({}) {
                   <Button
                     className="btn-contacts"
                     variant="contained"
-                    sx={{
-                      display: {
-                        xs: "none",
-                        sm: "block",
-                      },
-                    }}
+                    // sx={{
+                    //   display: {
+                    //     xs: "none",
+                    //     sm: "block",
+                    //   },
+                    // }}
                   >
                     {t("contacts")}
                   </Button>

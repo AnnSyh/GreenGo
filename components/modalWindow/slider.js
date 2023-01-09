@@ -64,12 +64,11 @@ export default function ModalWindow({ open, handleClose, project }) {
           margin: "auto",
         }}
         onClose={handleClose}
-        aria-labelledby="customized-dialog-title"
         open={open}
       >
         <BootstrapDialogTitle
-          id="customized-dialog-title"
           onClose={handleClose}
+          sx={{ textAlign: "center" }}
         >
           {project.position}
         </BootstrapDialogTitle>

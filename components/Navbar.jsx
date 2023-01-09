@@ -9,6 +9,7 @@ import { Box } from "@mui/system";
 import Menu from "../sections/menu/Menu";
 import { FormControlSelect } from "../sections/FormSection/FormControlSelect";
 import { useTranslation } from "next-i18next";
+import { NoEncryption } from "@mui/icons-material";
 
 const nav = [
   { id: 1, title: `homepage`, path: "/" },
@@ -67,13 +68,13 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
         <Box
           className="navbar-ul"
           sx={{
-            display: "flex",
+            display: {
+              xs: "none",
+              sm: "flex",
+            },
             justifyContent: "space-between",
             flexFlow: "row nowrap",
-            minWidth: {
-              xs: "135px",
-              sm: "170px",
-            },
+            minWidth: "170px",
             marginLeft: "10px",
             color: "#fff",
           }}
