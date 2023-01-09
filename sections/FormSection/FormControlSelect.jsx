@@ -41,16 +41,49 @@ const FormControlSelect = ({ languageToggle, sx }) => {
             setLocale(e.target.value);
             handleSelectLang(e.target.value);
           }}
-          sx={{ mr: 1, textTransform: 'uppercase', color: '#fff', width: '110px' }}
+          sx={{
+            textTransform: "uppercase",
+            color: "#fff",
+            width: {
+              xs: "auto",
+              sm: "110px",
+            },
+          }}
           renderValue={(selected) => selected}
         >
-          <MenuItem sx={{ textTransform: 'uppercase', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} value="ru">ru
-            <Box sx={{ mt: '3px' }}>
+          <MenuItem
+            sx={{
+              textTransform: "uppercase",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: {
+                xs: "5px",
+                sm: "16px",
+              },
+            }}
+            value="ru"
+          >
+            ru
+            <Box sx={{ mt: "3px", ml: "3px" }}>
               <img src="images/rus.png" />
             </Box>
           </MenuItem>
-          <MenuItem sx={{ textTransform: 'uppercase', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} value={"en"}>en
-            <Box sx={{ mt: '3px' }}>
+          <MenuItem
+            sx={{
+              textTransform: "uppercase",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: {
+                xs: "5px",
+                sm: "16px",
+              },
+            }}
+            value={"en"}
+          >
+            en
+            <Box sx={{ mt: "3px", ml: "3px" }}>
               <img src="images/en.png" />
             </Box>
           </MenuItem>

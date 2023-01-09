@@ -169,6 +169,12 @@ a {
     bottom: 12%;
   }
 }
+@media screen and (max-width: 450px) {
+  .btn-contacts {
+    bottom: 0;
+    margin: 15px 0;
+  }
+}
 
 .index-page .section > div {
   padding-bottom: 60px;
@@ -212,4 +218,24 @@ a {
   .card-inner {
     min-height: auto;
   }
+}
+
+ul {
+  margin: 20px;
+}
+
+.quote {
+  position: relative;
+  padding-left: 15px;
+  padding-top: 18px;
+  margin: 0;
+}
+.quote::after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: -21px;
+  height: calc(100% + 20px);
+  width: 2px;
+  background-color: #454545;
 }

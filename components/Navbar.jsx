@@ -39,7 +39,13 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
           edge="start"
           color="inherit"
           aria-label="menu"
-          sx={{ mr: 2, color: "#fff" }}
+          sx={{
+            mr: {
+              xs: 0,
+              md: 2,
+            },
+            color: "#fff",
+          }}
           onClick={onMenuIconClick}
         >
           <MenuIcon />
@@ -64,7 +70,11 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
             display: "flex",
             justifyContent: "space-between",
             flexFlow: "row nowrap",
-            minWidth: "170px",
+            minWidth: {
+              xs: "135px",
+              sm: "170px",
+            },
+            marginLeft: "10px",
             color: "#fff",
           }}
         >
