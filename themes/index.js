@@ -54,6 +54,7 @@ const theme = createTheme({
 theme.typography.colorGreen = {
   color: "#00b398",
 };
+
 theme.typography.h1 = {
   fontSize: "52px",
   color: "#454545",

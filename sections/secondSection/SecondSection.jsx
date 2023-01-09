@@ -76,8 +76,8 @@ const SecondSection = ({}) => {
                     alt={item.title}
                     src={item.iconsrc}
                     sx={() => ({
-                      width: 180,
-                      height: 180,
+                      width: 160,
+                      height: 160,
                       borderRadius: 0,
                     })}
                   />
