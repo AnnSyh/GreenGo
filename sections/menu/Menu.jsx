@@ -10,13 +10,17 @@ import {
   makeStyles,
   useTheme,
 } from "@mui/material";
+import { useRouter } from "next/router";
 import InboxIcon from "@mui/icons-material/Inbox";
 import MailIcon from "@mui/icons-material/Mail";
+import HomeIcon from "@mui/icons-material/Home";
 import { useTranslation } from "next-i18next";
 import { Avatar, Image } from "@mui/material";
+import styles from "../../styles/menu.module.css";
 
 export default function Menu(props) {
   const { t } = useTranslation("common");
+  const { pathname } = useRouter(); //подсвечиваем акт ссылку
   const menuItems = [
     {
       pageName: `homepage`,
@@ -45,24 +49,36 @@ export default function Menu(props) {
           onKeyDown={props.close}
         >
           <List>
-            {menuItems.map((item, index) => (
+            {menuItems.map((item, index, link) => (
               <ListItem key={index} disablePadding>
-                <ListItemButton component="a" href={item.link}>
-                  <ListItemIcon sx={{ color: "#fff" }}>
+                <ListItemButton
+                  component="a"
+                  href={item.link}
+                  className={
+                    pathname === item.link ? styles.active : styles.link
+                  }
+                >
+                  <ListItemIcon
+                    sx={{ color: "#fff" }}
+                    className={
+                      pathname === item.link ? styles.active : styles.link
+                    }
+                  >
                     {index % 2 === 0 ? (
-                      <Avatar
-                        alt={item.pageName}
-                        src={item.iconsrc}
-                        sx={() => ({
-                          fill: "#fff",
-                          width: 25,
-                          height: 25,
-                          borderRadius: 0,
-                        })}
-                      />
+                      <HomeIcon />
                     ) : (
-                      // <MailIcon sx={{ width: 25, height: 25, fill: "red" }} />
-                      <MailIcon sx={{ width: 25, height: 25 }} />
+                      // <Avatar
+                      //   alt={item.pageName}
+                      //   src={item.iconsrc}
+                      //   sx={() => ({
+                      //     fill: "#fff",
+                      //     color: "#fff",
+                      //     width: 25,
+                      //     height: 25,
+                      //     borderRadius: 0,
+                      //   })}
+                      // />
+                      <MailIcon />
                     )}
                   </ListItemIcon>
                   <ListItemText primary={t(item.pageName)} />
@@ -70,19 +86,6 @@ export default function Menu(props) {
               </ListItem>
             ))}
           </List>
-          {/* <Divider />
-          <List>
-            {["All mail", "Trash", "Spam"].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List> */}
         </Box>
       </Drawer>
     </>
