@@ -60,7 +60,7 @@ const ProvideSection = ({}) => {
               <Grid
                 item
                 className="card"
-                key={item.title}
+                key={i}
                 sx={(theme) => ({
                   borderRadius: theme.radius.default,
                 })}

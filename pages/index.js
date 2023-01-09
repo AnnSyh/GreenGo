@@ -7,7 +7,7 @@ import { SecondSection } from "../sections/secondSection/SecondSection";
 import { ProvideSection } from "../sections/provideSection/ProvideSection";
 
 import { TextSection } from "../sections/textSection/TextSection";
-import { SymmetricalTextSection } from "../sections/symmetricalTextSection/symmetricalTextSection";
+import { SymmetricalTextSection } from "../sections/symmetricalTextSection/SymmetricalTextSection";
 
 import { FormSection } from "../sections/FormSection/FormSection";
 import { CaruselSection } from "../sections/CaruselSection/caruselSection";
