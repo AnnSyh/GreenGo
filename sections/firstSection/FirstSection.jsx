@@ -79,35 +79,40 @@ export default function FirstSection({}) {
                 })}
               ></Box>
 
-              <Typography variant="body2">
+              <Typography
+                variant="body2"
+                sx={{
+                  marginTop: {
+                    xs: "15px",
+                    sm: "40px",
+                  },
+                }}
+              >
                 {t("provides_stable_technical_solutions")}
               </Typography>
-              <Typography variant="body2">
+              <Typography
+                variant="body2"
+                sx={{
+                  marginTop: {
+                    xs: "15px",
+                    sm: "40px",
+                  },
+                }}
+              >
                 {t("provide_most_effective_service")}
               </Typography>
-              <Typography variant="body2">{t("simplify_process")}</Typography>
-              {/* <Typography
-                variant="caption"
-                display="block"
-                sx={() => ({
-                  color: "white",
-                  margin: "18px 0 0",
-                  textAlign: {
-                    xs: "left",
-                    lg: "left",
+              <Typography
+                variant="body2"
+                sx={{
+                  marginTop: {
+                    xs: "15px",
+                    sm: "40px",
                   },
-                })}
+                }}
               >
-                {t("caption_text")}
-                <Typography
-                  variant="caption"
-                  component="span"
-                  sx={{ textDecoration: "underline", color: "white" }}
-                >
-                  {" "}
-                  {t("caption_text")}
-                </Typography>
-              </Typography> */}
+                {t("simplify_process")}
+              </Typography>
+
               <Box
                 sx={() => ({
                   width: "100%",
