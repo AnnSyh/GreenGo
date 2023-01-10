@@ -89,6 +89,11 @@ body {
   height: 100%;
 }
 
+.scroll-container {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
 .fill-current {
   fill: currentColor;
 }
