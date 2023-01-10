@@ -48,6 +48,7 @@ const ProvideSection = ({}) => {
         sx={(theme) => ({
           backgroundColor: theme.palette.common.white,
           position: "relative",
+          paddingTop: "100px",
         })}
       >
         <Box className="container-box">

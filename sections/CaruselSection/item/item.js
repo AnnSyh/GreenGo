@@ -37,6 +37,8 @@ export const Item = ({ item, i }) => {
         margin: "0 auto",
         minWidth: "300px",
         padding: "20px",
+        display: "flex",
+        height: "100%",
       })}
     >
       <Box

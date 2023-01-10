@@ -80,11 +80,12 @@ export const CaruselSection = ({}) => {
   return (
     <section id="carusel-section" className="section">
       <Box
-        sx={(theme) => ({
-          backgroundColor: theme.palette.common.white,
+        sx={() => ({
+          backgroundColor: "f5f5f5",
           width: "100%",
           position: "relative",
           display: "flex",
+          paddingTop: "100px",
           paddingBottom: "100px",
         })}
       >

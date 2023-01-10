@@ -14,6 +14,7 @@ import { NoEncryption } from "@mui/icons-material";
 const nav = [
   { id: 1, title: `homepage`, path: "/" },
   { id: 2, title: `contacts`, path: "/contacts" },
+  { id: 3, title: `questions`, path: "/questions" },
 ];
 const label = { inputProps: { "aria-label": "Switch demo" } };
 

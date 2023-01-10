@@ -7,13 +7,12 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  makeStyles,
-  useTheme,
 } from "@mui/material";
 import { useRouter } from "next/router";
 import InboxIcon from "@mui/icons-material/Inbox";
 import MailIcon from "@mui/icons-material/Mail";
 import HomeIcon from "@mui/icons-material/Home";
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import { useTranslation } from "next-i18next";
 import { Avatar, Image } from "@mui/material";
 import styles from "../../styles/menu.module.css";
@@ -25,11 +24,14 @@ export default function Menu(props) {
     {
       pageName: `homepage`,
       link: "/",
-      iconsrc: "/images/icons/icon-electric-car-3.svg",
     },
     {
       pageName: `contacts`,
       link: "/contacts",
+    },
+    {
+      pageName: `questions`,
+      link: "/questions",
     },
   ];
   const label = { inputProps: { "aria-label": "Switch demo" } };
@@ -64,21 +66,14 @@ export default function Menu(props) {
                       pathname === item.link ? styles.active : styles.link
                     }
                   >
-                    {index % 2 === 0 ? (
+                    {index === 0 ? (
                       <HomeIcon />
+                    ) : index % 2 === 0 ? (
+                      <HelpOutlineIcon />
                     ) : (
-                      // <Avatar
-                      //   alt={item.pageName}
-                      //   src={item.iconsrc}
-                      //   sx={() => ({
-                      //     fill: "#fff",
-                      //     color: "#fff",
-                      //     width: 25,
-                      //     height: 25,
-                      //     borderRadius: 0,
-                      //   })}
-                      // />
-                      <MailIcon />
+                      <>
+                        <MailIcon />
+                      </>
                     )}
                   </ListItemIcon>
                   <ListItemText primary={t(item.pageName)} />

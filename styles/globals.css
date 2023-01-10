@@ -413,3 +413,8 @@ ul {
   position: absolute;
   top: 20px;
 }
+
+#carusel-section {
+  background-color: #f5f5f5;
+  position: relative;
+}

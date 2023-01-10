@@ -45,5 +45,6 @@
   "stability_charging_stations": "stability of the charging stations",
   "monitoring_stability": "stable monitoring and control of charging stations",
   "gaining_popularity": "gaining popularity of their charging stations",
-  "no_extra_income": "no additional income from charging stations"
+  "no_extra_income": "no additional income from charging stations",
+  "questions": "Questions"
 }
