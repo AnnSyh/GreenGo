@@ -33,12 +33,12 @@ const SymmetricalTextSection = ({}) => {
               },
             }}
           >
-            <Grid item md={7}>
+            <Grid item md={6}>
               <Box
                 sx={() => ({
                   margin: {
                     xs: "15px 0px 15px 0px",
-                    sm: "30px 30px 30px 40px",
+                    sm: "30px 30px 30px 0px",
                   },
                   color: "#000",
                 })}
@@ -76,7 +76,7 @@ const SymmetricalTextSection = ({}) => {
                 </blockquote>
               </Box>
             </Grid>
-            <Grid item md={5}>
+            <Grid item md={6}>
               <div className="text-5xl font-extrabold">
                 <Typography
                   variant="h1"

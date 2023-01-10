@@ -49,31 +49,31 @@ export const CaruselSection = ({}) => {
       id: 5,
       desc: `${t("stability_charging_stations")}`,
       position: `${t("for_charging_stations_owners")}`,
-      image: "",
+      image: "./images/car-6.png",
     },
     {
       id: 6,
       desc: `${t("monitoring_stability")}`,
       position: `${t("for_charging_stations_owners")}`,
-      image: "",
+      image: "./images/car-7.png",
     },
     {
       id: 7,
       desc: `${t("gaining_popularity")}`,
       position: `${t("for_charging_stations_owners")}`,
-      image: "",
+      image: "./images/car-8.png",
     },
     {
       id: 8,
       desc: `${t("no_extra_income")}`,
       position: `${t("for_charging_stations_owners")}`,
-      image: "",
+      image: "./images/car-9.png",
     },
     {
       id: 9,
       desc: `${t("parking_spaces_for_charging_electric_vehicles")}`,
       position: `${t("for_charging_stations_owners")}`,
-      image: "",
+      image: "./images/provide/img-2.jpg",
     },
   ];
 
