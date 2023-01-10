@@ -189,7 +189,19 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   position: relative;
+  /* border: 1px solid green; */
 }
+
+#products-section .container-box-wrapper {
+  /* border: 1px solid violet; */
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* #products-section .container-box {
+  border: 1px solid red;
+  background-color: red;
+} */
 
 .card {
   border: 4px solid #00b398;

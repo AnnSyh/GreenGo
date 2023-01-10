@@ -40,13 +40,17 @@ const TextSection = ({}) => {
               <Box
                 sx={() => ({
                   margin: {
-                    xs: "15px 0px 15px 0px",
-                    sm: "30px 30px 30px 0px",
+                    xs: "0px 0px 15px 0px",
+                    sm: "0px 30px 30px 0px",
                   },
                   color: "#000",
                 })}
               >
-                <Typography variant="body" className={style.p}>
+                <Typography
+                  variant="body"
+                  className={style.p}
+                  sx={{ marginTop: "0px !important" }}
+                >
                   В Российской Федерации по состоянию 2022 год, рынок по
                   созданию инфраструктуры ЭЗС можно разделить на 3 основных
                   сегмента:

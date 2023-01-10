@@ -39,65 +39,70 @@ const SecondSection = ({}) => {
           position: "relative",
         })}
       >
-        <Box className="container-box">
-          <Grid
-            container
-            sx={() => ({
-              justifyContent: "space-between",
-              position: "relative",
-              top: "-30px",
-            })}
-          >
-            {items.map((item) => (
-              <Grid
-                item
-                className="card"
-                key={item.title}
-                sx={(theme) => ({
-                  borderRadius: theme.radius.default,
-                })}
-              >
-                <Box
-                  className="card-inner"
+        <Box className="container-box-wrapper">
+          <Box className="container-box">
+            <Grid
+              container
+              sx={() => ({
+                justifyContent: "space-between",
+                position: "relative",
+                top: "-30px",
+                width: "calc(100% + 56px)",
+                marginLeft: "-23px",
+                marginRight: "-23px",
+              })}
+            >
+              {items.map((item) => (
+                <Grid
+                  item
+                  className="card"
+                  key={item.title}
                   sx={(theme) => ({
-                    backgroundColor: theme.palette.common.white,
                     borderRadius: theme.radius.default,
                   })}
                 >
-                  <Typography
-                    variant="subtitle2"
-                    component="h2"
-                    fontSize={{ xs: "25px", md: "42px" }}
-                  >
-                    {t(item.title)}
-                  </Typography>
-
-                  <Avatar
-                    alt={item.title}
-                    src={item.iconsrc}
-                    sx={() => ({
-                      width: 160,
-                      height: 160,
-                      borderRadius: 0,
-                    })}
-                  />
-
-                  <Typography
-                    variant="body"
-                    gutterBottom
-                    textAlign="center"
-                    sx={() => ({
-                      marginTop: "20px",
-                      padding: "0 30px 30px",
-                      color: "black",
+                  <Box
+                    className="card-inner"
+                    sx={(theme) => ({
+                      backgroundColor: theme.palette.common.white,
+                      borderRadius: theme.radius.default,
                     })}
                   >
-                    {t(item.desc)}
-                  </Typography>
-                </Box>
-              </Grid>
-            ))}
-          </Grid>
+                    <Typography
+                      variant="subtitle2"
+                      component="h2"
+                      fontSize={{ xs: "25px", md: "42px" }}
+                    >
+                      {t(item.title)}
+                    </Typography>
+
+                    <Avatar
+                      alt={item.title}
+                      src={item.iconsrc}
+                      sx={() => ({
+                        width: 160,
+                        height: 160,
+                        borderRadius: 0,
+                      })}
+                    />
+
+                    <Typography
+                      variant="body"
+                      gutterBottom
+                      textAlign="center"
+                      sx={() => ({
+                        marginTop: "20px",
+                        padding: "0 30px 30px",
+                        color: "black",
+                      })}
+                    >
+                      {t(item.desc)}
+                    </Typography>
+                  </Box>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
         </Box>
       </Box>
     </section>

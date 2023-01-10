@@ -37,13 +37,17 @@ const SymmetricalTextSection = ({}) => {
               <Box
                 sx={() => ({
                   margin: {
-                    xs: "15px 0px 15px 0px",
-                    sm: "30px 30px 30px 0px",
+                    xs: "0px 0px 15px 0px",
+                    sm: "0px 30px 30px 0px",
                   },
                   color: "#000",
                 })}
               >
-                <Typography variant="body" className={style.p}>
+                <Typography
+                  variant="body"
+                  className={style.p}
+                  sx={{ marginTop: "0px !important" }}
+                >
                   Качественных полнофункциональных развитых сервисов по работе с
                   электрозаправочными станциями почти нет
                 </Typography>
