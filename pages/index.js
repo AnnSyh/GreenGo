@@ -4,7 +4,11 @@ import Navbar from "../components/Navbar";
 
 import FirstSection from "../sections/firstSection/FirstSection";
 import { SecondSection } from "../sections/secondSection/SecondSection";
-import { ThirdSection } from "../sections/thirdSection/ThirdSection";
+import { ProvideSection } from "../sections/provideSection/ProvideSection";
+
+import { TextSection } from "../sections/textSection/TextSection";
+import { SymmetricalTextSection } from "../sections/symmetricalTextSection/SymmetricalTextSection";
+
 import { FormSection } from "../sections/FormSection/FormSection";
 import { CaruselSection } from "../sections/CaruselSection/caruselSection";
 import { Footer } from "../footer/Footer";
@@ -82,9 +86,13 @@ export default function Home({ title = siteTitle }) {
 
         <SecondSection />
 
-        <ThirdSection />
+        <TextSection />
+
+        <SymmetricalTextSection />
 
         <CaruselSection />
+
+        <ProvideSection />
 
         <FormSection />
 

@@ -1,7 +1,12 @@
 {
   "welcome": "welcome",
-  "software_development": "Software development",
+  "software_development": "Your charging station operator",
   "lorem_ipsum": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+
+  "provides_stable_technical_solutions": "Provides stable technical solutions (hardware and software) for various customers",
+  "provide_most_effective_service": "To provide the most effective support service to both station owners and electric motorists",
+  "simplify_process": "Simplify the process of getting an electric car charging service as much as possible",
+
   "caption_text": "caption text",
   "contacts": "Contacts",
   "web_development": "Web development",
@@ -12,7 +17,7 @@
   "devops_txt": "The combination of cultural philosophies, practices, and tools that increases an organization's ability to deliver applications and services at high velocity.",
   "products": "Products",
   "products_txt": "Products text",
-  "subscription_form": "Subscription form",
+  "subscription_form": "Feedback form",
   "subscription_form_input_one": "Name",
   "homepage": "Home",
   "message": "Message",
@@ -27,5 +32,19 @@
   "phone_number": "Phone number",
   "enter_your_name": "Enter your name",
   "enter_your_email": "Enter your email",
-  "enter_your_message": "Enter your message"
+  "enter_your_message": "Enter your message",
+  "why_greengo": "Why GreenGo",
+  "we_solve_problems": "We solve problems",
+  "for_electric_car_owners": "For electric car owners",
+  "for_charging_stations_owners": "For owners of charging stations",
+  "difficulty_accessing_stations": "Difficulty accessing stations (large number of applications)",
+  "complexity_of_searching": "Complexity of searching, booking stations and routing to them",
+  "inability_communicate_with_other_owners": "Inability to communicate with other owners inside the service",
+  "automated_payment": "impossibility of automated payment for services (connected and left)",
+  "parking_spaces_for_charging_electric_vehicles": "improper placement of vehicles in parking spaces for charging electric vehicles",
+  "stability_charging_stations": "stability of the charging stations",
+  "monitoring_stability": "stable monitoring and control of charging stations",
+  "gaining_popularity": "gaining popularity of their charging stations",
+  "no_extra_income": "no additional income from charging stations",
+  "questions": "Questions"
 }

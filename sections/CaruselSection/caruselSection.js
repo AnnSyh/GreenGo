@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Item } from "./item/item";
 import { Avatar, Box, Grid, Typography } from "@mui/material";
 import SwiperCore, { Virtual, Navigation, Pagination } from "swiper";
@@ -5,73 +6,86 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { useTranslation } from "next-i18next";
 
 SwiperCore.use([Virtual, Navigation, Pagination]);
 
 export const CaruselSection = ({}) => {
+  const { t } = useTranslation("common");
+  // console.log("t=", t("welcome"));
   const items = [
     {
-      // name: "Для владельцев электромобилей",
-      desc: "сложность доступа к станциям (большое количество приложений)",
-      position: "Для владельцев электромобилей",
-      photo: "./images/car.png",
+      id: 0,
+      desc: `${t("difficulty_accessing_stations")}`,
+      position: `${t("for_electric_car_owners")}`,
+      image: "./images/car.png",
     },
     {
-      desc: "сложность поиска, бронирования станций и маршрутизации к ним",
-      position: "Для владельцев электромобилей",
-      photo: "./images/car-2.png",
+      id: 1,
+      desc: `${t("complexity_of_searching")}`,
+      position: `${t("for_electric_car_owners")}`,
+      image: "./images/car-2.png",
     },
     {
-      desc: "отсутствие возможно общаться в другими владельцами внутри сервиса",
-      position: "Для владельцев электромобилей",
-      photo: "./images/car-3.png",
+      id: 2,
+      desc: `${t("inability_communicate_with_other_owners")}`,
+      position: `${t("for_electric_car_owners")}`,
+      image: "./images/car-3.png",
     },
     {
-      desc: "невозможность автоматизированной оплаты услуг (подключил и ушел)",
-      position: "Для владельцев электромобилей",
-      photo: "./images/car-5.png",
+      id: 3,
+      desc: `${t("automated_payment")}`,
+      position: `${t("for_electric_car_owners")}`,
+      image: "./images/car-5.png",
     },
     {
-      desc: "неправомерное размещение транспортных средств на парковочных местах для зарядки электромобилей",
-      position: "Для владельцев электромобилей",
-      photo: "./images/car-4.png",
+      id: 4,
+      desc: `${t("parking_spaces_for_charging_electric_vehicles")}`,
+      position: `${t("for_electric_car_owners")}`,
+      image: "./images/car-4.png",
     },
     {
       // Для владельцев зарядных станций
-      desc: "стабильность работы зарядных станций",
-      position: "Для владельцев зарядных станций",
-      photo: "",
+      id: 5,
+      desc: `${t("stability_charging_stations")}`,
+      position: `${t("for_charging_stations_owners")}`,
+      image: "./images/car-6.png",
     },
     {
-      desc: "стабильность мониторинга и управления зарядных станций",
-      position: "Для владельцев зарядных станций",
-      photo: "",
+      id: 6,
+      desc: `${t("monitoring_stability")}`,
+      position: `${t("for_charging_stations_owners")}`,
+      image: "./images/car-7.png",
     },
     {
-      desc: "приобретение популярности своих зарядных станций",
-      position: "Для владельцев зарядных станций",
-      photo: "",
+      id: 7,
+      desc: `${t("gaining_popularity")}`,
+      position: `${t("for_charging_stations_owners")}`,
+      image: "./images/car-8.png",
     },
     {
-      desc: "отсутствие дополнительного дохода от зарядных станций",
-      position: "Для владельцев зарядных станций",
-      photo: "",
+      id: 8,
+      desc: `${t("no_extra_income")}`,
+      position: `${t("for_charging_stations_owners")}`,
+      image: "./images/car-9.png",
     },
     {
-      desc: "неправомерное размещение транспортных средств на парковочных местах для зарядки электромобилей",
-      position: "Для владельцев зарядных станций",
-      photo: "",
+      id: 9,
+      desc: `${t("parking_spaces_for_charging_electric_vehicles")}`,
+      position: `${t("for_charging_stations_owners")}`,
+      image: "./images/provide/img-2.jpg",
     },
   ];
 
   return (
     <section id="carusel-section" className="section">
       <Box
-        sx={(theme) => ({
-          backgroundColor: theme.palette.common.white,
+        sx={() => ({
+          backgroundColor: "f5f5f5",
           width: "100%",
           position: "relative",
           display: "flex",
+          paddingTop: "100px",
           paddingBottom: "100px",
         })}
       >
@@ -100,17 +114,19 @@ export const CaruselSection = ({}) => {
               sx={{ textAlign: "center" }}
               fontSize={{ xs: "35px", md: "52px" }}
             >
-              Почему GreenGo
+              {/* Почему GreenGo */}
+              {t("why_greengo")}
             </Typography>
             <Typography
               variant="subtitle2"
               component="div"
               fontSize={{ xs: "25px", md: "42px" }}
             >
-              Мы решаем проблемы:
+              {/* Мы решаем проблемы: */}
+              {t("we_solve_problems")}
             </Typography>
             <Box
-              sx={(theme) => ({
+              sx={() => ({
                 width: "100%",
                 margin: "0 auto",
                 display: "flex",
@@ -122,50 +138,51 @@ export const CaruselSection = ({}) => {
                 item
                 container
                 justifyContent="space-between"
-                display={{ xs: "none", lg: "block" }}
                 sx={() => ({
                   position: "relative",
                 })}
               >
                 <Swiper
-                  slidesPerView={4}
+                  // slidesPerView={4}
                   spaceBetween={10}
+                  breakpoints={{
+                    "@0.00": {
+                      slidesPerView: 1,
+                    },
+                    "@0.75": {
+                      slidesPerView: 2,
+                    },
+                    "@1.00": {
+                      slidesPerView: 3,
+                    },
+                    "@1.50": {
+                      slidesPerView: 4,
+                    },
+                  }}
+                  // breakpoints={{
+                  //   0: {
+                  //     slidesPerView: 1,
+                  //   },
+                  //   640: {
+                  //     slidesPerView: 2,
+                  //   },
+                  //   768: {
+                  //     slidesPerView: 3,
+                  //   },
+                  //   1024: {
+                  //     slidesPerView: 4,
+                  //   },
+                  // }}
                   pagination={{
-                    clickable: true,
+                    type: "fraction",
                   }}
                   modules={[Pagination]}
                   className="mySwiper"
                   navigation={true}
                 >
-                  {items.map((item, i) => (
+                  {items.map((item, i, handleClickOpen) => (
                     <SwiperSlide key={i}>
-                      <Item item={item} />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </Grid>
-              <Grid
-                item
-                container
-                justifyContent="space-between"
-                display={{ xs: "block", lg: "none" }}
-                sx={() => ({
-                  position: "relative",
-                })}
-              >
-                <Swiper
-                  slidesPerView={1}
-                  spaceBetween={10}
-                  pagination={{
-                    clickable: true,
-                  }}
-                  modules={[Pagination]}
-                  className="mySwiper"
-                  navigation={true}
-                >
-                  {items.map((item, i) => (
-                    <SwiperSlide key={i}>
-                      <Item item={item} />
+                      <Item item={item} handleClickOpen={handleClickOpen} />
                     </SwiperSlide>
                   ))}
                 </Swiper>

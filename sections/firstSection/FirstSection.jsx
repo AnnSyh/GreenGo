@@ -5,7 +5,6 @@ import { useTranslation } from "next-i18next";
 
 export default function FirstSection({}) {
   const { t } = useTranslation("common");
-  // console.log("t=", t("welcome"));
 
   return (
     <section id="intro" className="section">
@@ -27,7 +26,7 @@ export default function FirstSection({}) {
             <source src={"../../images/car-6mb.mp4"} type="video/mp4" />
           </video>
           <Box
-            className="container-box"
+            className="container-box fadeIn"
             sx={{
               height: "100%",
             }}
@@ -45,13 +44,12 @@ export default function FirstSection({}) {
             >
               {/* <h1> {t("welcome")} </h1> */}
               <Typography
-                variant="subtitleCompany"
+                variant="body2"
                 component="div"
                 textTransform="uppercase"
                 sx={() => ({
                   color: "white",
                   marginTop: {
-                    xs: "none",
                     lg: "46px",
                   },
                   textAlign: "left",
@@ -81,45 +79,39 @@ export default function FirstSection({}) {
               ></Box>
 
               <Typography
-                variant="body1"
-                sx={() => ({
-                  color: "white",
-                  marginTop: "18px",
-                  textAlign: {
-                    xs: "left",
-                    lg: "left",
+                variant="body2"
+                sx={{
+                  marginTop: {
+                    xs: "15px",
+                    sm: "40px",
                   },
-                })}
+                }}
               >
-                {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod
-              <br />
-              tempor incididunt ut labore et dolore magna aliqua. */}
-                {t("lorem_ipsum")}
+                {t("provides_stable_technical_solutions")}
               </Typography>
               <Typography
-                variant="caption"
-                display="block"
-                sx={() => ({
-                  color: "white",
-                  margin: "18px 0 0",
-                  textAlign: {
-                    xs: "left",
-                    lg: "left",
+                variant="body2"
+                sx={{
+                  marginTop: {
+                    xs: "15px",
+                    sm: "40px",
                   },
-                })}
+                }}
               >
-                {t("caption_text")}
-                <Typography
-                  variant="caption"
-                  component="span"
-                  sx={{ textDecoration: "underline", color: "white" }}
-                >
-                  {" "}
-                  {/* caption text{" "} */}
-                  {t("caption_text")}
-                </Typography>
+                {t("provide_most_effective_service")}
               </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  marginTop: {
+                    xs: "15px",
+                    sm: "30px",
+                  },
+                }}
+              >
+                {t("simplify_process")}
+              </Typography>
+
               <Box
                 sx={() => ({
                   width: "100%",
@@ -132,7 +124,16 @@ export default function FirstSection({}) {
                 })}
               >
                 <Link href="/contacts">
-                  <Button className="btn-contacts" variant="contained">
+                  <Button
+                    className="btn-contacts"
+                    variant="contained"
+                    // sx={{
+                    //   display: {
+                    //     xs: "none",
+                    //     sm: "block",
+                    //   },
+                    // }}
+                  >
                     {t("contacts")}
                   </Button>
                 </Link>

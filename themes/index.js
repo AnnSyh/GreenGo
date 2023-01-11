@@ -3,10 +3,12 @@ import { red } from "@mui/material/colors";
 
 // Create a theme instance.
 const theme = createTheme({
+  typography: {
+    fontFamily: ["Roadradio", "Arial", "sans-serif"].join(","),
+  },
   palette: {
     primary: {
       main: "#00b398",
-      // main: "#fff",
     },
     secondary: {
       main: "#A6B828",
@@ -52,44 +54,39 @@ const theme = createTheme({
 theme.typography.colorGreen = {
   color: "#00b398",
 };
+
 theme.typography.h1 = {
-  fontFamily: "Roadradio,Arial,sans-serif",
   fontSize: "52px",
-  color: "#454545",
+  color: "#000",
   fontWeight: 600,
 };
 theme.typography.h2 = {
-  fontFamily: "Roadradio,Arial,sans-serif",
   fontSize: "52px",
-  color: "#454545",
+  color: "#000",
   fontWeight: 400,
 };
 theme.typography.h3 = {
-  fontFamily: "Roadradio,Arial,sans-serif",
   fontSize: "52px",
-  color: "#454545",
+  color: "#000",
   fontWeight: 200,
 };
 theme.typography.subtitle2 = {
-  fontFamily: "Roadradio,Arial,sans-serif",
   fontSize: "42px",
   textAlign: "center",
   lineHeight: 1,
-  color: "#454545",
+  color: "#000",
   fontWeight: 200,
   paddingBottom: "20px",
 };
 theme.typography.subtitle1 = {
-  fontFamily: "Roadradio,Arial,sans-serif",
   fontSize: "30px",
   lineHeight: 1,
-  color: "#454545",
+  color: "#000",
   fontWeight: 200,
   paddingBottom: "30px",
 };
 theme.typography.subtitle1_text = {
-  fontFamily: "Roadradio,Arial,sans-serif",
-  fontSize: "16px",
+  fontSize: "18px",
   lineHeight: 2.5,
   color: "black",
   fontWeight: 200,
@@ -97,19 +94,22 @@ theme.typography.subtitle1_text = {
   alignItems: "center",
 };
 
-// theme.typography.body1 = {
-//   border: "1px solid red",
-//   fontFamily: "Roadradio,Arial,sans-serif",
-//   fontSize: "16px",
-//   color: "#454545",
-//   fontWeight: 400,
-// };
-// theme.typography.p = {
-//   fontFamily: "Roadradio,Arial,sans-serif",
-//   fontSize: "16px",
-//   color: "#454545",
-//   fontWeight: 400,
-// };
+theme.typography.body1 = {
+  fontSize: "18px",
+  fontWeight: 400,
+};
+theme.typography.body2 = {
+  fontSize: "18px",
+  color: "#fff",
+  fontWeight: 400,
+  marginTop: "40px",
+};
+
+theme.typography.p = {
+  fontSize: "18px",
+  color: "#000",
+  fontWeight: 400,
+};
 
 // шапка
 

@@ -9,19 +9,19 @@ import { Box } from "@mui/system";
 import Menu from "../sections/menu/Menu";
 import { FormControlSelect } from "../sections/FormSection/FormControlSelect";
 import { useTranslation } from "next-i18next";
+import { NoEncryption } from "@mui/icons-material";
 
 const nav = [
   { id: 1, title: `homepage`, path: "/" },
   { id: 2, title: `contacts`, path: "/contacts" },
+  { id: 3, title: `questions`, path: "/questions" },
 ];
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
 function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
   const { t } = useTranslation("common");
   const { pathname } = useRouter(); //подсвечиваем акт ссылку
-
-  console.log("isOpen = ", isOpen);
-  console.log("sx = ", sx);
+  // console.log("sx = ", sx);
 
   return (
     <AppBar position="fixed" sx={sx}>
@@ -41,7 +41,13 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
           edge="start"
           color="inherit"
           aria-label="menu"
-          sx={{ mr: 2, color: "#fff" }}
+          sx={{
+            mr: {
+              xs: 0,
+              md: 2,
+            },
+            color: "#fff",
+          }}
           onClick={onMenuIconClick}
         >
           <MenuIcon />
@@ -63,10 +69,14 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
         <Box
           className="navbar-ul"
           sx={{
-            display: "flex",
+            display: {
+              xs: "none",
+              sm: "flex",
+            },
             justifyContent: "space-between",
             flexFlow: "row nowrap",
             minWidth: "170px",
+            marginLeft: "10px",
             color: "#fff",
           }}
         >
