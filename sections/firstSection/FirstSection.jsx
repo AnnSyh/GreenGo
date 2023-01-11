@@ -124,16 +124,7 @@ export default function FirstSection({}) {
                 })}
               >
                 <Link href="/contacts">
-                  <Button
-                    className="btn-contacts"
-                    variant="contained"
-                    // sx={{
-                    //   display: {
-                    //     xs: "none",
-                    //     sm: "block",
-                    //   },
-                    // }}
-                  >
+                  <Button className="btn-contacts" variant="contained">
                     {t("contacts")}
                   </Button>
                 </Link>

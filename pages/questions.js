@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
-import Link from "next/link";
+import { Box, Button, Grid, Typography } from "@mui/material";
 
-import { FormControlSelect } from "../sections/FormSection/FormControlSelect";
+import ModalWindow from "../components/modalWindow/form";
 
-import { ContactsSection } from "../sections/contactsSection/ContactsSection";
 import { TopArrow } from "../components/TopArrow";
 import { Footer } from "../footer/Footer";
 
@@ -13,14 +12,23 @@ import { useRouter } from "next/router";
 
 import { useTranslation, Trans } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { Box } from "@mui/system";
 import { AccordionSection } from "../sections/accordionSection/AccordionSection";
 
-const siteTitle = "contacts";
+const siteTitle = "questions";
 
 export default function Questions({ title = siteTitle }) {
+  const { t } = useTranslation("common");
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [loader, setLoader] = useState(true);
+
+  const [open, setOpen] = useState(false);
+  const handleClickOpen = () => {
+    // console.log("handleClickOpen setOpen = ", open);
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const closeMenu = () => setMenuOpen(false);
   const openMenu = () => setMenuOpen(true);
@@ -74,6 +82,32 @@ export default function Questions({ title = siteTitle }) {
       <Box sx={{ height: "calc(100vh - 64px)" }}>
         <div id="top-page" />
         <AccordionSection />
+
+        <Box
+          className="container-box"
+          sx={{
+            alignItems: "center",
+            marginBottom: "30px !important",
+            flexDirection: "column  !important",
+          }}
+        >
+          <Typography variant="body" gutterBottom sx={{ color: "black" }}>
+            {/* Если вы не нашли ответ на свой вопрос, мы будем рады ответить на
+            него */}
+            {t("not_find_answer")}
+          </Typography>
+
+          <Button
+            className="btn-contacts"
+            variant="contained"
+            onClick={handleClickOpen}
+          >
+            {/* Связаться с нами */}
+            {t("contact_us")}
+          </Button>
+
+          <ModalWindow open={open} handleClose={handleClose} />
+        </Box>
 
         <Footer />
         <TopArrow />
