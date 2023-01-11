@@ -81,33 +81,47 @@ export default function Questions({ title = siteTitle }) {
 
       <Box sx={{ height: "calc(100vh - 64px)" }}>
         <div id="top-page" />
-        <AccordionSection />
 
         <Box
           className="container-box"
-          sx={{
-            alignItems: "center",
-            marginBottom: "30px !important",
-            flexDirection: "column  !important",
-          }}
+          sx={() => ({
+            paddingTop: "150px",
+            paddingLeft: "30px",
+            paddingRight: "30px",
+          })}
         >
-          <Typography variant="body" gutterBottom sx={{ color: "black" }}>
-            {/* Если вы не нашли ответ на свой вопрос, мы будем рады ответить на
-            него */}
-            {t("not_find_answer")}
-          </Typography>
+          <AccordionSection />
 
-          <Button
-            className="btn-contacts"
-            variant="contained"
-            onClick={handleClickOpen}
+          <Box
+            sx={{
+              display: "flex",
+              width: "100%",
+              alignItems: "center",
+              flexDirection: "column",
+              // border: "1px solid red",
+            }}
           >
-            {/* Связаться с нами */}
-            {t("contact_us")}
-          </Button>
+            <Typography
+              variant="body"
+              gutterBottom
+              sx={{ color: "black", maxWidth: "390px", textAlign: "center" }}
+            >
+              {t("not_find_answer")}
+            </Typography>
 
-          <ModalWindow open={open} handleClose={handleClose} />
+            <Button
+              variant="contained"
+              onClick={handleClickOpen}
+              sx={{
+                margin: "30px auto 60px auto",
+              }}
+            >
+              {t("contact_us")}
+            </Button>
+          </Box>
         </Box>
+
+        <ModalWindow open={open} handleClose={handleClose} />
 
         <Footer />
         <TopArrow />

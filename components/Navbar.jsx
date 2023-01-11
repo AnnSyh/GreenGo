@@ -75,9 +75,9 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
             },
             justifyContent: "space-between",
             flexFlow: "row nowrap",
-            minWidth: "170px",
             marginLeft: "10px",
             color: "#fff",
+            minWidth: "290px",
           }}
         >
           {nav.map(({ id, title, path }) => (

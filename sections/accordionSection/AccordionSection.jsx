@@ -55,60 +55,43 @@ const AccordionSection = ({}) => {
   ];
 
   return (
-    <Box
-      component="section"
-      className="section"
-      sx={(theme) => ({
-        backgroundColor: theme.palette.common.white,
-        width: "100%",
-      })}
-    >
-      <Box
-        className="container-box"
-        sx={() => ({
-          paddingTop: "150px",
-        })}
-      >
-        <Typography
-          variant="subtitle1"
-          component="div"
-          sx={{ color: "#00b398" }}
-        >
-          {t("questions")}
-        </Typography>
+    <>
+      <Typography variant="subtitle1" component="div" sx={{ color: "#00b398" }}>
+        {t("questions")}
+      </Typography>
 
-        <Grid
-          container
-          justifyContent="space-between"
-          sx={() => ({
-            position: "relative",
-            top: "30px",
-            minHeight: "calc(100vh - 160px - 150px)",
-          })}
-        >
-          <div>
-            {questions.map((item, index) => (
-              <Accordion
-                key={index}
-                expanded={expanded === `${item.id}`}
-                onChange={handleChange(`${item.id}`)}
+      <Grid
+        container
+        justifyContent="space-between"
+        sx={{
+          position: "relative",
+          top: "30px",
+          minHeight: "calc(100vh - 160px - 332px)",
+          // border: "1px solid green",
+        }}
+      >
+        <div>
+          {questions.map((item, index) => (
+            <Accordion
+              key={index}
+              expanded={expanded === `${item.id}`}
+              onChange={handleChange(`${item.id}`)}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel4bh-content"
+                id="panel4bh-header"
               >
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel4bh-content"
-                  id="panel4bh-header"
-                >
-                  <Typography>{item.summary}</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>{item.details}</Typography>
-                </AccordionDetails>
-              </Accordion>
-            ))}
-          </div>
-        </Grid>
-      </Box>
-    </Box>
+                <Typography>{item.summary}</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>{item.details}</Typography>
+              </AccordionDetails>
+            </Accordion>
+          ))}
+        </div>
+      </Grid>
+    </>
   );
 };
 

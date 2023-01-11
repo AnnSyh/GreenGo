@@ -42,7 +42,8 @@ const particlesBackground = () => {
           // background: {
           //   color: "#fff",
           // },
-          fpsLimit: 120,
+          fullScreen: { enable: false },
+          fpsLimit: 200,
           interactivity: {
             detectsOn: "window",
             events: {
@@ -50,13 +51,17 @@ const particlesBackground = () => {
                 enable: true,
                 mode: "push",
               },
-              onHover: {
+              onhover: {
                 enable: true,
-                mode: "repulse",
+                mode: "grab",
+                parallax: { enable: false, force: 60, smooth: 10 },
               },
               resize: true,
             },
             modes: {
+              grab: {
+                distance: 300,
+              },
               push: {
                 quantity: 4,
               },
@@ -92,11 +97,13 @@ const particlesBackground = () => {
                 enable: true,
                 area: 1080,
               },
-              value: 80,
+              value: 350,
               limit: 0,
             },
             opacity: {
-              value: 1,
+              anim: { enable: false, opacity_min: 0.1, speed: 1, sync: true },
+              random: false,
+              value: 0.5,
             },
             shape: {
               type: "circle",

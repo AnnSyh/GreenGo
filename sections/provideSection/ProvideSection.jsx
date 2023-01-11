@@ -57,8 +57,6 @@ const ProvideSection = ({}) => {
           overflow: "hidden",
         })}
       >
-        <ParticlesBackground />
-
         <Box className="container-box">
           <Typography
             variant="h1"
@@ -118,6 +116,7 @@ const ProvideSection = ({}) => {
             ))}
           </Grid>
         </Box>
+        <ParticlesBackground />
       </Box>
     </section>
   );

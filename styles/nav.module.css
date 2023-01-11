@@ -1,7 +1,8 @@
 .active {
-  color: #00b398;
+  /* color: #00b398; */
   font-weight: 400;
+  text-decoration: underline;
 }
-.link {
+/* .link {
   padding: 0 10px;
-}
+} */
