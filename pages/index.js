@@ -14,7 +14,7 @@ import { CaruselSection } from "../sections/CaruselSection/caruselSection";
 import { Footer } from "../footer/Footer";
 import { TopArrow } from "../components/TopArrow";
 
-import { Box, CircularProgress } from "@mui/material";
+import { Box, CircularProgress, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 
 import { useTranslation, Trans } from "next-i18next";
@@ -23,6 +23,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 const siteTitle = "GreenGo";
 
 export default function Home({ title = siteTitle }) {
+  const { t } = useTranslation("common");
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [loader, setLoader] = useState(true);
 

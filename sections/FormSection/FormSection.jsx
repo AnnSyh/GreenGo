@@ -11,12 +11,14 @@ import { Box, padding } from "@mui/system";
 import { Input } from "../../components/input/input";
 import { TextArea } from "../../components/textarea/textarea";
 import { useState } from "react";
-import { useFormik } from "formik";
+import { Form, useFormik } from "formik";
 import * as Yup from "yup";
 import { useTranslation } from "next-i18next";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
 import style from "../../styles/FormSection.module.css";
+
+import { FormMy } from "./FormMy";
 
 const FormSection = ({}) => {
   const { t } = useTranslation("common");
@@ -91,106 +93,15 @@ const FormSection = ({}) => {
             alignItems: "flex-top",
           })}
         >
-          {checkForm && (
-            <form onSubmit={formik.handleSubmit} style={styles.form}>
-              <Typography
-                variant="h1"
-                sx={{ textAlign: "center" }}
-                fontSize={{ xs: "35px", md: "52px" }}
-              >
-                {t("subscription_form")}
-              </Typography>
+          <Typography
+            variant="h1"
+            sx={{ textAlign: "center", width: "100%" }}
+            fontSize={{ xs: "35px", md: "52px" }}
+          >
+            {t("subscription_form")}
+          </Typography>
 
-              <Grid container spacing={2} marginBottom="30px">
-                <Grid item xs={12} md={4}>
-                  <Typography variant="colorGreen">
-                    {t("subscription_form_input_one")}
-                  </Typography>
-                  <TextField
-                    className={style.textField}
-                    value={formik.values.name}
-                    onChange={formik.handleChange}
-                    id="name"
-                    fullWidth
-                    name="name"
-                    placeholder={t("enter_your_name")}
-                    // error={formik.touched.name && Boolean(formik.errors.name)}
-                    // helpertext={formik.touched.name && formik.errors.name}
-                  />
-                  <Typography sx={{ color: "red" }}>
-                    {formik.touched.name && formik.errors.name}
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} md={4}>
-                  <Typography variant="colorGreen">Email</Typography>
-                  <TextField
-                    className={style.textField}
-                    value={formik.values.email}
-                    onChange={formik.handleChange}
-                    id="email"
-                    fullWidth
-                    name="email"
-                    placeholder={t("enter_your_email")}
-                    // error={formik.touched.email && Boolean(formik.errors.email)}
-                    // helpertext={formik.touched.email && formik.errors.email}
-                  />
-                  <Typography sx={{ color: "red" }}>
-                    {formik.touched.email && formik.errors.email}
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} md={4}>
-                  <Typography variant="colorGreen">
-                    {t("phone_number")}
-                  </Typography>
-                  <PhoneInput
-                    className={style.reactTelInput}
-                    country={"ru"}
-                    value={phoneNumber}
-                    onChange={(e) => setPhoneNumber(e)}
-                    name="phoneNumber"
-                  />
-                  {errorPhoneNumber && (
-                    <Typography sx={{ color: "red" }}>Required</Typography>
-                  )}
-                </Grid>
-              </Grid>
-              <Grid item md={12}>
-                <label htmlFor="message">{t("message")}</label>
-                <TextArea
-                  className={style.textArea}
-                  value={formik.values.message}
-                  onChange={formik.handleChange}
-                  placeholder={t("enter_your_message")}
-                  minRows={6}
-                  id="message"
-                  name="message"
-                  error={
-                    formik.touched.message && Boolean(formik.errors.message)
-                  }
-                  helpertext={formik.touched.message && formik.errors.message}
-                />
-              </Grid>
-              <Grid item md={12}>
-                <Button
-                  variant="contained"
-                  disabled={loader ? true : false}
-                  onClick={() => {
-                    formik.handleSubmit();
-                    handleErrPhoneNumber();
-                  }}
-                  sx={(theme) => ({
-                    margin: "45px auto",
-                  })}
-                >
-                  {loader ? (
-                    <CircularProgress sx={{ color: "#fff" }} />
-                  ) : (
-                    `${t("submit")}`
-                  )}
-                </Button>
-              </Grid>
-            </form>
-          )}
+          <FormMy />
         </Box>
         <Snackbar
           open={snakbar}
