@@ -44,6 +44,10 @@ const ProvideSection = ({}) => {
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
       />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      ></link>
       <Box
         sx={(theme) => ({
           backgroundColor: theme.palette.common.white,
