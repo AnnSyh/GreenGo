@@ -1,11 +1,22 @@
-import { Grid, Typography } from "@mui/material";
+import {
+  Grid,
+  Typography,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Button,
+} from "@mui/material";
 import { Box, fontSize, padding } from "@mui/system";
 import * as React from "react";
 import { useTranslation } from "next-i18next";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 import imgUrl from "../../public/images/icons/icon-clock.svg";
 // import MailIcon from "@mui/icons-material/Mail";
 import { Avatar, Image } from "@mui/material";
+import { auto } from "@popperjs/core";
 
 const SecondSection = ({}) => {
   const { t } = useTranslation("common");
@@ -33,76 +44,56 @@ const SecondSection = ({}) => {
 
   return (
     <section id="products-section" className="section">
-      <Box
-        sx={(theme) => ({
-          backgroundColor: theme.palette.common.white,
-          position: "relative",
-        })}
-      >
-        <Box className="container-box-wrapper">
-          <Box className="container-box">
-            <Grid
-              container
-              sx={() => ({
-                justifyContent: "space-between",
-                position: "relative",
-                top: "-30px",
-                width: "calc(100% + 56px)",
-                marginLeft: "-23px",
-                marginRight: "-23px",
-              })}
-            >
-              {items.map((item) => (
-                <Grid
-                  item
-                  className="card"
-                  key={item.title}
-                  sx={(theme) => ({
-                    borderRadius: theme.radius.default,
-                  })}
-                >
-                  <Box
-                    className="card-inner"
-                    sx={(theme) => ({
-                      backgroundColor: theme.palette.common.white,
-                      borderRadius: theme.radius.default,
-                    })}
-                  >
+      <Box className="container-box-wrapper">
+        <Box className="container-box">
+          <Grid
+            container
+            sx={{
+              justifyContent: "center",
+              position: "relative",
+              top: "-30px",
+              width: "calc(100% + 56px)",
+            }}
+          >
+            {items.map((item) => (
+              // <AnimationOnScroll animateOnce={true} animateIn="animate">
+              <Card
+                key={item.title}
+                sx={{
+                  width: { xs: "80%", sm: "40%", md: "31%" },
+                  borderRadius: "15px",
+                  margin: "1% 1% 30px 1%",
+                }}
+              >
+                <CardActionArea>
+                  <CardMedia
+                    sx={{ height: 240 }}
+                    image="/images/car.png"
+                    title="Contemplative Reptile"
+                  />
+                  <CardContent>
                     <Typography
-                      variant="subtitle2"
+                      variant="subtitle1"
                       component="h2"
-                      fontSize={{ xs: "25px", md: "42px" }}
+                      sx={{
+                        marginBottom: "0px !important",
+                        paddingBottom: "0px !important",
+                      }}
                     >
                       {t(item.title)}
                     </Typography>
-
-                    <Avatar
-                      alt={item.title}
-                      src={item.iconsrc}
-                      sx={() => ({
-                        width: 160,
-                        height: 160,
-                        borderRadius: 0,
-                      })}
-                    />
-
                     <Typography
-                      variant="body"
-                      gutterBottom
-                      textAlign="center"
-                      sx={() => ({
-                        marginTop: "20px",
-                        padding: "0 30px 30px",
-                        color: "black",
-                      })}
+                      variant="body2"
+                      sx={{ color: "black", marginTop: auto }}
                     >
                       {t(item.desc)}
                     </Typography>
-                  </Box>
-                </Grid>
-              ))}
-            </Grid>
-          </Box>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+              // {/* </AnimationOnScroll> */}
+            ))}
+          </Grid>
         </Box>
       </Box>
     </section>

@@ -65,7 +65,7 @@ const AccordionSection = ({}) => {
         justifyContent="space-between"
         sx={{
           position: "relative",
-          minHeight: "calc(100vh - 160px - 362px)",
+          minHeight: "calc(100vh - 160px - 386px)",
           // border: "1px solid green",
         }}
       >
@@ -75,6 +75,7 @@ const AccordionSection = ({}) => {
               key={index}
               expanded={expanded === `${item.id}`}
               onChange={handleChange(`${item.id}`)}
+              sx={{ backgroundColor: "transparent", color: "#fff" }}
             >
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}

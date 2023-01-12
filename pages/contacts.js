@@ -70,7 +70,7 @@ export default function Contacts({ title = siteTitle }) {
         />
       </Box>
 
-      <Box sx={{ height: "calc(100vh - 64px)" }}>
+      <Box sx={{ height: "calc(100vh - 64px)", backgroundColor: "#f5f5f5" }}>
         <div id="top-page" />
         <ContactsSection />
 

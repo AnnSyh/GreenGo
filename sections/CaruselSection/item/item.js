@@ -26,25 +26,17 @@ export const Item = ({ item, i }) => {
   };
 
   return (
-    <Grid
-      item
-      key={item.id}
-      xs={12}
-      lg={3}
-      sx={(theme) => ({
-        flexGrow: 0,
-        flexShrink: 0,
-        margin: "0 auto",
-        minWidth: "300px",
-        padding: "20px",
-        display: "flex",
-        height: "100%",
-      })}
-    >
+    <>
       <Box
         onClick={handleClickOpen}
         sx={(theme) => ({
           display: "flex",
+          height: "100%",
+          maxHeight: "330px",
+          marginBottom: {
+            xs: "90px",
+            md: "70px",
+          },
           flexFlow: "column nowrap",
           backgroundColor: theme.palette.common.white,
           alignItems: "center",
@@ -93,6 +85,6 @@ export const Item = ({ item, i }) => {
         </Typography>
       </Box>
       <ModalWindow open={open} handleClose={handleClose} project={item} />
-    </Grid>
+    </>
   );
 };

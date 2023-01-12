@@ -48,6 +48,7 @@ const FormControlSelect = ({ languageToggle, sx }) => {
               xs: "auto",
               sm: "110px",
             },
+            height: "43px",
           }}
           renderValue={(selected) => selected}
         >
@@ -57,10 +58,7 @@ const FormControlSelect = ({ languageToggle, sx }) => {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              padding: {
-                xs: "5px",
-                sm: "16px",
-              },
+              padding: "5px",
             }}
             value="ru"
           >
@@ -75,10 +73,7 @@ const FormControlSelect = ({ languageToggle, sx }) => {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              padding: {
-                xs: "5px",
-                sm: "16px",
-              },
+              padding: "5px",
             }}
             value={"en"}
           >

@@ -25,6 +25,7 @@ const TextSection = ({}) => {
           backgroundColor: theme.palette.common.white,
           width: "100%",
           position: "relative",
+          paddingTop: "60px",
         })}
       >
         <Box

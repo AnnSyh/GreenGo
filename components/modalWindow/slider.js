@@ -52,6 +52,12 @@ BootstrapDialogTitle.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
 
+import Zoom from "@mui/material/Zoom";
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Zoom timeout={500} ref={ref} {...props} />;
+});
+
 export default function ModalWindow({ open, handleClose, project }) {
   // console.log("project = ", project);
 
@@ -65,6 +71,7 @@ export default function ModalWindow({ open, handleClose, project }) {
         }}
         onClose={handleClose}
         open={open}
+        TransitionComponent={Transition}
       >
         <BootstrapDialogTitle
           onClose={handleClose}

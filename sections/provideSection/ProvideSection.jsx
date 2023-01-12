@@ -89,11 +89,13 @@ const ProvideSection = ({}) => {
                         variant="body"
                         gutterBottom
                         textAlign="center"
-                        fontSize={{ xs: "12px", md: "13px" }}
+                        fontSize={{ xs: "15px", md: "15px" }}
                         sx={() => ({
                           marginTop: "20px",
-                          padding: "0 13px 30px",
+                          // padding: "0 13px 30px",
+                          padding: "0 15px 0",
                           color: "black",
+                          textAlign: "left",
                         })}
                       >
                         {t(item.desc)}

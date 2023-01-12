@@ -73,7 +73,7 @@ export const CaruselSection = ({}) => {
       id: 9,
       desc: `${t("parking_spaces_for_charging_electric_vehicles")}`,
       position: `${t("for_charging_stations_owners")}`,
-      image: "./images/provide/img-2.jpg",
+      image: "./images/car-10.png",
     },
   ];
 
@@ -138,13 +138,11 @@ export const CaruselSection = ({}) => {
                 item
                 container
                 justifyContent="space-between"
-                sx={() => ({
-                  position: "relative",
-                })}
+                sx={{ position: "relative" }}
               >
                 <Swiper
                   // slidesPerView={4}
-                  spaceBetween={10}
+                  // spaceBetween={10}
                   breakpoints={{
                     "@0.00": {
                       slidesPerView: 1,
@@ -159,30 +157,24 @@ export const CaruselSection = ({}) => {
                       slidesPerView: 4,
                     },
                   }}
-                  // breakpoints={{
-                  //   0: {
-                  //     slidesPerView: 1,
-                  //   },
-                  //   640: {
-                  //     slidesPerView: 2,
-                  //   },
-                  //   768: {
-                  //     slidesPerView: 3,
-                  //   },
-                  //   1024: {
-                  //     slidesPerView: 4,
-                  //   },
-                  // }}
                   pagination={{
                     type: "fraction",
                   }}
-                  modules={[Pagination]}
-                  className="mySwiper"
                   navigation={true}
+                  modules={[Pagination, Navigation]}
+                  className="mySwiper"
                 >
                   {items.map((item, i, handleClickOpen) => (
                     <SwiperSlide key={i}>
-                      <Item item={item} handleClickOpen={handleClickOpen} />
+                      <Box
+                        sx={{
+                          marginLeft: "10px",
+                          marginRight: "10px",
+                          height: "100%",
+                        }}
+                      >
+                        <Item item={item} handleClickOpen={handleClickOpen} />
+                      </Box>
                     </SwiperSlide>
                   ))}
                 </Swiper>

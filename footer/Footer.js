@@ -10,7 +10,7 @@ export const Footer = ({}) => {
         <Box
           sx={() => ({
             minHeight: "100px",
-            backgroundColor: "#f5f5f5",
+            backgroundColor: "rgba(0, 179, 152, 0.7)",
             width: "100%",
             display: "flex",
             alignItems: "center",
@@ -18,10 +18,15 @@ export const Footer = ({}) => {
             flexDirection: "column",
           })}
         >
-          <Typography variant="subtitle2" component="div" align="center">
+          <Typography
+            variant="subtitle2"
+            component="div"
+            align="center"
+            sx={{ color: "#fff" }}
+          >
             GreenGo
           </Typography>
-          <Typography component="div" align="center">
+          <Typography component="div" align="center" sx={{ color: "#fff" }}>
             {/* © All Rights Reserved */}© {t("all_rights")}
           </Typography>
         </Box>

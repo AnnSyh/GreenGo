@@ -79,7 +79,13 @@ export default function Questions({ title = siteTitle }) {
         />
       </Box>
 
-      <Box sx={{ height: "calc(100vh - 64px)" }}>
+      <Box
+        sx={{
+          height: "calc(100vh - 99px)",
+          // backgroundColor: "#f5f5f5",
+          backgroundColor: "#246897",
+        }}
+      >
         <div id="top-page" />
 
         <Box
@@ -109,6 +115,7 @@ export default function Questions({ title = siteTitle }) {
                 maxWidth: "390px",
                 textAlign: "center",
                 marginTop: "30px",
+                color: "#fff",
               }}
             >
               {t("not_find_answer")}
