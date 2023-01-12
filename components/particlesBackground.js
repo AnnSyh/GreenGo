@@ -48,8 +48,7 @@ const particlesBackground = () => {
             detectsOn: "window",
             events: {
               onClick: {
-                enable: true,
-                mode: "push",
+                enable: false,
               },
               onhover: {
                 enable: true,
@@ -57,18 +56,6 @@ const particlesBackground = () => {
                 parallax: { enable: false, force: 60, smooth: 10 },
               },
               resize: true,
-            },
-            modes: {
-              grab: {
-                distance: 300,
-              },
-              push: {
-                quantity: 4,
-              },
-              repulse: {
-                distance: 20,
-                duration: 0.4,
-              },
             },
           },
           particles: {
@@ -82,35 +69,34 @@ const particlesBackground = () => {
               opacity: 0.5,
               width: 1,
             },
-            collisions: {
-              enable: true,
-            },
             move: {
               enable: true,
-              speed: 3,
-              directions: "none",
-              random: false,
-              straight: false,
+              speed: 1,
+              maxSpeed: 1,
+              // directions: "none",
+              // random: false,
+              // straight: false,
+              bounce: false,
             },
-            number: {
-              density: {
-                enable: true,
-                area: 1080,
-              },
-              value: 350,
-              limit: 0,
-            },
-            opacity: {
-              anim: { enable: false, opacity_min: 0.1, speed: 1, sync: true },
-              random: false,
-              value: 0.5,
-            },
-            shape: {
-              type: "circle",
-            },
-            size: {
-              value: { min: 1, max: 5 },
-            },
+            // number: {
+            //   density: {
+            //     enable: true,
+            //     area: 1080,
+            //   },
+            //   value: 350,
+            //   limit: 0,
+            // },
+            // opacity: {
+            //   anim: { enable: false, opacity_min: 0.1, speed: 1, sync: true },
+            //   random: false,
+            //   value: 0.5,
+            // },
+            // shape: {
+            //   type: "circle",
+            // },
+            // size: {
+            //   value: { min: 1, max: 5 },
+            // },
           },
         }}
       />

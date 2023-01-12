@@ -65,7 +65,6 @@ const AccordionSection = ({}) => {
         justifyContent="space-between"
         sx={{
           position: "relative",
-          top: "30px",
           minHeight: "calc(100vh - 160px - 332px)",
           // border: "1px solid green",
         }}
