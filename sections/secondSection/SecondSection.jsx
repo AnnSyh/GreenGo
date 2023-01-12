@@ -58,6 +58,7 @@ const SecondSection = ({}) => {
             {items.map((item) => (
               // <AnimationOnScroll animateOnce={true} animateIn="animate">
               <Card
+                className="lab__card"
                 key={item.title}
                 sx={{
                   width: { xs: "80%", sm: "40%", md: "31%" },

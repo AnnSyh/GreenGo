@@ -75,7 +75,7 @@ const AccordionSection = ({}) => {
               key={index}
               expanded={expanded === `${item.id}`}
               onChange={handleChange(`${item.id}`)}
-              sx={{ backgroundColor: "transparent", color: "#fff" }}
+              sx={{ backgroundColor: "transparent" }}
             >
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}

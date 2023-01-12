@@ -34,10 +34,10 @@ const ContactsSection = ({}) => {
     <Box
       component="section"
       className="section"
-      sx={(theme) => ({
-        backgroundColor: theme.palette.common.white,
+      sx={{
+        backgroundColor: "#E0F0FF",
         width: "100%",
-      })}
+      }}
     >
       <Box
         className="container-box"
@@ -81,10 +81,7 @@ const ContactsSection = ({}) => {
                 sx={(theme) => ({
                   display: "flex",
                   flexFlow: "column nowrap",
-                  backgroundColor: theme.palette.common.white,
                   borderRadius: theme.radius.default,
-
-                  // border: "1px solid red",
                 })}
               >
                 <Typography

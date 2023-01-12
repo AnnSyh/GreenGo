@@ -83,7 +83,7 @@ export default function Questions({ title = siteTitle }) {
         sx={{
           height: "calc(100vh - 99px)",
           // backgroundColor: "#f5f5f5",
-          backgroundColor: "#246897",
+          backgroundColor: "#E0F0FF",
         }}
       >
         <div id="top-page" />
@@ -115,7 +115,7 @@ export default function Questions({ title = siteTitle }) {
                 maxWidth: "390px",
                 textAlign: "center",
                 marginTop: "30px",
-                color: "#fff",
+                // color: "#fff",
               }}
             >
               {t("not_find_answer")}
