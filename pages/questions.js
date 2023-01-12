@@ -104,7 +104,12 @@ export default function Questions({ title = siteTitle }) {
             <Typography
               variant="body"
               gutterBottom
-              sx={{ color: "black", maxWidth: "390px", textAlign: "center" }}
+              sx={{
+                color: "black",
+                maxWidth: "390px",
+                textAlign: "center",
+                marginTop: "30px",
+              }}
             >
               {t("not_find_answer")}
             </Typography>

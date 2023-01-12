@@ -42,7 +42,6 @@ export default function FirstSection({}) {
                 // border: "10px solid blue",
               }}
             >
-              {/* <h1> {t("welcome")} </h1> */}
               <Typography
                 variant="body2"
                 component="div"
@@ -55,13 +54,12 @@ export default function FirstSection({}) {
                   textAlign: "left",
                 })}
               >
-                {/* Software development */}
                 {t("software_development")}
               </Typography>
 
               <Box
                 sx={(heme) => ({
-                  backgroundImage: `url('/images/logo-1.png')`,
+                  backgroundImage: `url('/images/logo.svg')`,
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "contain",
                   backgroundPosition: "center",
@@ -124,7 +122,11 @@ export default function FirstSection({}) {
                 })}
               >
                 <Link href="/contacts">
-                  <Button className="btn-contacts" variant="contained">
+                  <Button
+                    className="btn-contacts"
+                    variant="contained"
+                    sx={{ marginTop: "60px" }}
+                  >
                     {t("contacts")}
                   </Button>
                 </Link>
