@@ -37,7 +37,10 @@ const TextSection = ({}) => {
           <Grid container>
             <Grid item md={6}>
               <div className="text-5xl font-extrabold">
-                <AnimationOnScroll animateIn="animate__fadeInLeftBig">
+                <AnimationOnScroll
+                  animateOnce={true}
+                  animateIn="animate__fadeInLeftBig"
+                >
                   <Typography
                     variant="h1"
                     fontSize={{ xs: "20px", sm: "40px", lg: "52px" }}
@@ -49,7 +52,10 @@ const TextSection = ({}) => {
               </div>
             </Grid>
             <Grid item md={6}>
-              <AnimationOnScroll animateIn="animate__fadeInRightBig">
+              <AnimationOnScroll
+                animateOnce={true}
+                animateIn="animate__fadeInRightBig"
+              >
                 <Box
                   sx={() => ({
                     margin: {

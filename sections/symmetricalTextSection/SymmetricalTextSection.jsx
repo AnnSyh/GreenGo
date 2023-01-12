@@ -45,7 +45,10 @@ const SymmetricalTextSection = ({}) => {
                   color: "#000",
                 })}
               >
-                <AnimationOnScroll animateIn="animate__fadeInLeftBig">
+                <AnimationOnScroll
+                  animateOnce={true}
+                  animateIn="animate__fadeInLeftBig"
+                >
                   <Typography
                     variant="body"
                     className={style.p}
@@ -85,7 +88,10 @@ const SymmetricalTextSection = ({}) => {
               </Box>
             </Grid>
             <Grid item md={6}>
-              <AnimationOnScroll animateIn="animate__fadeInRightBig">
+              <AnimationOnScroll
+                animateOnce={true}
+                animateIn="animate__fadeInRightBig"
+              >
                 <div className="text-5xl font-extrabold">
                   <Typography
                     variant="h1"
