@@ -62,7 +62,7 @@ export const Item = ({ item, i }) => {
         />
         <Box
           sx={{
-            padding: "10px 40px 0px 40px",
+            padding: "10px 28px 0px 28px",
             textAlign: "center",
           }}
         >
@@ -70,11 +70,13 @@ export const Item = ({ item, i }) => {
             variant="body"
             gutterBottom
             sx={() => ({
-              marginTop: "20px",
+              marginTop: "5px",
+              marginBottom: "5px",
               padding: 0,
               textAlign: "center",
               fontSize: "13px",
               lineHeight: 1.4,
+              display: "block",
             })}
           >
             {item.desc}

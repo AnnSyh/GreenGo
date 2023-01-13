@@ -11,6 +11,7 @@ import Typography from "@mui/material/Typography";
 import { CardMedia, CardContent } from "@mui/material";
 import { CSSTransition } from "react-transition-group";
 // import "../../styles/slider.module.css";
+import { Box, fontSize, padding } from "@mui/system";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiPaper-root": {
@@ -77,6 +78,7 @@ export default function ModalWindow({ open, handleClose, project }) {
           ref={nodeRef}
           sx={{
             borderRadius: "20px",
+            // maxWidth: "600px",
             margin: "auto",
           }}
           onClose={handleClose}
@@ -86,31 +88,33 @@ export default function ModalWindow({ open, handleClose, project }) {
           //   console.log("!!!!");
           // }}
         >
-          <BootstrapDialogTitle
-            onClose={handleClose}
-            sx={{ textAlign: "center" }}
-          >
-            {project.position}
-          </BootstrapDialogTitle>
-          <DialogContent dividers>
-            <CardMedia
-              component="img"
-              height="400"
-              image={project.image}
-              alt="image project"
-              sx={{
-                width: "100%",
-                height: "auto",
-                padding: "15px",
-                borderRadius: "15px",
-              }}
-            />
-            <CardContent>
-              <Typography variant="body1" color="text.secondary" paragraph>
-                {project.desc}
-              </Typography>
-            </CardContent>
-          </DialogContent>
+          <Box sx={{ maxWidth: "600px" }}>
+            <BootstrapDialogTitle
+              onClose={handleClose}
+              sx={{ textAlign: "center" }}
+            >
+              {project.position}
+            </BootstrapDialogTitle>
+            <DialogContent dividers>
+              <CardMedia
+                component="img"
+                height="400"
+                image={project.image}
+                alt="image project"
+                sx={{
+                  width: "100%",
+                  height: "auto",
+                  padding: "15px",
+                  borderRadius: "15px",
+                }}
+              />
+              <CardContent>
+                <Typography variant="body1" color="text.secondary" paragraph>
+                  {project.desc}
+                </Typography>
+              </CardContent>
+            </DialogContent>
+          </Box>
         </BootstrapDialog>
       </CSSTransition>
     </div>
