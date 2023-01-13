@@ -17,6 +17,7 @@ import imgUrl from "../../public/images/icons/icon-clock.svg";
 // import MailIcon from "@mui/icons-material/Mail";
 import { Avatar, Image } from "@mui/material";
 import { auto } from "@popperjs/core";
+import style from "../../styles/TextSection.module.css";
 
 const SecondSection = ({}) => {
   const { t } = useTranslation("common");
@@ -56,7 +57,6 @@ const SecondSection = ({}) => {
             }}
           >
             {items.map((item) => (
-              // <AnimationOnScroll animateOnce={true} animateIn="animate">
               <Card
                 className="lab__card"
                 key={item.title}
@@ -74,25 +74,26 @@ const SecondSection = ({}) => {
                   />
                   <CardContent>
                     <Typography
-                      variant="subtitle1"
-                      component="h2"
-                      sx={{
-                        marginBottom: "0px !important",
-                        paddingBottom: "0px !important",
-                      }}
+                      variant="h1"
+                      fontFamily={"Roadradio"}
+                      fontSize={{ xs: "20px", sm: "40px" }}
                     >
                       {t(item.title)}
                     </Typography>
                     <Typography
-                      variant="body2"
-                      sx={{ color: "black", marginTop: auto }}
+                      variant="p"
+                      fontFamily={"Roadradio"}
+                      className={style.p}
+                      sx={{
+                        marginTop: auto,
+                        fontWeight: "200",
+                      }}
                     >
                       {t(item.desc)}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
               </Card>
-              // {/* </AnimationOnScroll> */}
             ))}
           </Grid>
         </Box>

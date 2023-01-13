@@ -59,11 +59,13 @@ theme.typography.h1 = {
   fontSize: "52px",
   color: "#000",
   fontWeight: 600,
+  // border: "1px solid green",
 };
 theme.typography.h2 = {
   fontSize: "52px",
   color: "#000",
   fontWeight: 400,
+  // border: "1px solid red",
 };
 theme.typography.h3 = {
   fontSize: "52px",

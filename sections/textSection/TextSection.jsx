@@ -5,14 +5,6 @@ import { useTranslation } from "next-i18next";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import style from "../../styles/TextSection.module.css";
 
-import {
-  Animate,
-  useAnimateKeyframes,
-  useAnimateGroup,
-  AnimateKeyframes,
-  AnimateGroup,
-} from "react-simple-animate";
-
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const TextSection = ({}) => {
