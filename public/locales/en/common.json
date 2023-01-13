@@ -48,5 +48,17 @@
   "no_extra_income": "no additional income from charging stations",
   "questions": "Questions",
   "contact_us": "Contact us",
-  "not_find_answer": "If you did not find the answer to your question, we will be happy to answer it."
+  "not_find_answer": "If you did not find the answer to your question, we will be happy to answer it.",
+
+  "text_section_title": "Charging infrastructure market",
+  "text_section_p_1": "en В Российской Федерации по состоянию 2022 год, рынок по созданию инфраструктуры ЭЗС можно разделить на 3 основных сегмента:",
+  "text_section_li_1": "en Производители станций",
+  "text_section_li_2": "en Поставщики IT-услуг",
+  "text_section_li_3": "en Инжиниринговые компании",
+  "text_section_p_2": "en Существующие сервисы для оплаты зарядных сессий разрознены и сложны в пользовании",
+  "text_section_li_4": "en Разные приложения производителей станций и интеграторов станций",
+  "text_section_li_5": "en Мало способов оплаты",
+  "text_section_li_6": "en Отсутствует и плохо работает техподдержка",
+  "problem": "en ПРОБЛЕМА",
+  "text_section_blockquote": "en В настоящее время на рынке нет сервиса одновременно упрощающего жизнь владельцам электромобилей и объединяющего производителей, операторов и владельцев зарядных станций"
 }
