@@ -65,8 +65,7 @@ const AccordionSection = ({}) => {
         justifyContent="space-between"
         sx={{
           position: "relative",
-          minHeight: "calc(100vh - 160px - 386px)",
-          // border: "1px solid green",
+          minHeight: "calc(100vh - 160px - 362px)",
         }}
       >
         <div>
@@ -78,14 +77,14 @@ const AccordionSection = ({}) => {
               sx={{ backgroundColor: "transparent" }}
             >
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
+                expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
                 aria-controls="panel4bh-content"
                 id="panel4bh-header"
               >
-                <Typography>{item.summary}</Typography>
+                <Typography sx={{ color: "#fff" }}>{item.summary}</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>{item.details}</Typography>
+                <Typography sx={{ color: "#fff" }}>{item.details}</Typography>
               </AccordionDetails>
             </Accordion>
           ))}

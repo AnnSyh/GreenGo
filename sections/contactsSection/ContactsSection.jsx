@@ -35,7 +35,7 @@ const ContactsSection = ({}) => {
       component="section"
       className="section"
       sx={{
-        backgroundColor: "#E0F0FF",
+        // backgroundColor: "#E0F0FF",
         width: "100%",
       }}
     >
@@ -88,20 +88,21 @@ const ContactsSection = ({}) => {
                   variant="subtitle1"
                   component="div"
                   fontSize={{ xs: "20px", md: "30px" }}
+                  sx={{ color: "#fff" }}
                 >
                   {t(item.title)}
                 </Typography>
 
-                <Typography variant="subtitle1_text">
+                <Typography variant="subtitle1_text" sx={{ color: "#fff" }}>
                   <PhoneIcon sx={{ marginRight: "10px" }} />
                   {t(item.tel)}
                 </Typography>
-                <Typography variant="subtitle1_text">
+                <Typography variant="subtitle1_text" sx={{ color: "#fff" }}>
                   <MailIcon sx={{ marginRight: "10px" }} />
                   {t(item.email)}
                 </Typography>
                 {item.telegramm ? (
-                  <Typography variant="subtitle1_text">
+                  <Typography variant="subtitle1_text" sx={{ color: "#fff" }}>
                     <TelegramIcon sx={{ marginRight: "10px" }} />
                     {t(item.telegramm)}
                   </Typography>

@@ -1,5 +1,6 @@
 import { Box, Grid, Typography, Button } from "@mui/material";
 import { useTranslation } from "next-i18next";
+import SotialLinks from "../components/SotialLinks";
 
 export const Footer = ({}) => {
   const { t } = useTranslation("common");
@@ -9,12 +10,12 @@ export const Footer = ({}) => {
       <footer>
         <Box
           sx={() => ({
-            minHeight: "100px",
+            minHeight: "150px",
             backgroundColor: "rgba(0, 179, 152, 0.7)",
             width: "100%",
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
+            justifyContent: "space-evenly",
             flexDirection: "column",
           })}
         >
@@ -22,10 +23,11 @@ export const Footer = ({}) => {
             variant="subtitle2"
             component="div"
             align="center"
-            sx={{ color: "#fff" }}
+            sx={{ color: "#fff", paddingBottom: "0px" }}
           >
             GreenGo
           </Typography>
+          <SotialLinks />
           <Typography component="div" align="center" sx={{ color: "#fff" }}>
             {/* © All Rights Reserved */}© {t("all_rights")}
           </Typography>

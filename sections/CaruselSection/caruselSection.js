@@ -141,8 +141,6 @@ export const CaruselSection = ({}) => {
                 sx={{ position: "relative" }}
               >
                 <Swiper
-                  // slidesPerView={4}
-                  // spaceBetween={10}
                   breakpoints={{
                     "@0.00": {
                       slidesPerView: 1,

@@ -60,29 +60,35 @@ export const Item = ({ item, i }) => {
             borderStyle: "solid",
           })}
         />
-
-        <Typography
-          variant="body"
-          gutterBottom
-          sx={() => ({
-            marginTop: "20px",
-            padding: 0,
-            textAlign: "center",
-            fontSize: "13px",
-            lineHeight: 1.4,
-          })}
-        >
-          {item.desc}
-        </Typography>
-        <Typography
-          variant="subtitle2"
+        <Box
           sx={{
-            fontSize: "16px",
-            color: "#000",
+            padding: "10px 40px 0px 40px",
+            textAlign: "center",
           }}
         >
-          {item.position}
-        </Typography>
+          <Typography
+            variant="body"
+            gutterBottom
+            sx={() => ({
+              marginTop: "20px",
+              padding: 0,
+              textAlign: "center",
+              fontSize: "13px",
+              lineHeight: 1.4,
+            })}
+          >
+            {item.desc}
+          </Typography>
+          <Typography
+            variant="subtitle2"
+            sx={{
+              fontSize: "16px",
+              color: "#000",
+            }}
+          >
+            {item.position}
+          </Typography>
+        </Box>
       </Box>
       <ModalWindow open={open} handleClose={handleClose} project={item} />
     </>

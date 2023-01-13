@@ -32,6 +32,7 @@
     "react-particles": "^2.7.1",
     "react-phone-input-2": "^2.15.1",
     "react-simple-animate": "^3.5.2",
+    "react-transition-group": "^4.4.5",
     "swiper": "^8.4.5",
     "tsparticles": "^2.7.1",
     "yup": "^0.32.11"

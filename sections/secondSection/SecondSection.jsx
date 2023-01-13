@@ -76,7 +76,7 @@ const SecondSection = ({}) => {
                     <Typography
                       variant="h1"
                       fontFamily={"Roadradio"}
-                      fontSize={{ xs: "20px", sm: "40px" }}
+                      fontSize={{ xs: "20px", sm: "30px" }}
                     >
                       {t(item.title)}
                     </Typography>

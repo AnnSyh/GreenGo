@@ -87,6 +87,11 @@ body {
   font-weight: 200;
   font-size: 16px;
   height: 100%;
+
+  background-image: url(/images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .scroll-container {
@@ -437,4 +442,23 @@ ul {
 
 .lab__card:hover {
   bottom: 30px;
+}
+
+.alert-enter {
+  opacity: 0;
+  transform: scale(0.9);
+  border: 1px solid red;
+}
+.alert-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 900ms, transform 900ms;
+}
+.alert-exit {
+  opacity: 1;
+}
+.alert-exit-active {
+  opacity: 0;
+  transform: scale(0.1);
+  transition: opacity 900ms, transform 900ms;
 }
