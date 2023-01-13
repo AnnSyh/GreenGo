@@ -77,5 +77,14 @@
   "provide_section_card_3": "Notification of the authorized body about the offense with sending photo data (optional)",
   "provide_section_card_4": "Intelligent route planning, cost and station booking based on traffic conditions from a mobile application",
   "provide_section_card_5": "Automatic detection of the user and the start of the session when connected to the EZS - «connected and left» (through reading the license plate or personal mobile gadget)",
-  "provide_section_card_6": "Automatic notification when the charging station is free to schedule the start of the session"
+  "provide_section_card_6": "Automatic notification when the charging station is free to schedule the start of the session",
+
+  "questions_summary_1": "1 Personal data",
+  "questions_details_1": "en 1 Nunc vitae orci ultricies, auctor nunc in, volutpat nisl.Integer sit amet egestas eros, vitae egestas augue. Duis velest augue ?",
+  "questions_summary_2": "2 Personal data",
+  "questions_details_2": "en 2 Nunc vitae orci ultricies, auctor nunc in, volutpat nisl.Integer sit amet egestas eros, vitae egestas augue. Duis velest augue ?",
+  "questions_summary_3": "3 Personal data",
+  "questions_details_3": "en 3 Nunc vitae orci ultricies, auctor nunc in, volutpat nisl.Integer sit amet egestas eros, vitae egestas augue. Duis velest augue ?",
+  "questions_summary_4": "4 Personal data",
+  "questions_details_4": "en 4 Nunc vitae orci ultricies, auctor nunc in, volutpat nisl.Integer sit amet egestas eros, vitae egestas augue. Duis velest augue ?"
 }

@@ -26,31 +26,23 @@ const AccordionSection = ({}) => {
   const questions = [
     {
       id: "panel1",
-      summary: `1 Personal data`,
-      details: `1 Nunc vitae orci ultricies, auctor nunc in, volutpat nisl.
-      Integer sit amet egestas eros, vitae egestas augue. Duis vel
-      est augue.`,
+      summary: `${t("questions_summary_1")}`,
+      details: `${t("questions_details_1")}`,
     },
     {
       id: "panel2",
-      summary: `2 Personal data`,
-      details: `2 Nunc vitae orci ultricies, auctor nunc in, volutpat nisl.
-      Integer sit amet egestas eros, vitae egestas augue. Duis vel
-      est augue.`,
+      summary: `${t("questions_summary_2")}`,
+      details: `${t("questions_details_2")}`,
     },
     {
       id: "panel3",
-      summary: `3 Personal data`,
-      details: `3 Nunc vitae orci ultricies, auctor nunc in, volutpat nisl.
-      Integer sit amet egestas eros, vitae egestas augue. Duis vel
-      est augue.`,
+      summary: `${t("questions_summary_3")}`,
+      details: `${t("questions_details_3")}`,
     },
     {
       id: "panel4",
-      summary: `4 Personal data`,
-      details: `4 Nunc vitae orci ultricies, auctor nunc in, volutpat nisl.
-      Integer sit amet egestas eros, vitae egestas augue. Duis vel
-      est augue.`,
+      summary: `${t("questions_summary_4")}`,
+      details: `${t("questions_details_4")}`,
     },
   ];
 
