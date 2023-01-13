@@ -1,6 +1,6 @@
 import { Box, Grid, Typography, Button } from "@mui/material";
 import { useTranslation } from "next-i18next";
-import SotialLinks from "../components/SotialLinks";
+import SoсialLinks from "../components/SoсialLinks";
 
 export const Footer = ({}) => {
   const { t } = useTranslation("common");
@@ -19,17 +19,16 @@ export const Footer = ({}) => {
             flexDirection: "column",
           })}
         >
+          <SoсialLinks />
+          <Typography component="div" align="center" sx={{ color: "#fff" }}>
+            {/* © All Rights Reserved */} {t("all_rights")}
+          </Typography>
           <Typography
-            variant="subtitle2"
             component="div"
             align="center"
             sx={{ color: "#fff", paddingBottom: "0px" }}
           >
-            GreenGo
-          </Typography>
-          <SotialLinks />
-          <Typography component="div" align="center" sx={{ color: "#fff" }}>
-            {/* © All Rights Reserved */}© {t("all_rights")}
+            © 2022 GreenGo
           </Typography>
         </Box>
       </footer>

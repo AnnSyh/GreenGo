@@ -153,6 +153,12 @@ a {
     padding-right: 30px;
   }
 }
+@media screen and (max-width: 550px) {
+  .section > div {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 
 .headerColor2 header {
   background-color: rgba(0, 179, 152, 0.7);
@@ -428,6 +434,7 @@ ul {
   height: 100%;
   width: 100%;
   top: 0;
+  left: 0;
 }
 
 .mySwiper .swiper-pagination {

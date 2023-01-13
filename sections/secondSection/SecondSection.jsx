@@ -25,21 +25,18 @@ const SecondSection = ({}) => {
   const items = [
     {
       title: `web_development`,
-      image: `url('/images/icons/icon-clock.svg')`,
-      iconsrc: "/images/icons/icon-electric-car-1.svg",
-      desc: `web_development_txt`,
+      src: "/images/car.png",
+      desc: `provides_stable_technical_solutions`,
     },
     {
       title: `devops`,
-      image: `url('/images/icons/www.svg')`,
-      iconsrc: "/images/icons/icon-electric-car-2.svg",
-      desc: `devops_txt`,
+      src: "/images/car-2.png",
+      desc: `provide_most_effective_service`,
     },
     {
       title: `design`,
-      image: `url('/images/icons/design.svg')`,
-      iconsrc: "/images/icons/icon-electric-car-3.svg",
-      desc: `design_txt`,
+      src: "/images/car-3.png",
+      desc: `simplify_process`,
     },
   ];
 
@@ -61,7 +58,7 @@ const SecondSection = ({}) => {
                 className="lab__card"
                 key={item.title}
                 sx={{
-                  width: { xs: "80%", sm: "40%", md: "31%" },
+                  width: { xs: "100%", sm: "40%", md: "31%" },
                   borderRadius: "15px",
                   margin: "1% 1% 30px 1%",
                 }}
@@ -69,17 +66,18 @@ const SecondSection = ({}) => {
                 <CardActionArea>
                   <CardMedia
                     sx={{ height: 240 }}
-                    image="/images/car.png"
+                    // image="/images/car.png"
+                    image={item.src}
                     title="Contemplative Reptile"
                   />
                   <CardContent>
-                    <Typography
+                    {/* <Typography
                       variant="h1"
                       fontFamily={"Roadradio"}
                       fontSize={{ xs: "20px", sm: "30px" }}
                     >
                       {t(item.title)}
-                    </Typography>
+                    </Typography> */}
                     <Typography
                       variant="p"
                       fontFamily={"Roadradio"}

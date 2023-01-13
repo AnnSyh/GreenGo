@@ -95,8 +95,8 @@ const FormSection = ({}) => {
         >
           <Typography
             variant="h1"
-            sx={{ textAlign: "center", width: "100%" }}
-            fontSize={{ xs: "35px", md: "52px" }}
+            sx={{ textAlign: "center", width: "100%", marginBottom: "30px" }}
+            fontSize={{ xs: "25px", md: "52px" }}
           >
             {t("subscription_form")}
           </Typography>

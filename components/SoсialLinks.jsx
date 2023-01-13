@@ -1,27 +1,21 @@
-import React, { useState } from "react";
-import { AppBar, Toolbar, IconButton, Typography, Button } from "@mui/material";
-import { useRouter } from "next/router";
-import styles from "../styles/nav.module.css";
+import React from "react";
 import { Box } from "@mui/system";
 import { useTranslation } from "next-i18next";
 
 import TelegramIcon from "@mui/icons-material/Telegram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { FaVk } from "react-icons/fa";
 
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
-function SotialLinks() {
+function SoсialLinks() {
   const { t } = useTranslation("common");
 
   return (
     <Box
-      className="SotialLinks-ul"
       sx={{
-        display: {
-          xs: "none",
-          sm: "flex",
-        },
+        display: "flex",
         justifyContent: "space-between",
         flexFlow: "row nowrap",
         marginLeft: "10px",
@@ -41,7 +35,13 @@ function SotialLinks() {
         <FacebookIcon />
         {/* facebook */}
       </a>
+      <a href="https://www.vk.com/" target="_blank" color="inherit">
+        <Box sx={{ fontSize: "23px" }}>
+          <FaVk />
+        </Box>
+        {/* vk */}
+      </a>
     </Box>
   );
 }
-export default SotialLinks;
+export default SoсialLinks;

@@ -96,6 +96,7 @@ const SymmetricalTextSection = ({}) => {
                   <Typography
                     variant="h1"
                     fontSize={{ xs: "20px", sm: "40px", lg: "52px" }}
+                    marginBottom={{ xs: "30px" }}
                   >
                     {/* {t("products")} */}
                     РЫНОК <br />

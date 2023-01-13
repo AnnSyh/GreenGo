@@ -76,7 +76,7 @@ export default function FirstSection({}) {
                 })}
               ></Box>
 
-              <Typography
+              {/* <Typography
                 variant="body2"
                 sx={{
                   marginTop: {
@@ -86,8 +86,8 @@ export default function FirstSection({}) {
                 }}
               >
                 {t("provides_stable_technical_solutions")}
-              </Typography>
-              <Typography
+              </Typography> */}
+              {/* <Typography
                 variant="body2"
                 sx={{
                   marginTop: {
@@ -97,8 +97,8 @@ export default function FirstSection({}) {
                 }}
               >
                 {t("provide_most_effective_service")}
-              </Typography>
-              <Typography
+              </Typography> */}
+              {/* <Typography
                 variant="body2"
                 sx={{
                   marginTop: {
@@ -108,7 +108,7 @@ export default function FirstSection({}) {
                 }}
               >
                 {t("simplify_process")}
-              </Typography>
+              </Typography> */}
 
               <Box
                 sx={() => ({

@@ -69,7 +69,6 @@ export default function ModalWindow({ open, handleClose, project }) {
         nodeRef={nodeRef}
         timeout={300}
         classNames="alert"
-        // classNames={style.alert}
         unmountOnExit
         onEnter={() => setShowButton(false)}
         onExited={() => setShowButton(true)}

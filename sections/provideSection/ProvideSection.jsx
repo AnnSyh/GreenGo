@@ -4,7 +4,7 @@ import { useTranslation } from "next-i18next";
 
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import imgUrl from "../../public/images/icons/icon-clock.svg";
-// import MailIcon from "@mui/icons-material/Mail";
+import MailIcon from "@mui/icons-material/Mail";
 import { Avatar, Image } from "@mui/material";
 import ParticlesBackground from "../../components/particlesBackground";
 
@@ -41,19 +41,22 @@ const ProvideSection = ({}) => {
   return (
     <section id="provide-section" className="section">
       <Box
-        sx={(theme) => ({
+        sx={{
           backgroundColor: "#fff",
           position: "relative",
           paddingTop: "100px",
-          // border: "1px solid red",
           overflow: "hidden",
-        })}
+          paddingLeft: {
+            xs: "0px",
+            md: "15px",
+          },
+        }}
       >
         <Box className="container-box">
           <Typography
             variant="h1"
             sx={{ textAlign: "center", width: "100%", marginBottom: "60px" }}
-            fontSize={{ xs: "35px", md: "52px" }}
+            fontSize={{ xs: "25px", md: "52px" }}
           >
             Предоставляем
           </Typography>
