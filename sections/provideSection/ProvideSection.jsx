@@ -14,27 +14,27 @@ const ProvideSection = ({}) => {
   const items = [
     {
       image: `url('/images/provide/img-1.jpg')`,
-      desc: `Определение занятости парковочного места у зарядной станции`,
+      desc: `${t("provide_section_card_1")}`,
     },
     {
       image: `url('/images/provide/img-2.jpg')`,
-      desc: `Определение правомерности занятости парковочного места по типу размещенного ТС`,
+      desc: `${t("provide_section_card_2")}`,
     },
     {
       image: `url('/images/provide/img-3.jpg')`,
-      desc: `Уведомление уполномоченного органа о правонарушении с отправкой фотоданных (опционально)`,
+      desc: `${t("provide_section_card_3")}`,
     },
     {
       image: `url('/images/provide/img-4.jpg')`,
-      desc: `Интеллектуальное планирование маршрута, стоимости и бронирования станции исходя из дорожной обстановки из мобильного приложения`,
+      desc: `${t("provide_section_card_4")}`,
     },
     {
       image: `url('/images/provide/img-5.jpg')`,
-      desc: `Автоматическая детекция пользователя и старта сессии при подключении к ЭЗС - «подключился и ушел» (через считывание госномера или персональное мобильный гаджет)`,
+      desc: `${t("provide_section_card_5")}`,
     },
     {
       image: `url('/images/provide/img-6.jpg')`,
-      desc: `Автоматическое уведомление при освобождении зарядной станции для планирования старта сессии`,
+      desc: `${t("provide_section_card_6")}`,
     },
   ];
 
@@ -58,7 +58,8 @@ const ProvideSection = ({}) => {
             sx={{ textAlign: "center", width: "100%", marginBottom: "60px" }}
             fontSize={{ xs: "25px", md: "52px" }}
           >
-            Предоставляем
+            {/* Предоставляем */}
+            {t("provide_section_title")}
           </Typography>
 
           <Grid container>

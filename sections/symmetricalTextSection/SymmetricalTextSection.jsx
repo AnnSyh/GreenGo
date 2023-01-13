@@ -54,35 +54,47 @@ const SymmetricalTextSection = ({}) => {
                     className={style.p}
                     sx={{ marginTop: "0px !important" }}
                   >
-                    Качественных полнофункциональных развитых сервисов по работе
-                    с электрозаправочными станциями почти нет
+                    {t("symmetrical_text_section_p_1")}
+                    {/* Качественных полнофункциональных развитых сервисов по работе
+                    с электрозаправочными станциями почти нет */}
                   </Typography>
                   <Box className={style.listItem}>
                     <CheckCircleOutlineIcon />
-                    Мало зарядных станций
+                    {t("symmetrical_text_section_li_1")}
+                    {/* Мало зарядных станций */}
                   </Box>
                   <Box className={style.listItem}>
                     <CheckCircleOutlineIcon />
-                    Мало электромобилей
+                    {/* Мало электромобилей */}
+                    {t("symmetrical_text_section_li_2")}
                   </Box>
 
                   <Typography variant="body" className={style.p}>
-                    Существующие сервисы для оплаты зарядных сессий разрознены и
-                    сложны в пользовании
+                    {/* Существующие сервисы для оплаты зарядных сессий разрознены и
+                    сложны в пользовании */}
+                    {t("symmetrical_text_section_p_2")}
                   </Typography>
                   <ul>
                     <li>
-                      Разные приложения производителей станций и интеграторов
-                      станций
+                      {/* Разные приложения производителей станций и интеграторов
+                      станций */}
+                      {t("symmetrical_text_section_li_3")}
                     </li>
-                    <li>Мало способов оплаты</li>
-                    <li>Отсутствует и плохо работает техподдержка</li>
+                    <li>
+                      {/* Мало способов оплаты */}
+                      {t("symmetrical_text_section_li_4")}
+                    </li>
+                    <li>
+                      {/* Отсутствует и плохо работает техподдержка */}
+                      {t("symmetrical_text_section_li_5")}
+                    </li>
                   </ul>
                   <h2>ПРОБЛЕМА</h2>
                   <blockquote className="quote">
-                    В настоящее время на рынке нет сервиса одновременно
+                    {t("text_section_blockquote")}
+                    {/* В настоящее время на рынке нет сервиса одновременно
                     упрощающего жизнь владельцам электромобилей и объединяющего
-                    производителей, операторов и владельцев зарядных станций
+                    производителей, операторов и владельцев зарядных станций */}
                   </blockquote>
                 </AnimationOnScroll>
               </Box>
@@ -98,9 +110,9 @@ const SymmetricalTextSection = ({}) => {
                     fontSize={{ xs: "20px", sm: "40px", lg: "52px" }}
                     marginBottom={{ xs: "30px" }}
                   >
-                    {/* {t("products")} */}
-                    РЫНОК <br />
-                    СЕРВИСОВ УПРАВЛЕНИЯ
+                    {t("symmetrical_text_section_title")}
+                    {/* РЫНОК <br />
+                    СЕРВИСОВ УПРАВЛЕНИЯ */}
                   </Typography>
                 </div>
               </AnimationOnScroll>
