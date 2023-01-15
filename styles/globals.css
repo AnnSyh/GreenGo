@@ -97,6 +97,8 @@ body {
 .scroll-container {
   overflow-y: scroll;
   scroll-behavior: smooth;
+
+  background-color: #0a234c;
 }
 
 .fill-current {
