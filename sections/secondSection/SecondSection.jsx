@@ -53,6 +53,7 @@ const SecondSection = ({}) => {
               width: "calc(100% + 56px)",
             }}
           >
+            {/* ---------------- */}
             {items.map((item) => (
               <Card
                 className="lab__card"
@@ -66,26 +67,14 @@ const SecondSection = ({}) => {
                 <CardActionArea>
                   <CardMedia
                     sx={{ height: 240 }}
-                    // image="/images/car.png"
                     image={item.src}
                     title="Contemplative Reptile"
                   />
                   <CardContent>
-                    {/* <Typography
-                      variant="h1"
-                      fontFamily={"Roadradio"}
-                      fontSize={{ xs: "20px", sm: "30px" }}
-                    >
-                      {t(item.title)}
-                    </Typography> */}
                     <Typography
                       variant="p"
                       fontFamily={"Roadradio"}
                       className={style.p}
-                      sx={{
-                        marginTop: auto,
-                        fontWeight: "200",
-                      }}
                     >
                       {t(item.desc)}
                     </Typography>
@@ -93,6 +82,7 @@ const SecondSection = ({}) => {
                 </CardActionArea>
               </Card>
             ))}
+            {/* ---------------- */}
           </Grid>
         </Box>
       </Box>
