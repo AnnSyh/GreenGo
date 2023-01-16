@@ -11,7 +11,7 @@ export const Footer = ({}) => {
         <Box
           sx={() => ({
             minHeight: "150px",
-            backgroundColor: "rgba(0, 179, 152, 1)",
+            backgroundColor: "rgba(0, 179, 152, 0.9)",
             width: "100%",
             display: "flex",
             alignItems: "center",
