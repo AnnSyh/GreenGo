@@ -44,7 +44,7 @@ const ProvideSection = ({}) => {
         sx={{
           backgroundColor: "#fff",
           position: "relative",
-          paddingTop: "100px",
+          paddingTop: "30px",
           overflow: "hidden",
           paddingLeft: {
             xs: "0px",

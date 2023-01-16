@@ -119,7 +119,7 @@ const FormMy = ({}) => {
                   // error={formik.touched.email && Boolean(formik.errors.email)}
                   // helpertext={formik.touched.email && formik.errors.email}
                 />
-                <Typography sx={{ color: "red" }}>
+                <Typography>
                   {formik.touched.email && formik.errors.email}
                 </Typography>
               </Grid>
@@ -128,7 +128,8 @@ const FormMy = ({}) => {
                   {t("phone_number")}
                 </Typography>
                 <PhoneInput
-                  className={style.reactTelInput}
+                  // className={style.reactTelInput}
+                  className={style.textField}
                   country={"ru"}
                   value={phoneNumber}
                   onChange={(e) => setPhoneNumber(e)}

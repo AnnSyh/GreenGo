@@ -85,7 +85,7 @@ export const CaruselSection = ({}) => {
           width: "100%",
           position: "relative",
           display: "flex",
-          paddingTop: "100px",
+          paddingTop: "30px",
           paddingBottom: "100px",
         })}
       >

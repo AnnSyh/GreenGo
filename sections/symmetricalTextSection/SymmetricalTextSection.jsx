@@ -17,6 +17,11 @@ const SymmetricalTextSection = ({}) => {
           backgroundColor: theme.palette.common.white,
           width: "100%",
           position: "relative",
+          paddingBottom: "0px !important",
+          maxHeight: {
+            xs: "auto",
+            md: "480px",
+          },
         })}
       >
         <Box
