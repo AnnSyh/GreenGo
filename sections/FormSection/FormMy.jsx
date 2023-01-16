@@ -87,7 +87,7 @@ const FormMy = ({}) => {
         {checkForm && (
           <form onSubmit={formik.handleSubmit} style={styles.form}>
             <Grid container spacing={2} marginBottom="30px">
-              <Grid item xs={12} lg={4}>
+              <Grid item xs={12} md={4}>
                 <Typography variant="colorGreen">
                   {t("subscription_form_input_one")}
                 </Typography>
@@ -106,7 +106,7 @@ const FormMy = ({}) => {
                   {formik.touched.name && formik.errors.name}
                 </Typography>
               </Grid>
-              <Grid item xs={12} lg={4}>
+              <Grid item xs={12} md={4}>
                 <Typography variant="colorGreen">Email</Typography>
                 <TextField
                   className={style.textField}
@@ -123,7 +123,7 @@ const FormMy = ({}) => {
                   {formik.touched.email && formik.errors.email}
                 </Typography>
               </Grid>
-              <Grid item xs={12} lg={4}>
+              <Grid item xs={12} md={4}>
                 <Typography variant="colorGreen">
                   {t("phone_number")}
                 </Typography>
@@ -140,7 +140,9 @@ const FormMy = ({}) => {
               </Grid>
             </Grid>
             <Grid item md={12}>
-              <label htmlFor="message">{t("message")}</label>
+              <label htmlFor="message">
+                <Typography variant="colorGreen">{t("message")}</Typography>
+              </label>
               <TextArea
                 className={style.textArea}
                 value={formik.values.message}

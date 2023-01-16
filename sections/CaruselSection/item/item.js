@@ -69,7 +69,7 @@ export const Item = ({ item, i }) => {
           <Typography
             variant="body"
             gutterBottom
-            sx={() => ({
+            sx={{
               marginTop: "5px",
               marginBottom: "5px",
               padding: 0,
@@ -77,7 +77,8 @@ export const Item = ({ item, i }) => {
               fontSize: "13px",
               lineHeight: 1.4,
               display: "block",
-            })}
+              color: "#00b398",
+            }}
           >
             {item.desc}
           </Typography>

@@ -42,7 +42,7 @@ const SymmetricalTextSection = ({}) => {
                     xs: "0px 0px 15px 0px",
                     sm: "0px 30px 30px 0px",
                   },
-                  color: "#000",
+                  color: "#fff",
                 })}
               >
                 <AnimationOnScroll

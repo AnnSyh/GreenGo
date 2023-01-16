@@ -51,6 +51,8 @@ const SecondSection = ({}) => {
               position: "relative",
               top: "-30px",
               width: "calc(100% + 56px)",
+              marginLeft: "-30px",
+              marginRight: "-30px",
             }}
           >
             {/* ---------------- */}
