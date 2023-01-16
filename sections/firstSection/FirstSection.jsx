@@ -92,10 +92,11 @@ export default function FirstSection({}) {
                     className="btn-contacts"
                     variant="contained"
                     sx={{
-                      marginTop: {
-                        xs: "345px",
-                        md: "160px",
-                      },
+                      marginTop: "0px",
+                      // marginTop: {
+                      //   xs: "345px",
+                      //   md: "160px",
+                      // },
                     }}
                   >
                     {t("contacts")}
