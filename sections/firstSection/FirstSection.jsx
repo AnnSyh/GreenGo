@@ -58,7 +58,7 @@ export default function FirstSection({}) {
               </Typography>
 
               <Box
-                sx={(heme) => ({
+                sx={{
                   backgroundImage: `url('/images/logo.svg')`,
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "contain",
@@ -70,48 +70,14 @@ export default function FirstSection({}) {
                   },
                   margin: {
                     xs: "auto",
-                    lg: "10px 0",
                     md: "auto",
+                    lg: "10px 0",
                   },
-                })}
+                }}
               ></Box>
 
-              {/* <Typography
-                variant="body2"
-                sx={{
-                  marginTop: {
-                    xs: "15px",
-                    sm: "40px",
-                  },
-                }}
-              >
-                {t("provides_stable_technical_solutions")}
-              </Typography> */}
-              {/* <Typography
-                variant="body2"
-                sx={{
-                  marginTop: {
-                    xs: "15px",
-                    sm: "40px",
-                  },
-                }}
-              >
-                {t("provide_most_effective_service")}
-              </Typography> */}
-              {/* <Typography
-                variant="body2"
-                sx={{
-                  marginTop: {
-                    xs: "15px",
-                    sm: "30px",
-                  },
-                }}
-              >
-                {t("simplify_process")}
-              </Typography> */}
-
               <Box
-                sx={() => ({
+                sx={{
                   width: "100%",
                   display: "flex",
                   flexFlow: "row nowrap",
@@ -119,15 +85,17 @@ export default function FirstSection({}) {
                     xs: "start",
                     lg: "start",
                   },
-                })}
+                }}
               >
                 <Link href="/contacts">
                   <Button
                     className="btn-contacts"
                     variant="contained"
                     sx={{
-                      marginTop: "360px",
-                      // border: "10px solid blue"
+                      marginTop: {
+                        xs: "345px",
+                        md: "160px",
+                      },
                     }}
                   >
                     {t("contacts")}
