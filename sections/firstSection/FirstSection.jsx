@@ -23,7 +23,7 @@ export default function FirstSection({}) {
           alignItems="center"
         >
           <video autoPlay muted loop id="video">
-            <source src={"../../images/car-17mb.mp4"} type="video/mp4" />
+            <source src={"../../images/electric-car-8.mp4"} type="video/mp4" />
           </video>
           <Box
             className="container-box fadeIn"

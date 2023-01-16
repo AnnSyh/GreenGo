@@ -51,8 +51,12 @@ const SecondSection = ({}) => {
               position: "relative",
               top: "-30px",
               width: "calc(100% + 56px)",
-              marginLeft: "-30px",
-              marginRight: "-30px",
+              // marginLeft: "-30px",
+              // marginRight: "-30px",
+              margin: {
+                xs: "0px",
+                md: "0px -30px",
+              },
             }}
           >
             {/* ---------------- */}
@@ -61,7 +65,7 @@ const SecondSection = ({}) => {
                 className="lab__card"
                 key={item.title}
                 sx={{
-                  width: { xs: "100%", sm: "40%", md: "31%" },
+                  width: { xs: "90%", sm: "40%", md: "31%" },
                   borderRadius: "15px",
                   margin: "1% 1% 30px 1%",
                 }}
