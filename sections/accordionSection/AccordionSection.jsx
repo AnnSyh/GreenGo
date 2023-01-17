@@ -113,14 +113,16 @@ const AccordionSection = ({}) => {
             minHeight: "calc(100vh - 160px - 436px)",
           }}
         >
-          <Box>
+          <Box sx={{ width: "100%" }}>
             {questions.map((item, index) => (
               <Accordion
                 square
                 key={index}
                 expanded={expanded === `${item.id}`}
                 onChange={handleChange(`${item.id}`)}
-                sx={{ backgroundColor: "transparent" }}
+                sx={{
+                  backgroundColor: "transparent",
+                }}
               >
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
