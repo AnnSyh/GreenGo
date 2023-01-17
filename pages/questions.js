@@ -5,7 +5,7 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 
 import ModalWindow from "../components/modalWindow/form";
 
-import { TopArrow } from "../components/TopArrow";
+// import { TopArrow } from "../components/TopArrow";
 import { Footer } from "../footer/Footer";
 
 import { useRouter } from "next/router";
@@ -72,69 +72,32 @@ export default function Questions({ title = siteTitle }) {
           close={closeMenu}
           isOpen={isMenuOpen}
           languageToggle={handelLanguageToggle}
-          // sx={{ border: "1px solid red" }}
         />
       </Box>
 
-      <Box
-        sx={{
-          height: "calc(100vh - 99px)",
-          // backgroundColor: "#f5f5f5",
-          // backgroundColor: "#E0F0FF",
-          // backgroundImage: "url('/images/bg.jpg')",
-        }}
-      >
+      <Box className="boxHeigh">
         <div id="top-page" />
 
-        <Box
-          className="container-box"
-          sx={() => ({
-            paddingTop: "150px",
-            paddingLeft: "30px",
-            paddingRight: "30px",
-          })}
-        >
-          <AccordionSection />
+        <AccordionSection />
 
-          <Box
-            sx={{
-              display: "flex",
-              width: "100%",
-              alignItems: "center",
-              flexDirection: "column",
-              // border: "1px solid red",
-            }}
+        <Box className="boxNotFindAnswer">
+          <Typography className="boxNotFindAnswer__text" variant="body">
+            {t("not_find_answer")}
+          </Typography>
+
+          <Button
+            variant="contained"
+            onClick={handleClickOpen}
+            sx={{ margin: "30px auto 60px auto" }}
           >
-            <Typography
-              variant="body"
-              gutterBottom
-              sx={{
-                color: "black",
-                maxWidth: "390px",
-                textAlign: "center",
-                marginTop: "30px",
-                color: "#fff",
-              }}
-            >
-              {t("not_find_answer")}
-            </Typography>
-
-            <Button
-              variant="contained"
-              onClick={handleClickOpen}
-              sx={{
-                margin: "30px auto 60px auto",
-              }}
-            >
-              {t("contact_us")}
-            </Button>
-          </Box>
+            {t("contact_us")}
+          </Button>
         </Box>
 
         <ModalWindow open={open} handleClose={handleClose} />
 
-        <Footer />
-        <TopArrow />
+        <Footer sx={{ backgroundColor: "rgba(0, 179, 152, 1)" }} />
+        {/* <TopArrow /> */}
       </Box>
     </Box>
   );

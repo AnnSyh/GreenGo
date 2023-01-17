@@ -52,18 +52,13 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
         >
           <MenuIcon />
         </IconButton>
-        {/* <Search color="inherit" /> */}
         <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
           {" "}
         </Typography>
 
-        {/* <Button color="inherit">Login</Button> */}
         <FormControlSelect
           languageToggle={languageToggle}
-          sx={{
-            // color: "#00b398",
-            margin: "10px",
-          }}
+          sx={{ margin: "10px" }}
         />
 
         <Box

@@ -79,7 +79,6 @@ theme.typography.subtitle2 = {
   fontSize: "42px",
   textAlign: "center",
   lineHeight: 1,
-  // color: "#000",
   color: "#fff",
   fontWeight: 200,
   paddingBottom: "20px",
@@ -87,7 +86,6 @@ theme.typography.subtitle2 = {
 theme.typography.subtitle1 = {
   fontSize: "30px",
   lineHeight: 1,
-  // color: "#000",
   color: "#fff",
   fontWeight: 200,
   paddingBottom: "30px",
@@ -95,12 +93,15 @@ theme.typography.subtitle1 = {
 theme.typography.subtitle1_text = {
   fontSize: "18px",
   lineHeight: 2.5,
-  color: "black",
+  color: "#fff",
   fontWeight: 200,
   display: "flex",
   alignItems: "center",
 };
 
+theme.typography.body = {
+  color: "#fff",
+};
 theme.typography.body1 = {
   fontSize: "18px",
   fontWeight: 400,

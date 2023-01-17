@@ -13,12 +13,11 @@ const TextSection = ({}) => {
   return (
     <section id="about-section" className="section">
       <Box
-        sx={(theme) => ({
-          backgroundColor: theme.palette.common.white,
+        sx={{
           width: "100%",
           position: "relative",
-          paddingTop: "60px",
-        })}
+          paddingTop: "30px",
+        }}
       >
         <Box
           id="about"

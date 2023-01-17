@@ -96,7 +96,7 @@ export default function Home({ title = siteTitle }) {
 
         <FormSection />
 
-        <Footer />
+        <Footer sx={{ backgroundColor: "rgba(0, 179, 152, 0.9)" }} />
         <TopArrow />
       </Box>
     </Box>

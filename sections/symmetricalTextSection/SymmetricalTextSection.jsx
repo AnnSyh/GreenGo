@@ -13,30 +13,19 @@ const SymmetricalTextSection = ({}) => {
   return (
     <section id="about-section" className="section">
       <Box
-        sx={(theme) => ({
-          backgroundColor: theme.palette.common.white,
+        sx={{
           width: "100%",
           position: "relative",
           paddingBottom: "0px !important",
-          maxHeight: {
-            xs: "auto",
-            md: "480px",
-          },
-        })}
+        }}
       >
-        <Box
-          id="about"
-          className="container-box"
-          sx={() => ({
-            alignItems: "flex-top",
-          })}
-        >
+        <Box id="about" className="container-box">
           <Grid
             container
             sx={{
               flexDirection: {
                 xs: "column-reverse",
-                md: "column",
+                md: "row",
               },
             }}
           >

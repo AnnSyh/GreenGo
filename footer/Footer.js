@@ -2,22 +2,32 @@ import { Box, Grid, Typography, Button } from "@mui/material";
 import { useTranslation } from "next-i18next";
 import SoсialLinks from "../components/SoсialLinks";
 
-export const Footer = ({}) => {
+export const Footer = ({ sx }) => {
   const { t } = useTranslation("common");
 
   return (
-    <Box sx={{ position: "relative", zIndex: 1 }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        marginTop: "auto",
+        widows: "100%",
+        position: "relative",
+        zIndex: "1",
+        ...sx,
+      }}
+    >
       <footer>
         <Box
-          sx={() => ({
+          sx={{
             minHeight: "150px",
-            backgroundColor: "rgba(0, 179, 152, 0.9)",
             width: "100%",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-evenly",
             flexDirection: "column",
-          })}
+          }}
         >
           <SoсialLinks />
           <Typography component="div" align="center" sx={{ color: "#fff" }}>

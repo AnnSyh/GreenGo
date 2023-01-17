@@ -496,3 +496,26 @@ ul {
 #form-section > div {
   padding-top: 30px;
 }
+
+.boxHeigh {
+  position: relative;
+  background-color: #0a234c;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.boxNotFindAnswer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  bottom: 150px;
+  position: absolute;
+}
+
+.boxNotFindAnswer__text {
+  max-width: 390px;
+  text-align: center;
+  margin-top: 30px;
+}

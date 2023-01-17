@@ -27,7 +27,7 @@ function MyApp({
       <ThemeProvider theme={theme}>
         <div ref={containerRef}>
           <CssBaseline />
-          <Component {...pageProps} />;
+          <Component {...pageProps} />
         </div>
       </ThemeProvider>
     </CacheProvider>

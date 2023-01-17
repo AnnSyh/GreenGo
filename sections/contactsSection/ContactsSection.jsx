@@ -31,20 +31,8 @@ const ContactsSection = ({}) => {
   ];
 
   return (
-    <Box
-      component="section"
-      className="section"
-      sx={{
-        // backgroundColor: "#E0F0FF",
-        width: "100%",
-      }}
-    >
-      <Box
-        className="container-box"
-        sx={() => ({
-          paddingTop: "150px",
-        })}
-      >
+    <Box component="section" className="section">
+      <Box className="container-box" sx={{ paddingTop: "150px" }}>
         <Typography
           variant="subtitle1"
           component="div"
@@ -53,56 +41,40 @@ const ContactsSection = ({}) => {
           {t("contacts")}
         </Typography>
 
-        <Grid
-          container
-          justifyContent="space-between"
-          sx={() => ({
-            position: "relative",
-            top: "30px",
-            minHeight: "calc(100vh - 160px - 200px)",
-          })}
-        >
+        <Grid container justifyContent="space-between">
           {contacts.map((item) => (
             <Grid
               item
               key={item.title}
-              sx={(theme) => ({
-                borderRadius: theme.radius.default,
-                flexGrow: 0,
-                flexShrink: 0,
-                minWidth: "337px",
+              sx={{
                 flexBasis: "calc(33.3333% - 42px)",
-                margin: "0 auto",
                 marginBottom: "60px",
-                marginLeft: "0px",
-              })}
+              }}
             >
               <Box
-                sx={(theme) => ({
+                sx={{
                   display: "flex",
                   flexFlow: "column nowrap",
-                  borderRadius: theme.radius.default,
-                })}
+                }}
               >
                 <Typography
                   variant="subtitle1"
                   component="div"
                   fontSize={{ xs: "20px", md: "30px" }}
-                  sx={{ color: "#fff" }}
                 >
                   {t(item.title)}
                 </Typography>
 
-                <Typography variant="subtitle1_text" sx={{ color: "#fff" }}>
+                <Typography variant="subtitle1_text">
                   <PhoneIcon sx={{ marginRight: "10px" }} />
                   {t(item.tel)}
                 </Typography>
-                <Typography variant="subtitle1_text" sx={{ color: "#fff" }}>
+                <Typography variant="subtitle1_text">
                   <MailIcon sx={{ marginRight: "10px" }} />
                   {t(item.email)}
                 </Typography>
                 {item.telegramm ? (
-                  <Typography variant="subtitle1_text" sx={{ color: "#fff" }}>
+                  <Typography variant="subtitle1_text">
                     <TelegramIcon sx={{ marginRight: "10px" }} />
                     {t(item.telegramm)}
                   </Typography>

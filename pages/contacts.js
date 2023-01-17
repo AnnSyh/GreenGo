@@ -63,20 +63,15 @@ export default function Contacts({ title = siteTitle }) {
           close={closeMenu}
           isOpen={isMenuOpen}
           languageToggle={handelLanguageToggle}
-          // sx={{ border: "1px solid red" }}
         />
       </Box>
 
-      <Box
-        sx={{
-          height: "calc(100vh - 64px)",
-        }}
-      >
+      <Box className="boxHeigh">
         <div id="top-page" />
         <ContactsSection />
 
-        <Footer />
-        <TopArrow />
+        <Footer sx={{ backgroundColor: "rgba(0, 179, 152, 1)" }} />
+        {/* <TopArrow /> */}
       </Box>
     </Box>
   );
