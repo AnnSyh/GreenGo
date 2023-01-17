@@ -9,43 +9,53 @@ import * as React from "react";
 import { useTranslation } from "next-i18next";
 import { useState } from "react";
 
-import Accordion from "@mui/material/Accordion";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import AccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 
-// import { withStyles } from "@mui/styles";
-// const Accordion = withStyles({
-//   root: {
-//     border: "1px solid red",
-//     boxShadow: "none",
-//   },
-//   expanded: {},
-// })(Accordion);
+import { styled } from "@mui/material/styles";
 
-// const AccordionSummary = withStyles({
-//   root: {
-//     backgroundColor: "green",
-//     borderBottom: "1px solid rgba(0, 0, 0, .125)",
-//     marginBottom: -1,
-//     minHeight: 56,
-//     "&$expanded": {
-//       minHeight: 56,
-//     },
-//   },
-//   content: {
-//     "&$expanded": {
-//       margin: "12px 0",
-//     },
-//   },
-//   expanded: {},
-// })(AccordionSummary);
+const Accordion = styled((props) => (
+  <MuiAccordion disableGutters elevation={0} square {...props} />
+))(({ theme }) => ({
+  border: `1px solid #00b398`,
+  "&:not(:last-child)": {
+    borderBottom: 0,
+  },
+  "&:before": {
+    display: "none",
+  },
+}));
 
-// const AccordionDetails = withStyles((theme) => ({
-//   root: {
-//     padding: theme.spacing(2),
-//   },
-// }))(AccordionDetails);
+const AccordionSummary = styled((props) => (
+  <MuiAccordionSummary
+    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+    {...props}
+  />
+))(({ theme }) => ({
+  border: `1px solid #00b398`,
+  backgroundColor: "rgb(0, 179, 152, 0.5)",
+  // backgroundColor:
+  //   theme.palette.mode === "dark"
+  //     ? "rgba(0, 179, 152, .05)"
+  //     : "rgba(0, 0, 0, .03)",
+  flexDirection: "row-reverse",
+  "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+    transform: "rotate(90deg)",
+  },
+  "& .MuiAccordionSummary-content": {
+    marginLeft: theme.spacing(1),
+  },
+}));
+
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  padding: theme.spacing(2),
+  // borderTop: "1px solid rgba(225, 225, 225, 1)",
+  // borderBottom: "1px solid rgba(225, 225, 225, 1)",
+}));
 
 const AccordionSection = ({}) => {
   const { t } = useTranslation("common");
@@ -115,7 +125,15 @@ const AccordionSection = ({}) => {
                   <Typography sx={{ color: "#fff" }}>{item.summary}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography sx={{ color: "#fff" }}>{item.details}</Typography>
+                  <Typography
+                    sx={{
+                      color: "#fff",
+                      fontSize: "16px",
+                      fontWeight: "200",
+                    }}
+                  >
+                    {item.details}
+                  </Typography>
                 </AccordionDetails>
               </Accordion>
             ))}
