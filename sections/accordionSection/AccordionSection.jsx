@@ -44,7 +44,7 @@ const AccordionSummary = styled((props) => (
   //     : "rgba(0, 0, 0, .03)",
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-    transform: "rotate(90deg)",
+    transform: "rotate(180deg)",
   },
   "& .MuiAccordionSummary-content": {
     marginLeft: theme.spacing(1),
@@ -91,7 +91,12 @@ const AccordionSection = ({}) => {
 
   return (
     <Box component="section" className="section">
-      <Box className="container-box" sx={{ paddingTop: "150px" }}>
+      <Box
+        className="container-box"
+        sx={{
+          paddingTop: "150px",
+        }}
+      >
         <Typography
           variant="subtitle1"
           component="div"
@@ -108,7 +113,7 @@ const AccordionSection = ({}) => {
             minHeight: "calc(100vh - 160px - 436px)",
           }}
         >
-          <div>
+          <Box>
             {questions.map((item, index) => (
               <Accordion
                 square
@@ -137,7 +142,7 @@ const AccordionSection = ({}) => {
                 </AccordionDetails>
               </Accordion>
             ))}
-          </div>
+          </Box>
         </Grid>
       </Box>
     </Box>

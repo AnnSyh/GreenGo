@@ -507,11 +507,12 @@ ul {
 .boxNotFindAnswer {
   display: flex;
   flex-direction: column;
+  margin-top: auto;
   align-items: center;
   width: 100%;
 
-  bottom: 150px;
-  position: absolute;
+  /* bottom: 150px;
+  position: absolute; */
 }
 
 .boxNotFindAnswer__text {
