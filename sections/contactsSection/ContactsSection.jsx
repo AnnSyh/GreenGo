@@ -15,18 +15,25 @@ const ContactsSection = ({}) => {
     {
       title: `contacts_title`,
       tel: `8 (800) 250 93 36`,
+      telhref: `tel:88002509336`,
       email: `support.ezs@sitronics.com`,
+      emailto: `mailto:support.ezs@sitronics.com`,
       telegramm: `contacts_telegramm`,
+      tme: `https://t.me/`,
     },
     {
       title: `contacts_title1`,
       tel: `8 (800) 250 93 36`,
+      telhref: `tel:88002509336`,
       email: `support.ezs@sitronics.com`,
+      emailto: `mailto:support.ezs@sitronics.com`,
     },
     {
       title: `contacts_title2`,
       tel: `8 (495) 225-98-29`,
+      telhref: `tel:88002509336`,
       email: `support.ezs@sitronics.com`,
+      emailto: `mailto:support.ezs@sitronics.com`,
     },
   ];
 
@@ -65,19 +72,25 @@ const ContactsSection = ({}) => {
                   {t(item.title)}
                 </Typography>
 
-                <Typography variant="subtitle1_text">
-                  <PhoneIcon sx={{ marginRight: "10px" }} />
-                  {t(item.tel)}
-                </Typography>
-                <Typography variant="subtitle1_text">
-                  <MailIcon sx={{ marginRight: "10px" }} />
-                  {t(item.email)}
-                </Typography>
-                {item.telegramm ? (
+                <a href={item.telhref} color="inherit">
                   <Typography variant="subtitle1_text">
-                    <TelegramIcon sx={{ marginRight: "10px" }} />
-                    {t(item.telegramm)}
+                    <PhoneIcon sx={{ marginRight: "10px" }} />
+                    {item.tel}
                   </Typography>
+                </a>
+                <a href={item.emailto} color="inherit">
+                  <Typography variant="subtitle1_text">
+                    <MailIcon sx={{ marginRight: "10px" }} />
+                    {t(item.email)}
+                  </Typography>
+                </a>
+                {item.telegramm ? (
+                  <a href={item.tme} color="inherit">
+                    <Typography variant="subtitle1_text">
+                      <TelegramIcon sx={{ marginRight: "10px" }} />
+                      {t(item.telegramm)}
+                    </Typography>
+                  </a>
                 ) : (
                   " "
                 )}
