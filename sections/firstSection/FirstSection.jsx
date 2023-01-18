@@ -2,6 +2,7 @@ import * as React from "react";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
+import { display } from "@mui/system";
 
 export default function FirstSection({}) {
   const { t } = useTranslation("common");
@@ -23,7 +24,8 @@ export default function FirstSection({}) {
           alignItems="center"
         >
           <video autoPlay muted loop id="video">
-            <source src={"../../images/electric-car-8.mp4"} type="video/mp4" />
+            {/* <source src={"../../images/electric-car-8.mp4"} type="video/mp4" /> */}
+            <source src={"../../images/car-2.mp4"} type="video/mp4" />
           </video>
           <Box
             className="container-box fadeIn"
@@ -34,7 +36,7 @@ export default function FirstSection({}) {
             <Box
               className="fadeIn"
               sx={{
-                maxWidth: "452px",
+                width: "80%",
                 position: "relative",
                 bottom: "-10%",
                 left: 0,
@@ -47,9 +49,11 @@ export default function FirstSection({}) {
                 component="div"
                 textTransform="uppercase"
                 sx={() => ({
-                  color: "white",
-                  marginTop: {
-                    lg: "46px",
+                  color: "#fff",
+                  fontSize: {
+                    xs: "19px",
+                    md: "35px",
+                    lg: "49px",
                   },
                   textAlign: "left",
                 })}
@@ -64,17 +68,28 @@ export default function FirstSection({}) {
                   backgroundSize: "contain",
                   backgroundPosition: "center",
                   height: 150,
-                  textAlign: {
-                    xs: "left",
-                    lg: "left",
-                  },
-                  margin: {
-                    xs: "auto",
-                    md: "auto",
-                    lg: "10px 0",
-                  },
+                  textAlign: "left",
+                  margin: "10% 0",
                 }}
               ></Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "space-between",
+                  marginBottom: "60px",
+                  maxWidth: "390px",
+                }}
+              >
+                <a href="#">
+                  <Box sx={{ width: "100%" }}>
+                    <img src={"../../images/appstore.svg"} alt="appstore" />
+                  </Box>
+                </a>
+                <a href="#">
+                  <img src={"../../images/googleplay.svg"} alt="googleplay" />
+                </a>
+              </Box>
 
               <Box
                 sx={{
@@ -91,13 +106,7 @@ export default function FirstSection({}) {
                   <Button
                     className="btn-contacts"
                     variant="contained"
-                    sx={{
-                      marginTop: "0px",
-                      // marginTop: {
-                      //   xs: "345px",
-                      //   md: "160px",
-                      // },
-                    }}
+                    sx={{ marginTop: "0px" }}
                   >
                     {t("contacts")}
                   </Button>

@@ -39,7 +39,7 @@ const ProvideSection = ({}) => {
   ];
 
   return (
-    <section id="provide-section" className="section">
+    <section id="provide-section" className="section bg-light-gray">
       <Box
         sx={{
           backgroundColor: "#fff",

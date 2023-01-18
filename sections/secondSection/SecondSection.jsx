@@ -41,7 +41,7 @@ const SecondSection = ({}) => {
   ];
 
   return (
-    <section id="products-section" className="section">
+    <section id="products-section" className="section bg-dark-gray">
       <Box className="container-box-wrapper">
         <Box className="container-box">
           <Grid
@@ -51,8 +51,6 @@ const SecondSection = ({}) => {
               position: "relative",
               top: "-30px",
               width: "calc(100% + 56px)",
-              // marginLeft: "-30px",
-              // marginRight: "-30px",
               margin: {
                 xs: "0px",
                 md: "0px -30px",

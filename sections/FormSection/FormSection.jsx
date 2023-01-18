@@ -80,8 +80,8 @@ const FormSection = ({}) => {
   return (
     <section id="form-section" className="section">
       <Box
+        className="bg-dark-gray"
         sx={(theme) => ({
-          backgroundColor: theme.palette.common.white,
           width: "100%",
           position: "relative",
         })}

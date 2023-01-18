@@ -11,7 +11,7 @@ const SymmetricalTextSection = ({}) => {
   const { t } = useTranslation("common");
 
   return (
-    <section id="about-section" className="section">
+    <section id="about-section" className="section bg-light-gray">
       <Box
         sx={{
           width: "100%",
@@ -36,7 +36,7 @@ const SymmetricalTextSection = ({}) => {
                     xs: "0px 0px 15px 0px",
                     sm: "0px 30px 30px 0px",
                   },
-                  color: "#fff",
+                  color: "black",
                 })}
               >
                 <AnimationOnScroll

@@ -19,7 +19,7 @@
   "products_txt": "Текст про продукты",
   "subscription_form": "Форма обратной связи",
   "subscription_form_input_one": "Имя",
-  "homepage": "Главная",
+  "homepage": "Гл",
   "message": "Сообщение",
   "submit": "Отправить",
   "trash": "Мусор",
@@ -86,5 +86,7 @@
   "questions_summary_3": "Заголовок вопроса 3",
   "questions_details_3": "Текст вопроса 3 ?",
   "questions_summary_4": "Заголовок вопроса 4",
-  "questions_details_4": "Текст вопроса 4 ?"
+  "questions_details_4": "Текст вопроса 4 ?",
+
+  "organizations": "organizations"
 }

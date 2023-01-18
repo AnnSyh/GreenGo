@@ -78,7 +78,7 @@ export const CaruselSection = ({}) => {
   ];
 
   return (
-    <section id="carusel-section" className="section">
+    <section id="carusel-section" className="section bg-dark-gray">
       <Box
         sx={() => ({
           backgroundColor: "f5f5f5",

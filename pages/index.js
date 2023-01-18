@@ -74,8 +74,7 @@ export default function Home({ title = siteTitle }) {
           languageToggle={handelLanguageToggle}
           sx={{
             backdropFilter: "blur(8px)",
-            backgroundColor: "transparent",
-            color: "#fff",
+            color: "black",
           }}
         />
       </Box>

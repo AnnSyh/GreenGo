@@ -15,6 +15,8 @@ const nav = [
   { id: 1, title: `homepage`, path: "/" },
   { id: 2, title: `contacts`, path: "/contacts" },
   { id: 3, title: `questions`, path: "/questions" },
+  // { id: 4, title: `map`, path: "/map" },
+  { id: 4, title: `organizations`, path: "/organizations" },
 ];
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
@@ -72,7 +74,7 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
             flexFlow: "row nowrap",
             marginLeft: "10px",
             color: "#fff",
-            minWidth: "290px",
+            minWidth: "370px",
           }}
         >
           {nav.map(({ id, title, path }) => (

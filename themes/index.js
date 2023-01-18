@@ -29,7 +29,7 @@ const theme = createTheme({
       },
       styleOverrides: {
         root: ({ o, theme }) => ({
-          color: "#fff",
+          color: "white",
           fontSize: "1rem",
           boxShadow: "none",
           borderRadius: "0",
@@ -58,49 +58,49 @@ theme.typography.colorGreen = {
 theme.typography.h1 = {
   fontSize: "52px",
   // color: "#000",
-  color: "#fff",
+  color: "black",
   fontWeight: 600,
   // border: "1px solid green",
 };
 theme.typography.h2 = {
   fontSize: "52px",
   // color: "#000",
-  color: "#fff",
+  color: "black",
   fontWeight: 400,
   // border: "1px solid red",
 };
 theme.typography.h3 = {
   fontSize: "52px",
   // color: "#000",
-  color: "#fff",
+  color: "black",
   fontWeight: 200,
 };
 theme.typography.subtitle2 = {
   fontSize: "42px",
   textAlign: "center",
   lineHeight: 1,
-  color: "#fff",
+  color: "black",
   fontWeight: 200,
   paddingBottom: "20px",
 };
 theme.typography.subtitle1 = {
   fontSize: "30px",
   lineHeight: 1,
-  color: "#fff",
+  color: "black",
   fontWeight: 200,
   paddingBottom: "30px",
 };
 theme.typography.subtitle1_text = {
   fontSize: "18px",
   lineHeight: 2.5,
-  color: "#fff",
+  color: "black",
   fontWeight: 200,
   display: "flex",
   alignItems: "center",
 };
 
 theme.typography.body = {
-  color: "#fff",
+  color: "black",
 };
 theme.typography.body1 = {
   fontSize: "18px",
@@ -108,14 +108,13 @@ theme.typography.body1 = {
 };
 theme.typography.body2 = {
   fontSize: "18px",
-  color: "#fff",
+  color: "black",
   fontWeight: 400,
   marginTop: "40px",
 };
 
 theme.typography.p = {
   fontSize: "18px",
-  // color: "#000",
   color: "#fff",
   fontWeight: 400,
 };

@@ -75,7 +75,7 @@ export default function Questions({ title = siteTitle }) {
         />
       </Box>
 
-      <Box className="boxHeigh">
+      <Box className="boxHeigh bg-light-gray">
         <div id="top-page" />
 
         <AccordionSection />

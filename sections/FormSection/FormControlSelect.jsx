@@ -34,7 +34,7 @@ const FormControlSelect = ({ languageToggle, sx }) => {
 
   return (
     <>
-      <FormControl variant="outlined">
+      <FormControl variant="outlined" sx={{ display: "none" }}>
         <Select
           value={locale}
           onChange={(e) => {

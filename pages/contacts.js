@@ -3,9 +3,8 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
 
-import { FormControlSelect } from "../sections/FormSection/FormControlSelect";
-
 import { ContactsSection } from "../sections/contactsSection/ContactsSection";
+import { MapSection } from "../sections/mapSection/MapSection";
 import { TopArrow } from "../components/TopArrow";
 import { Footer } from "../footer/Footer";
 
@@ -66,9 +65,10 @@ export default function Contacts({ title = siteTitle }) {
         />
       </Box>
 
-      <Box className="boxHeigh">
+      <Box className="boxHeigh bg-light-gray">
         <div id="top-page" />
         <ContactsSection />
+        <MapSection />
 
         <Footer sx={{ backgroundColor: "rgba(0, 179, 152, 1)" }} />
         {/* <TopArrow /> */}
