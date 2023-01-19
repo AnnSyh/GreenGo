@@ -13,10 +13,9 @@ import { NoEncryption } from "@mui/icons-material";
 
 const nav = [
   { id: 1, title: `homepage`, path: "/" },
-  { id: 2, title: `contacts`, path: "/contacts" },
+  { id: 2, title: `organizations`, path: "/organizations" },
   { id: 3, title: `questions`, path: "/questions" },
-  // { id: 4, title: `map`, path: "/map" },
-  { id: 4, title: `organizations`, path: "/organizations" },
+  { id: 4, title: `contacts`, path: "/contacts" },
 ];
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
@@ -74,7 +73,7 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
             flexFlow: "row nowrap",
             marginLeft: "10px",
             color: "#fff",
-            minWidth: "370px",
+            minWidth: "455px",
           }}
         >
           {nav.map(({ id, title, path }) => (

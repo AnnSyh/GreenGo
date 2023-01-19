@@ -15,13 +15,16 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import AddIcon from "@mui/icons-material/Add";
+import ControlPointIcon from "@mui/icons-material/ControlPoint";
 
 import { styled } from "@mui/material/styles";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
-  border: `1px solid #00b398`,
+  borderTop: `1px solid #00b398`,
+  borderBottom: `2px solid #00b398`,
   "&:not(:last-child)": {
     borderBottom: 0,
   },
@@ -32,29 +35,26 @@ const Accordion = styled((props) => (
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+    expandIcon={<ControlPointIcon sx={{ fontSize: "1.9rem" }} />}
     {...props}
   />
 ))(({ theme }) => ({
-  border: `1px solid #00b398`,
-  backgroundColor: "rgb(0, 179, 152, 0.5)",
-  // backgroundColor:
-  //   theme.palette.mode === "dark"
-  //     ? "rgba(0, 179, 152, .05)"
-  //     : "rgba(0, 0, 0, .03)",
-  flexDirection: "row-reverse",
+  borderTop: `1px solid #00b398`,
+  backgroundColor: "#f5f5f5",
+  // flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-    transform: "rotate(180deg)",
+    transform: "rotate(45deg)",
   },
   "& .MuiAccordionSummary-content": {
-    marginLeft: theme.spacing(1),
+    marginLeft: theme.spacing(0),
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(3),
   },
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
-  // borderTop: "1px solid rgba(225, 225, 225, 1)",
-  // borderBottom: "1px solid rgba(225, 225, 225, 1)",
+  backgroundColor: "#f5f5f5",
 }));
 
 const AccordionSection = ({}) => {
@@ -120,21 +120,21 @@ const AccordionSection = ({}) => {
                 key={index}
                 expanded={expanded === `${item.id}`}
                 onChange={handleChange(`${item.id}`)}
-                sx={{
-                  backgroundColor: "transparent",
-                }}
               >
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
+                  expandIcon={
+                    <AddIcon
+                      sx={{ fontSize: "2rem", color: "rgba(0, 0, 0, 0.87)" }}
+                    />
+                  }
                   aria-controls="panel4bh-content"
                   id="panel4bh-header"
                 >
-                  <Typography sx={{ color: "#fff" }}>{item.summary}</Typography>
+                  <Typography>{item.summary}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography
                     sx={{
-                      color: "#fff",
                       fontSize: "16px",
                       fontWeight: "200",
                     }}

@@ -26,12 +26,16 @@ export default function Menu(props) {
       link: "/",
     },
     {
-      pageName: `contacts`,
-      link: "/contacts",
+      pageName: `organizations`,
+      link: "/organizations",
     },
     {
       pageName: `questions`,
       link: "/questions",
+    },
+    {
+      pageName: `contacts`,
+      link: "/contacts",
     },
   ];
   const label = { inputProps: { "aria-label": "Switch demo" } };
@@ -41,7 +45,7 @@ export default function Menu(props) {
       <Drawer anchor="left" open={props.isOpen} onClose={props.close}>
         <Box
           sx={{
-            width: 200,
+            width: 230,
             color: "#fff",
             backgroundColor: "#00b398",
             height: "100%",

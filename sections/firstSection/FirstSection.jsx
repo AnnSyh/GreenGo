@@ -41,76 +41,95 @@ export default function FirstSection({}) {
                 bottom: "-10%",
                 left: 0,
                 height: "90%",
+                display: "flex",
+                flexDirection: "column",
                 // border: "10px solid blue",
               }}
             >
-              <Typography
-                variant="body2"
-                component="div"
-                textTransform="uppercase"
-                sx={() => ({
-                  color: "#fff",
-                  fontSize: {
-                    xs: "19px",
-                    md: "35px",
-                    lg: "49px",
-                  },
-                  textAlign: "left",
-                })}
-              >
-                {t("software_development")}
-              </Typography>
-
-              <Box
-                sx={{
-                  backgroundImage: `url('/images/logo.svg')`,
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  height: 150,
-                  textAlign: "left",
-                  margin: "10% 0",
-                }}
-              ></Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "space-between",
-                  marginBottom: "60px",
-                  maxWidth: "390px",
-                }}
-              >
-                <a href="#">
-                  <Box sx={{ width: "100%" }}>
-                    <img src={"../../images/appstore.svg"} alt="appstore" />
-                  </Box>
-                </a>
-                <a href="#">
-                  <img src={"../../images/googleplay.svg"} alt="googleplay" />
-                </a>
+              <Box>
+                <Typography
+                  variant="body2"
+                  component="div"
+                  textTransform="uppercase"
+                  sx={() => ({
+                    color: "#fff",
+                    fontSize: {
+                      xs: "19px",
+                      md: "35px",
+                      lg: "49px",
+                    },
+                    textAlign: "left",
+                  })}
+                >
+                  {t("software_development")}
+                </Typography>
+                <Box
+                  sx={{
+                    backgroundImage: `url('/images/logo.svg')`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "contain",
+                    backgroundPosition: "center",
+                    height: 150,
+                    textAlign: "left",
+                    margin: "10% 0",
+                  }}
+                ></Box>
+                <Box
+                  sx={{
+                    width: "100%",
+                    display: "flex",
+                    flexFlow: "row nowrap",
+                    justifyContent: {
+                      xs: "start",
+                      lg: "start",
+                    },
+                  }}
+                >
+                  <Link href="/contacts">
+                    <Button
+                      className="btn-contacts"
+                      variant="contained"
+                      sx={{ marginTop: "0px" }}
+                    >
+                      {t("contacts")}
+                    </Button>
+                  </Link>
+                </Box>
               </Box>
 
               <Box
                 sx={{
                   width: "100%",
                   display: "flex",
-                  flexFlow: "row nowrap",
-                  justifyContent: {
-                    xs: "start",
-                    lg: "start",
-                  },
+                  flexDirection: "column",
+                  marginTop: "auto",
+                  marginBottom: "60px",
+                  // border: "1px solid red",
                 }}
               >
-                <Link href="/contacts">
-                  <Button
-                    className="btn-contacts"
-                    variant="contained"
-                    sx={{ marginTop: "0px" }}
-                  >
-                    {t("contacts")}
-                  </Button>
-                </Link>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "space-between",
+                    marginBottom: "30px",
+                    maxWidth: "420px",
+                  }}
+                >
+                  <a href="#">
+                    <Box sx={{ margin: "30px 30px 0 0" }}>
+                      <img src={"../../images/appstore.svg"} alt="appstore" />
+                    </Box>
+                  </a>
+                  <a href="#">
+                    <Box sx={{ margin: "30px 30px 0 0" }}>
+                      <img
+                        src={"../../images/googleplay.svg"}
+                        alt="googleplay"
+                      />
+                    </Box>
+                  </a>
+                </Box>
               </Box>
             </Box>
           </Box>

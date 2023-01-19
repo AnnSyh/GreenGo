@@ -34,6 +34,7 @@
     "react-phone-input-2": "^2.15.1",
     "react-simple-animate": "^3.5.2",
     "react-transition-group": "^4.4.5",
+    "react-yandex-maps": "^4.6.0",
     "swiper": "^8.4.5",
     "tsparticles": "^2.7.1",
     "yup": "^0.32.11"

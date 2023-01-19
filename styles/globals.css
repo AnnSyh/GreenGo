@@ -517,3 +517,15 @@ ul {
 .color-pantone-green {
   color: #00b398;
 }
+
+/* --------------Maps style----------------------- */
+.item-place-address,
+.item-place-time,
+.item-place-title {
+  display: block;
+}
+.item-place-title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
