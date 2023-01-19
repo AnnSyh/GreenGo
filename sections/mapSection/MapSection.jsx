@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import { YMaps, Map, Placemark, Panorama } from "react-yandex-maps";
+import { YMaps, Map, Placemark, Panorama } from "@pbe/react-yandex-maps";
 
 const MapSection = ({}) => {
   const contacts = [
