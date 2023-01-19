@@ -5,6 +5,9 @@ import Navbar from "../components/Navbar";
 import FirstSection from "../sections/firstSection/FirstSection";
 import { SecondSection } from "../sections/secondSection/SecondSection";
 import { ProvideSection } from "../sections/provideSection/ProvideSection";
+import { HowToUseSection } from "../sections/howToUseSection/HowToUseSection";
+// import { TimeLineSection } from "../sections/timeLineSection/TimeLineSection";
+import { CustomizedTimeline } from "../sections/customizedTimeline/CustomizedTimeline";
 
 import { TextSection } from "../sections/textSection/TextSection";
 import { SymmetricalTextSection } from "../sections/symmetricalTextSection/SymmetricalTextSection";
@@ -92,6 +95,11 @@ export default function Home({ title = siteTitle }) {
         <CaruselSection />
 
         <ProvideSection />
+
+        {/* <HowToUseSection /> */}
+
+        {/* <TimeLineSection /> */}
+        <CustomizedTimeline />
 
         <FormSection />
 
