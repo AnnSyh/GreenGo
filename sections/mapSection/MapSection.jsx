@@ -49,7 +49,7 @@ const MapSection = ({}) => {
         }}
       >
         <Map
-          class="contacts-map"
+          className="contacts-map"
           width="100%"
           // height="284px" + 30px + 45
           // height="359px"
@@ -78,9 +78,9 @@ const MapSection = ({}) => {
                 hintContent: `<b> ${item.name} </b>`,
                 balloonContentHeader: `<img src=${item.src} width="100%" height='50px'>`,
                 balloonContentBody:
-                  ` <div class="item-place-title">${item.name}</div>` +
-                  `<div class="item-place-address">${item.address}</div>` +
-                  `<div class="item-place-time">${item.time}</div>`,
+                  ` <div className="item-place-title">${item.name}</div>` +
+                  `<div className="item-place-address">${item.address}</div>` +
+                  `<div className="item-place-time">${item.time}</div>`,
               }}
               onClick={() => {
                 console.log(`Click balloon ${item.name}`);

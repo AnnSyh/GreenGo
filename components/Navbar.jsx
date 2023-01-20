@@ -1,10 +1,21 @@
 import React, { useState } from "react";
-import { AppBar, Toolbar, IconButton, Typography, Button } from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Button,
+  List,
+  ListItem,
+  ListItemButton,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 // import Search from "./Search";
-import Link from "next/link";
+// import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "../styles/nav.module.css";
+
+import styles from "../styles/menu.module.css";
+
 import { Box } from "@mui/system";
 import Menu from "../sections/menu/Menu";
 import { FormControlSelect } from "../sections/FormSection/FormControlSelect";
@@ -22,7 +33,7 @@ const label = { inputProps: { "aria-label": "Switch demo" } };
 function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
   const { t } = useTranslation("common");
   const { pathname } = useRouter(); //подсвечиваем акт ссылку
-  // console.log("sx = ", sx);
+  // console.log("pathname = ", pathname);
 
   return (
     <AppBar position="fixed" sx={sx}>
@@ -64,6 +75,7 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
 
         <Box
           className="navbar-ul"
+          component="ul"
           sx={{
             display: {
               xs: "none",
@@ -76,15 +88,18 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
             minWidth: "455px",
           }}
         >
-          {nav.map(({ id, title, path }) => (
-            <Link
-              key={id}
-              href={path}
-              className={pathname === path ? styles.active : styles.link}
-              color="inherit"
-            >
-              {t(title)}
-            </Link>
+          {nav.map((item, index, path) => (
+            <ListItem key={index} disablePadding>
+              <ListItemButton
+                component="a"
+                href={item.path}
+                // className="test-test-test"
+                className={pathname === item.path ? styles.active : styles.link}
+                // color="inherit"
+              >
+                {t(item.title)}
+              </ListItemButton>
+            </ListItem>
           ))}
         </Box>
       </Toolbar>
