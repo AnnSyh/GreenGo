@@ -37,7 +37,7 @@ const MapSection = ({}) => {
   ];
 
   return (
-    <Box component="section">
+    <Box component="section" sx={{ height: "100%", minHeight: "300px" }}>
       {/* <YMaps>
         <Panorama defaultPoint={[55.751574, 37.573856]} />
       </YMaps>
@@ -51,9 +51,7 @@ const MapSection = ({}) => {
         <Map
           className="contacts-map"
           width="100%"
-          // height="284px" + 30px + 45
-          // height="359px"
-          height="calc(100vh - 420px - 150px)"
+          height="100%"
           defaultState={{
             center: [55.751574, 37.573856],
             zoom: 10,

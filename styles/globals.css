@@ -642,8 +642,13 @@ ul {
 }
 
 .contacts-map {
-  /* border: 1px solid red; */
   overflow: hidden;
   display: flex;
   margin-top: auto;
+  height: 100%;
+}
+
+.contacts-map > ymaps,
+.contacts-map > ymaps > ymaps {
+  height: 100% !important;
 }
