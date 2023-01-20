@@ -49,9 +49,11 @@ const MapSection = ({}) => {
         }}
       >
         <Map
+          class="contacts-map"
           width="100%"
           // height="284px" + 30px + 45
-          height="359px"
+          // height="359px"
+          height="calc(100vh - 420px - 150px)"
           defaultState={{
             center: [55.751574, 37.573856],
             zoom: 10,

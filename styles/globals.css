@@ -640,3 +640,10 @@ ul {
   outline-width: 2px;
   border-radius: 4px;
 }
+
+.contacts-map {
+  border: 1px solid red;
+  overflow: hidden;
+  display: flex;
+  margin-top: auto;
+}
