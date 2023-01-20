@@ -184,7 +184,7 @@ const CustomizedTimeline = ({}) => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  border: "1px solid red",
+                  // border: "1px solid red",
                 }}
               >
                 <Box
