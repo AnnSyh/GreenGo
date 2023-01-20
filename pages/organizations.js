@@ -12,7 +12,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Box, Typography } from "@mui/material";
 
 import { TextSection } from "../sections/organizations/textSection/TextSection";
-import { CustomizedTimeline } from "../sections/customizedTimeline/CustomizedTimeline";
+import { OrgTimeline } from "../sections/orgTimeline/OrgTimeline";
 
 const siteTitle = "organizations";
 
@@ -93,7 +93,7 @@ export default function organizations({ title = siteTitle }) {
               </Typography>
             </Box>
           </Box>
-          <CustomizedTimeline />
+          <OrgTimeline />
           <TextSection />
         </Box>
         <Footer sx={{ backgroundColor: "rgba(0, 179, 152, 1)" }} />

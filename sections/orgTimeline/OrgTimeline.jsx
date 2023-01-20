@@ -6,68 +6,66 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-
 import { Box, Button, Grid, Typography, Paper } from "@mui/material";
 
-import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
-import PlaceIcon from "@mui/icons-material/Place";
-import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
-import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
-import BatteryChargingFullIcon from "@mui/icons-material/BatteryChargingFull";
-import ElectricalServicesIcon from "@mui/icons-material/ElectricalServices";
-import NoCrashIcon from "@mui/icons-material/NoCrash";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import VpnKeyIcon from "@mui/icons-material/VpnKey";
+import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
+import CreditCardIcon from "@mui/icons-material/CreditCard";
+import AddLocationIcon from "@mui/icons-material/AddLocation";
+import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 
 import { StoreButtons } from "../../components/StoreButtons";
 
-const CustomizedTimeline = ({}) => {
+const OrgTimeline = ({}) => {
   const steps = [
     {
       id: 1,
       label: "шаг 1",
-      icon: CloudDownloadIcon,
+      icon: ExitToAppIcon,
       timelineDotColor: "primary",
       variant: "outlined",
-      description: `Скачайте приложение`,
+      description: `Войдите на сайт`,
     },
     {
       id: 2,
       label: "шаг 2",
-      icon: PlaceIcon,
+      icon: VpnKeyIcon,
       // timelineDotColor: "secondary",
       variant: "outlined",
-      description: "Выберите на карте станцию (Возможно бронирование станции)",
+      description: "Зарегистрируйтесь на сайте",
     },
     {
       id: 3,
       label: "шаг 3",
-      icon: PowerSettingsNewIcon,
+      icon: VerifiedUserIcon,
       timelineDotColor: "primary",
       variant: "outlined",
-      description: `Подключите зарядный кабель к машине и нажмите кнопку «Начать зарядку»`,
+      description: `Пройдите верификацию`,
     },
     {
       id: 4,
       label: "шаг 4",
-      icon: AccountBalanceWalletIcon,
+      icon: CreditCardIcon,
       // timelineDotColor: "primary",
       variant: "outlined",
-      description: `Привяжите банковскую карту и оплатите зарядку в приложении`,
+      description: `Привяжите счет для получения выплат`,
     },
     {
       id: 5,
       label: "шаг 5",
-      icon: BatteryChargingFullIcon,
+      icon: AddLocationIcon,
       timelineDotColor: "primary",
       variant: "outlined",
-      description: `Дождитесь окончания процесса зарядки`,
+      description: `Добавте зарядные станции с их адресами и характеристиками`,
     },
     {
       id: 6,
       label: "шаг 6",
-      icon: ElectricalServicesIcon,
+      icon: MonetizationOnIcon,
       // timelineDotColor: "primary",
       variant: "outlined",
-      description: `После завершения достаньте зарядный кабель`,
+      description: `Просматривайте свою статистику и зарабатывайте`,
     },
   ];
 
@@ -164,12 +162,12 @@ const CustomizedTimeline = ({}) => {
                     variant="body2"
                     color="text.secondary"
                   >
-                    в путь!
+                    шаг 6
                   </TimelineOppositeContent>
                   <TimelineSeparator>
                     <TimelineConnector />
                     <TimelineDot color="primary" variant="outlined">
-                      <NoCrashIcon />
+                      <MonetizationOnIcon />
                     </TimelineDot>
                   </TimelineSeparator>
                 </TimelineItem>
@@ -212,4 +210,4 @@ const CustomizedTimeline = ({}) => {
   );
 };
 
-export { CustomizedTimeline };
+export { OrgTimeline };
