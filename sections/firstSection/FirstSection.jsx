@@ -3,6 +3,7 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { display } from "@mui/system";
+import { StoreButtons } from "../../components/StoreButtons";
 
 export default function FirstSection({}) {
   const { t } = useTranslation("common");
@@ -36,7 +37,7 @@ export default function FirstSection({}) {
             <Box
               className="fadeIn"
               sx={{
-                width: "80%",
+                width: "75%",
                 position: "relative",
                 bottom: "-10%",
                 left: 0,
@@ -54,9 +55,9 @@ export default function FirstSection({}) {
                   sx={() => ({
                     color: "#fff",
                     fontSize: {
-                      xs: "19px",
-                      md: "35px",
-                      lg: "49px",
+                      xs: "18px",
+                      md: "33px",
+                      lg: "40px",
                     },
                     textAlign: "left",
                   })}
@@ -107,29 +108,7 @@ export default function FirstSection({}) {
                   // border: "1px solid red",
                 }}
               >
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    justifyContent: "space-between",
-                    marginBottom: "30px",
-                    maxWidth: "420px",
-                  }}
-                >
-                  <a href="#">
-                    <Box sx={{ margin: "30px 30px 0 0" }}>
-                      <img src={"../../images/appstore.svg"} alt="appstore" />
-                    </Box>
-                  </a>
-                  <a href="#">
-                    <Box sx={{ margin: "30px 30px 0 0" }}>
-                      <img
-                        src={"../../images/googleplay.svg"}
-                        alt="googleplay"
-                      />
-                    </Box>
-                  </a>
-                </Box>
+                <StoreButtons sx={{ justifyContent: "space-between" }} />
               </Box>
             </Box>
           </Box>

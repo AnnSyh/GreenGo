@@ -20,6 +20,8 @@ import BatteryChargingFullIcon from "@mui/icons-material/BatteryChargingFull";
 import ElectricalServicesIcon from "@mui/icons-material/ElectricalServices";
 import NoCrashIcon from "@mui/icons-material/NoCrash";
 
+import { StoreButtons } from "../../components/StoreButtons";
+
 const CustomizedTimeline = ({}) => {
   const steps = [
     {
@@ -98,9 +100,23 @@ const CustomizedTimeline = ({}) => {
             Как подключиться к приложению
           </Typography>
 
-          <Grid container>
+          <Grid
+            container
+            sx={{
+              flexDirection: {
+                xs: "column-reverse",
+                md: "row",
+              },
+            }}
+          >
             <Grid item md={6}>
-              <Timeline position="left">
+              <Timeline
+                position="left"
+                sx={{
+                  margin: "0px",
+                  padding: "0px",
+                }}
+              >
                 {steps.map((item, i) => (
                   <TimelineItem key={item.id}>
                     <TimelineOppositeContent
@@ -125,13 +141,22 @@ const CustomizedTimeline = ({}) => {
                       <TimelineConnector />
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: "12px", px: 2 }}>
-                      <Typography variant="h6" component="span">
+                      <Typography
+                        variant="h6"
+                        component="span"
+                        // sx={{ fontSize: "10px" }}
+                        sx={{
+                          fontSize: {
+                            xs: "13px",
+                            md: "18px",
+                          },
+                        }}
+                      >
                         {item.description}
                       </Typography>
                     </TimelineContent>
                   </TimelineItem>
                 ))}
-
                 <TimelineItem>
                   <TimelineOppositeContent
                     sx={{
@@ -157,10 +182,30 @@ const CustomizedTimeline = ({}) => {
               <Box
                 sx={{
                   display: "flex",
-                  justifyContent: "center",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  border: "1px solid red",
                 }}
               >
-                <img src="../../images/phone.png" height="680px" alt="" />
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    border: "1px solid green",
+                    height: {
+                      xs: "300px",
+                      md: "606px",
+                    },
+                  }}
+                >
+                  <img
+                    src="../../images/phone.png"
+                    width="auto"
+                    height="100%"
+                    alt=""
+                  />
+                </Box>
+                <StoreButtons sx={{ justifyContent: "center" }} />
               </Box>
             </Grid>
           </Grid>

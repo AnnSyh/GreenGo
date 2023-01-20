@@ -15,10 +15,15 @@ import { useRouter } from "next/router";
 import { useTranslation, Trans } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Box } from "@mui/system";
+import { Grid, Typography } from "@mui/material";
+
+import { TextSection } from "../sections/organizations/textSection/TextSection";
+import { CustomizedTimeline } from "../sections/customizedTimeline/CustomizedTimeline";
 
 const siteTitle = "organizations";
 
 export default function organizations({ title = siteTitle }) {
+  const { t } = useTranslation("common");
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [loader, setLoader] = useState(true);
 
@@ -53,7 +58,7 @@ export default function organizations({ title = siteTitle }) {
   };
 
   return (
-    <Box className="bg-light-gray">
+    <Box>
       <Head>
         <title>{title} | GreenGo </title>
       </Head>
@@ -68,12 +73,38 @@ export default function organizations({ title = siteTitle }) {
       </Box>
 
       <Box className="boxHeigh bg-light-gray">
-        <div id="top-page" />
-        {/* <ContactsSection /> */}
-        <OrgSection />
+        <Box
+          // className="bg-light-gray"
+          sx={{
+            paddingBottom: "60px",
+            backgroundColor: "#fff",
+          }}
+        >
+          <Box component="section" className="section bg-light-gray">
+            <Box
+              className="container-box"
+              sx={{
+                paddingTop: "150px",
+              }}
+            >
+              <Typography
+                variant="subtitle1"
+                component="div"
+                sx={{ color: "#00b398" }}
+              >
+                {t("organizations")}
+              </Typography>
+            </Box>
+          </Box>
 
+          <div id="top-page" />
+
+          <TextSection />
+
+          <CustomizedTimeline />
+        </Box>
         <Footer sx={{ backgroundColor: "rgba(0, 179, 152, 1)" }} />
-        {/* <TopArrow /> */}
+        <TopArrow />
       </Box>
     </Box>
   );

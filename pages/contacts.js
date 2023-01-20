@@ -68,6 +68,7 @@ export default function Contacts({ title = siteTitle }) {
       <Box className="boxHeigh bg-light-gray">
         <div id="top-page" />
         <ContactsSection />
+
         <MapSection />
 
         <Footer sx={{ backgroundColor: "rgba(0, 179, 152, 1)" }} />

@@ -18,8 +18,8 @@ const ContactsSection = ({}) => {
       telhref: `tel:88002509336`,
       email: `support.ezs@sitronics.com`,
       emailto: `mailto:support.ezs@sitronics.com`,
-      telegramm: `contacts_telegramm`,
-      tme: `https://t.me/`,
+      // telegramm: `contacts_telegramm`,
+      // tme: `https://t.me/`,
     },
     {
       title: `contacts_title1`,
@@ -55,7 +55,7 @@ const ContactsSection = ({}) => {
               key={item.title}
               sx={{
                 flexBasis: "calc(33.3333% - 42px)",
-                marginBottom: "60px",
+                marginBottom: "30px",
               }}
             >
               <Box
