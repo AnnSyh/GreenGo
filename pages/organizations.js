@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
-import Link from "next/link";
 
-import { FormControlSelect } from "../sections/FormSection/FormControlSelect";
-
-import { OrgSection } from "../sections/orgSection/OrgSection";
-// import { ContactsSection } from "../sections/contactsSection/ContactsSection";
 import { TopArrow } from "../components/TopArrow";
 import { Footer } from "../footer/Footer";
 
@@ -14,8 +9,7 @@ import { useRouter } from "next/router";
 
 import { useTranslation, Trans } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { Box } from "@mui/system";
-import { Grid, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 import { TextSection } from "../sections/organizations/textSection/TextSection";
 import { CustomizedTimeline } from "../sections/customizedTimeline/CustomizedTimeline";
@@ -74,12 +68,15 @@ export default function organizations({ title = siteTitle }) {
 
       <Box className="boxHeigh bg-light-gray">
         <Box
-          // className="bg-light-gray"
+          className="bg-light-gray"
           sx={{
             paddingBottom: "60px",
-            backgroundColor: "#fff",
+            // height: "100vh",
+            // overflowX: "hidden",
           }}
         >
+          <div id="top-page" />
+
           <Box component="section" className="section bg-light-gray">
             <Box
               className="container-box"
@@ -96,12 +93,8 @@ export default function organizations({ title = siteTitle }) {
               </Typography>
             </Box>
           </Box>
-
-          <div id="top-page" />
-
-          <TextSection />
-
           <CustomizedTimeline />
+          <TextSection />
         </Box>
         <Footer sx={{ backgroundColor: "rgba(0, 179, 152, 1)" }} />
         <TopArrow />

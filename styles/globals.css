@@ -96,7 +96,7 @@ body {
 
   background-color: #00000030;
 
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .scroll-container {
