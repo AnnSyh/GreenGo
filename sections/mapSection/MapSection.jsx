@@ -48,7 +48,7 @@ const MapSection = ({}) => {
           load: "Map,Placemark,control.ZoomControl,control.FullscreenControl,geoObject.addon.balloon,geoObject.addon.hint",
         }}
       >
-        <Panorama defaultPoint={[55.751574, 37.573856]} />
+        {/* <Panorama defaultPoint={[55.751574, 37.573856]} /> */}
         <Map
           className="contacts-map"
           width="100%"
