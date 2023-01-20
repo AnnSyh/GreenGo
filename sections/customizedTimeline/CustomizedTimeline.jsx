@@ -191,7 +191,7 @@ const CustomizedTimeline = ({}) => {
                   sx={{
                     display: "flex",
                     justifyContent: "center",
-                    border: "1px solid green",
+                    // border: "1px solid green",
                     height: {
                       xs: "300px",
                       md: "606px",
