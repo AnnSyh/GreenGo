@@ -68,10 +68,11 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
           {" "}
         </Typography>
 
-        <FormControlSelect
+        {/* select для выбора языка */}
+        {/* <FormControlSelect
           languageToggle={languageToggle}
           sx={{ margin: "10px" }}
-        />
+        /> */}
 
         <Box
           className="navbar-ul"
