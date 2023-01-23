@@ -5,9 +5,8 @@ import Navbar from "../components/Navbar";
 import FirstSection from "../sections/firstSection/FirstSection";
 import { SecondSection } from "../sections/secondSection/SecondSection";
 import { ProvideSection } from "../sections/provideSection/ProvideSection";
-import { HowToUseSection } from "../sections/howToUseSection/HowToUseSection";
-// import { TimeLineSection } from "../sections/timeLineSection/TimeLineSection";
-import { CustomizedTimeline } from "../sections/customizedTimeline/CustomizedTimeline";
+// import { CustomizedTimeline } from "../sections/customizedTimeline/CustomizedTimeline";
+import { ZigzagTimeline } from "../sections/zigzagTimeLine/ZigzagTimeline";
 
 import { TextSection } from "../sections/textSection/TextSection";
 import { SymmetricalTextSection } from "../sections/symmetricalTextSection/SymmetricalTextSection";
@@ -17,7 +16,7 @@ import { CaruselSection } from "../sections/CaruselSection/caruselSection";
 import { Footer } from "../footer/Footer";
 import { TopArrow } from "../components/TopArrow";
 
-import { Box, CircularProgress, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { useRouter } from "next/router";
 
 import { useTranslation, Trans } from "next-i18next";
@@ -85,22 +84,13 @@ export default function Home({ title = siteTitle }) {
       <Box className="index-page" sx={{ height: "calc(100vh - 64px)" }}>
         <div id="top-page" />
         <FirstSection />
-
         <SecondSection />
-
         <TextSection />
-
         <SymmetricalTextSection />
-
         <CaruselSection />
-
         <ProvideSection />
-
-        {/* <HowToUseSection /> */}
-
-        {/* <TimeLineSection /> */}
-        <CustomizedTimeline />
-
+        {/* <CustomizedTimeline /> */}
+        <ZigzagTimeline />
         <FormSection />
 
         <Footer sx={{ backgroundColor: "rgba(0, 179, 152, 0.9)" }} />

@@ -1,0 +1,169 @@
+/* Timeline Container */
+
+/* Card container */
+.timelineCard {
+  position: relative;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* setting padding based on even or odd */
+.timelineCard:nth-child(odd) {
+  padding: 30px 0 30px 30px;
+}
+.timelineCard:nth-child(even) {
+  padding: 30px 30px 30px 0;
+}
+/* Global ::before */
+.timelineCard::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  border: solid #00b398;
+}
+
+/* Setting the border of top, bottom, left */
+.timelineCard:nth-child(odd)::before {
+  left: 0px;
+  top: -4.5px;
+  bottom: -4.5px;
+  border-width: 5px 0 5px 5px;
+  border-radius: 50px 0 0 50px;
+}
+
+/* Removing the border if it is the last card  and it's odd */
+.timelineCard:last-child:nth-child(odd)::before {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+}
+
+.timelineCard:last-child:nth-child(even) .title::before {
+  content: none;
+}
+
+.timelineDot {
+  margin: 0 auto 10px auto;
+}
+
+/* Information about the timeline */
+.info {
+  display: flex;
+  flex-direction: column;
+  color: #333;
+  border-radius: 30px;
+  padding: 10px;
+  /* background-color: rgb(0, 179, 152, 0.5); */
+}
+
+/* Title of the card */
+.title {
+  color: #00b398;
+  position: relative;
+  margin: auto;
+}
+
+/* Timeline dot  */
+/* .title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  border: 3px solid #00b398;
+} */
+/* setting dot to the left if the card is odd */
+/* .timelineCard:nth-child(odd) > .info > .title::before {
+  left: -25px;
+  border: 1px solid red;
+} */
+/* setting dot to the right if the card is odd */
+/* .timelineCard:nth-child(even) > .info > .title::before {
+  left: -25px;
+  border: 1px solid violet;
+} */
+
+/* ------------- */
+@media screen and (max-width: 898px) {
+  .outer {
+    z-index: 1;
+    position: relative;
+  }
+  /* Setting the border of top, bottom, right */
+  .timelineCard:nth-child(even)::before {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 5px 5px 5px 0;
+    border-radius: 0 50px 50px 0;
+  }
+
+  /* Removing the border if it is the first card */
+  .timelineCard:first-child::before {
+    border-top: 0;
+    border-top-left-radius: 0;
+  }
+}
+
+@media screen and (min-width: 898px) {
+  .outer {
+    z-index: 1;
+    position: relative;
+  }
+
+  .outer {
+    display: flex;
+  }
+
+  .timelineCard:nth-child(odd) {
+    padding: 15px 15px;
+    /* width: 67%; */
+  }
+  .timelineCard {
+    position: relative;
+    /* max-width: 400px; */
+  }
+
+  .timelineCard:nth-child(odd)::before {
+    left: -0.5px;
+    top: 0.5px;
+    /* bottom: -4.5px; */
+    border-width: 5px 5px 0px 5px;
+    border-radius: 50px 50px 0px 0px;
+    /* border: solid green; */
+    width: calc(100% + 9.5px);
+  }
+  .timelineCard::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border: solid #00b398;
+    height: 50%;
+  }
+
+  .timelineCard:nth-child(even) {
+    padding: 15px 15px;
+  }
+  .timelineCard {
+    position: relative;
+    max-width: 400px;
+    width: calc(100% / 6);
+  }
+
+  .timelineCard:nth-child(even)::before {
+    right: -4.5px;
+    bottom: 0;
+    bottom: 0;
+    border-width: 0px 5px 5px 5px;
+    border-radius: 0 0px 50px 50px;
+    width: 100.2%;
+  }
+  .timelineCard::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border: solid #00b398;
+    height: 50%;
+    background-color: ;
+  }
+}
