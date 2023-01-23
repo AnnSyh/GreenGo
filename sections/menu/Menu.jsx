@@ -9,9 +9,12 @@ import {
   ListItemText,
 } from "@mui/material";
 import { useRouter } from "next/router";
+
 import InboxIcon from "@mui/icons-material/Inbox";
 import MailIcon from "@mui/icons-material/Mail";
 import HomeIcon from "@mui/icons-material/Home";
+import ImportContactsIcon from "@mui/icons-material/ImportContacts";
+
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import { useTranslation } from "next-i18next";
 import { Avatar, Image } from "@mui/material";
@@ -74,9 +77,11 @@ export default function Menu(props) {
                       <HomeIcon />
                     ) : index % 2 === 0 ? (
                       <HelpOutlineIcon />
+                    ) : index % 3 === 0 ? (
+                      <MailIcon />
                     ) : (
                       <>
-                        <MailIcon />
+                        <ImportContactsIcon />
                       </>
                     )}
                   </ListItemIcon>
