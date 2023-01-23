@@ -106,7 +106,12 @@ const ZigzagTimeline = ({}) => {
               },
             }}
           >
-            <Grid item lg={2}>
+            <Grid
+              item
+              lg={2}
+              md={12}
+              sx={{ display: "flex", justifyContent: "center", width: "100%" }}
+            >
               <Box
                 sx={{
                   display: "flex",
@@ -119,7 +124,6 @@ const ZigzagTimeline = ({}) => {
                   sx={{
                     display: "flex",
                     justifyContent: "center",
-                    // border: "1px solid green",
                     height: {
                       xs: "300px",
                       md: "300px",
@@ -136,7 +140,17 @@ const ZigzagTimeline = ({}) => {
                 <StoreButtons sx={{ justifyContent: "center" }} />
               </Box>
             </Grid>
-            <Grid item lg={10}>
+            <Grid
+              item
+              lg={10}
+              md={12}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                width: "100%",
+                marginBottom: "60px",
+              }}
+            >
               <div className={style.timeline}>
                 <div className={style.outer}>
                   {steps.map((item, i) => (

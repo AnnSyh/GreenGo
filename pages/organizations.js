@@ -13,6 +13,7 @@ import { Box, Typography } from "@mui/material";
 
 import { TextSection } from "../sections/organizations/textSection/TextSection";
 import { OrgTimeline } from "../sections/orgTimeline/OrgTimeline";
+import { ZigzagTimeline } from "../sections/zigzagTimeLine/ZigzagTimeline";
 
 const siteTitle = "organizations";
 
@@ -93,7 +94,8 @@ export default function organizations({ title = siteTitle }) {
               </Typography>
             </Box>
           </Box>
-          <OrgTimeline />
+          {/* <OrgTimeline /> */}
+          <ZigzagTimeline />
           <TextSection />
         </Box>
         <Footer sx={{ backgroundColor: "rgba(0, 179, 152, 1)" }} />
