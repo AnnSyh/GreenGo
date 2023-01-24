@@ -70,7 +70,7 @@ const SecondSection = ({}) => {
               >
                 <CardActionArea>
                   <CardMedia
-                    sx={{ height: 240 }}
+                    sx={{ height: 350, backgroundPosition: "top center" }}
                     image={item.src}
                     title="Contemplative Reptile"
                   />

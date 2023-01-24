@@ -102,9 +102,11 @@ export default function ModalWindow({ open, handleClose, project }) {
                 alt="image project"
                 sx={{
                   width: "100%",
-                  height: "auto",
+                  // height: "auto",
+                  maxHeight: "600px",
                   padding: "15px",
                   borderRadius: "15px",
+                  margin: "auto",
                 }}
               />
               <CardContent>
