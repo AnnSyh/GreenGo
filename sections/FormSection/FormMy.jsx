@@ -18,24 +18,21 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
 import style from "../../styles/FormSection.module.css";
 
-const FormMy = ({}) => {
+const FormMy = ({ open }) => {
   const { t } = useTranslation("common");
   const [loader, setLoader] = React.useState(false);
   const [checkForm, setCheckForm] = useState(true);
   const [snakbar, setSnakbar] = useState(false);
   const [phoneNumber, setPhoneNumber] = React.useState("");
   const [errorPhoneNumber, setErrorPhoneNumber] = React.useState(false);
+  // console.log("open = ", open);
 
   const styles = {
     form: {
       width: "100%",
     },
   };
-  const handleClose = () => setSnakbar(false);
-
-  const handleClick = () => {
-    setSnakbar(true);
-  };
+  const handleCloseSnak = () => setSnakbar(false);
 
   const formik = useFormik({
     initialValues: {
@@ -49,7 +46,7 @@ const FormMy = ({}) => {
       message: Yup.string().required("Required"),
     }),
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      // alert(JSON.stringify(values, null, 2));
       setLoader(true);
       const data = {
         name: values.name,
@@ -69,9 +66,11 @@ const FormMy = ({}) => {
         if (res.status === 200) {
           setLoader(false);
           setCheckForm(false);
+          // setOpen(false);
           setSnakbar(true);
         } else {
           setLoader(false);
+          setSnakbar(false);
         }
       });
     },
@@ -173,9 +172,7 @@ const FormMy = ({}) => {
                   formik.handleSubmit();
                   handleErrPhoneNumber();
                 }}
-                sx={(theme) => ({
-                  margin: "45px auto",
-                })}
+                sx={{ margin: "45px auto" }}
               >
                 {loader ? (
                   <CircularProgress sx={{ color: "#fff" }} />
@@ -183,9 +180,6 @@ const FormMy = ({}) => {
                   `${t("submit")}`
                 )}
               </Button>
-              {/* <Button variant="outlined" onClick={handleClick}>
-                Open success snackbar
-              </Button> */}
             </Grid>
           </form>
         )}
@@ -193,19 +187,16 @@ const FormMy = ({}) => {
       <Snackbar
         open={snakbar}
         autoHideDuration={3000}
-        onClose={handleClose}
+        onClose={handleCloseSnak}
         message="Message sent"
         sx={{
           ".MuiPaper-root": {
-            // background: "#00b398",
-            // minWidth: "10px",
-            // color: "#fff",
             background: "#fff",
             minWidth: "10px",
             color: "#00b398",
             position: "relative",
             zIndex: "100",
-            border: "10px solid red",
+            border: "2px solid #00b398",
           },
         }}
       />

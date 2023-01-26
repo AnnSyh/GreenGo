@@ -81,7 +81,8 @@ export default function ModalWindow({ open, handleClose }) {
         </BootstrapDialogTitle>
         <DialogContent dividers>
           <CardContent>
-            <FormMy />
+            <FormMy open={open} handleClose={handleClose} />
+            {/* <FormMy /> */}
           </CardContent>
         </DialogContent>
       </BootstrapDialog>

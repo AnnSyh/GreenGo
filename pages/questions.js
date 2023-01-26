@@ -27,6 +27,7 @@ export default function Questions({ title = siteTitle }) {
     setOpen(true);
   };
   const handleClose = () => {
+    console.log("handleClose close!!!!");
     setOpen(false);
   };
 
