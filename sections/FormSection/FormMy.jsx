@@ -41,9 +41,11 @@ const FormMy = ({ open }) => {
       message: "",
     },
     validationSchema: Yup.object({
-      name: Yup.string().required("Required"),
-      email: Yup.string().email("Must be a valid email").required("Required"),
-      message: Yup.string().required("Required"),
+      name: Yup.string().required(t("required")),
+      email: Yup.string()
+        .email(t("must_be_valid_email"))
+        .required(t("required")),
+      message: Yup.string().required(t("required")),
     }),
     onSubmit: (values) => {
       // alert(JSON.stringify(values, null, 2));
@@ -141,7 +143,7 @@ const FormMy = ({ open }) => {
                   name="phoneNumber"
                 />
                 {errorPhoneNumber && (
-                  <Typography sx={{ color: "red" }}>Required</Typography>
+                  <Typography sx={{ color: "red" }}>{t("required")}</Typography>
                 )}
               </Grid>
             </Grid>

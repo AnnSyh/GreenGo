@@ -88,5 +88,7 @@
   "questions_summary_4": "Заголовок вопроса 4",
   "questions_details_4": "Текст вопроса 4 ?",
 
-  "organizations": "организации"
+  "organizations": "организации",
+  "required": "обязательное поле",
+  "must_be_valid_email": "не валидный емайл"
 }
