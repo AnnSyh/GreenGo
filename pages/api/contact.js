@@ -12,7 +12,7 @@ export default async function (req, res) {
   });
 
   const mailData = {
-    from: "ann.syharevskaya@gmail.com",
+    from: "AnnSyh@rambler.ru",
     to: process.env.MAIL_USER,
     subject: req.body.message,
     text: "test",
