@@ -12,6 +12,7 @@ export default async function (req, res) {
   });
 
   const mailData = {
+    // from: "miron00001993@gmail.com",
     from: "testann02@gmail.com",
     to: process.env.MAIL_USER,
     subject: req.body.message,

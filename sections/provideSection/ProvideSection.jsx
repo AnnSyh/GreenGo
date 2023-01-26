@@ -13,7 +13,7 @@ const ProvideSection = ({}) => {
 
   const items = [
     {
-      image: `url('/images/provide-new/img-3.jpg')`,
+      image: `url('/images/provide-new/img-31.png')`,
       desc: `${t("provide_section_card_1")}`,
     },
     {
@@ -21,7 +21,7 @@ const ProvideSection = ({}) => {
       desc: `${t("provide_section_card_2")}`,
     },
     {
-      image: `url('/images/provide-new/img-1.png')`,
+      image: `url('/images/provide-new/gerb.png')`,
       desc: `${t("provide_section_card_3")}`,
     },
     {
@@ -29,7 +29,7 @@ const ProvideSection = ({}) => {
       desc: `${t("provide_section_card_4")}`,
     },
     {
-      image: `url('/images/provide-new/img-5.png')`,
+      image: `url('/images/provide-new/img-51.jpg')`,
       desc: `${t("provide_section_card_5")}`,
     },
     {

@@ -35,7 +35,7 @@ const SecondSection = ({}) => {
     },
     {
       title: `design`,
-      src: "/images/car-3.png",
+      src: "/images/car-32.png",
       desc: `simplify_process`,
     },
   ];
