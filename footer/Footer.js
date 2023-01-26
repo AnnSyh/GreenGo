@@ -14,7 +14,7 @@ export const Footer = ({ sx }) => {
         marginTop: "auto",
         widows: "100%",
         position: "relative",
-        zIndex: "1",
+        zIndex: "0",
         ...sx,
       }}
     >

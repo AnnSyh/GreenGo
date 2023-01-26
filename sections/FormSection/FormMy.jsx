@@ -32,6 +32,11 @@ const FormMy = ({}) => {
     },
   };
   const handleClose = () => setSnakbar(false);
+
+  const handleClick = () => {
+    setSnakbar(true);
+  };
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -44,6 +49,7 @@ const FormMy = ({}) => {
       message: Yup.string().required("Required"),
     }),
     onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
       setLoader(true);
       const data = {
         name: values.name,
@@ -119,7 +125,7 @@ const FormMy = ({}) => {
                   // error={formik.touched.email && Boolean(formik.errors.email)}
                   // helpertext={formik.touched.email && formik.errors.email}
                 />
-                <Typography>
+                <Typography sx={{ color: "red" }}>
                   {formik.touched.email && formik.errors.email}
                 </Typography>
               </Grid>
@@ -155,6 +161,9 @@ const FormMy = ({}) => {
                 error={formik.touched.message && Boolean(formik.errors.message)}
                 helpertext={formik.touched.message && formik.errors.message}
               />
+              <Typography sx={{ color: "red" }}>
+                {formik.touched.message && formik.errors.message}
+              </Typography>
             </Grid>
             <Grid item md={12}>
               <Button
@@ -174,6 +183,9 @@ const FormMy = ({}) => {
                   `${t("submit")}`
                 )}
               </Button>
+              {/* <Button variant="outlined" onClick={handleClick}>
+                Open success snackbar
+              </Button> */}
             </Grid>
           </form>
         )}
@@ -185,8 +197,15 @@ const FormMy = ({}) => {
         message="Message sent"
         sx={{
           ".MuiPaper-root": {
-            background: "#00b398",
+            // background: "#00b398",
+            // minWidth: "10px",
+            // color: "#fff",
+            background: "#fff",
             minWidth: "10px",
+            color: "#00b398",
+            position: "relative",
+            zIndex: "100",
+            border: "10px solid red",
           },
         }}
       />
