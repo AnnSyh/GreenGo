@@ -18,20 +18,22 @@ const Map = (props) =>
 				"title": "area-0",
 				"shape": "poly",
 				"name": "0",
-				"preFillColor": "green",
-				"fillColor": "#eab54d4d",
+				"preFillColor": "#C7B8E9",
+				"fillColor": "rgba(238, 130, 238, 0.3)",
 				"strokeColor": "white",
 				"coords": [
 					67, 126, 63, 451, 528, 127
 				],
+				// "stayMultiHighlighted": 'true'
 			},
 			{
 				"id": "1",
 				"title": "area-1",
 				"shape": "poly",
 				"name": "1",
-				"preFillColor": "red",
-				"fillColor": "#eab54d4d",
+				"areaKeyName": 'areaKeyName-1',
+				"preFillColor": "#C7B8E9",
+				"fillColor": "rgba(238, 130, 238, 0.3)",
 				"strokeColor": "white",
 				"coords": [
 					63, 453, 63, 590, 72, 599, 461, 601, 528, 127
@@ -42,8 +44,8 @@ const Map = (props) =>
 				"title": "area-2",
 				"shape": "poly",
 				"name": "2",
-				"preFillColor": "blue",
-				"fillColor": "#eab54d4d",
+				"preFillColor": "#C7B8E9",
+				"fillColor": "rgba(238, 130, 238, 0.3)",
 				"strokeColor": "white",
 				"coords": [
 					527, 127, 680, 124, 692, 130, 691, 395, 464, 602
@@ -54,8 +56,8 @@ const Map = (props) =>
 				"title": "area-3",
 				"shape": "poly",
 				"name": "3",
-				"preFillColor": "orange",
-				"fillColor": "#eab54d4d",
+				"preFillColor": "#C7B8E9",
+				"fillColor": "rgba(238, 130, 238, 0.3)",
 				"strokeColor": "white",
 				"coords": [
 					691, 395, 462, 600, 681, 604, 692, 592
@@ -71,6 +73,7 @@ const Map = (props) =>
 
 	const [ clickedAreaId, setClickedAreaId ] = useState(0);
 	const [ open, setOpen ] = useState(false);
+	const [ titleArea, setTitleArea ] = useState('title');
 	// const [ clickedColor, setClickedColor ] = useState('transparent');
 
 	function handleClickOpen(e)
@@ -78,7 +81,8 @@ const Map = (props) =>
 		// e.preFillColor = 'transparent';
 		setOpen(true);
 		setClickedAreaId(e.id);
-		MAP.areas[ clickedAreaId ].preFillColor = 'red';
+		// MAP.areas[ clickedAreaId ].preFillColor = 'red';
+		setTitleArea(MAP.areas[ clickedAreaId ].title);
 	};
 
 	const handleClose = () =>
@@ -96,9 +100,15 @@ const Map = (props) =>
 			<ImageMapper
 				src={URL}
 				map={MAP}
+				// stayHighlighted='true'
+				stayMultiHighlighted={true}
+
 				// onClick={(e) => { handleClick(e); }}
+
+				// - форма при клике на область
 				onClick={(e) => { handleClickOpen(e); }}
 			/>
+
 			<ModalWindow open={open} handleClose={handleClose} project={MAP.areas[ clickedAreaId ]} />
 		</>
 	);

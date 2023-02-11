@@ -136,7 +136,7 @@ export default function ModalWindow({ open, handleClose, project })
 							onClose={handleClose}
 							sx={{ textAlign: "center" }}
 						>
-							Surf coach {project.id}  bg-color = {project.preFillColor}
+							Surf coach id = {project.id}  title = {project.title}
 						</BootstrapDialogTitle>
 						<DialogContent dividers>
 							<CardContent>
