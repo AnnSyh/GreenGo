@@ -1,15 +1,10 @@
-import React, { useState } from "react";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Button,
-  List,
-  ListItem,
-  ListItemButton,
-} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import
+{
+  AppBar, IconButton, ListItem,
+  ListItemButton, Toolbar, Typography
+} from "@mui/material";
+import React from "react";
 // import Search from "./Search";
 // import Link from "next/link";
 import { useRouter } from "next/router";
@@ -17,20 +12,20 @@ import { useRouter } from "next/router";
 import styles from "../styles/menu.module.css";
 
 import { Box } from "@mui/system";
-import Menu from "../sections/menu/Menu";
-import { FormControlSelect } from "../sections/FormSection/FormControlSelect";
 import { useTranslation } from "next-i18next";
-import { NoEncryption } from "@mui/icons-material";
+import Menu from "../sections/menu/Menu";
 
 const nav = [
   { id: 1, title: `homepage`, path: "/" },
   { id: 2, title: `organizations`, path: "/organizations" },
   { id: 3, title: `questions`, path: "/questions" },
   { id: 4, title: `contacts`, path: "/contacts" },
+  { id: 5, title: `map`, path: "/map" },
 ];
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
-function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
+function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx })
+{
   const { t } = useTranslation("common");
   const { pathname } = useRouter(); //подсвечиваем акт ссылку
   // console.log("pathname = ", pathname);
@@ -96,7 +91,7 @@ function Navbar({ onMenuIconClick, close, isOpen, languageToggle, sx }) {
                 href={item.path}
                 // className="test-test-test"
                 className={pathname === item.path ? styles.active : styles.link}
-                // color="inherit"
+              // color="inherit"
               >
                 {t(item.title)}
               </ListItemButton>

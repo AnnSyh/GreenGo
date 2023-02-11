@@ -1,17 +1,17 @@
 // import * as React from "react";
-import React, { useState, useRef } from "react";
-import PropTypes from "prop-types";
-import { styled } from "@mui/material/styles";
-import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
-import DialogContent from "@mui/material/DialogContent";
-import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
+import { CardContent, CardMedia } from "@mui/material";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+import IconButton from "@mui/material/IconButton";
+import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
-import { CardMedia, CardContent } from "@mui/material";
+import PropTypes from "prop-types";
+import React, { useRef, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 // import "../../styles/slider.module.css";
-import { Box, fontSize, padding } from "@mui/system";
+import { Box } from "@mui/system";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiPaper-root": {
@@ -27,7 +27,8 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   },
 }));
 
-const BootstrapDialogTitle = (props) => {
+const BootstrapDialogTitle = (props) =>
+{
   const { children, onClose, ...other } = props;
 
   return (
@@ -41,7 +42,7 @@ const BootstrapDialogTitle = (props) => {
             position: "absolute",
             right: 8,
             top: 8,
-            color: (theme) => theme.palette.grey[500],
+            color: (theme) => theme.palette.grey[ 500 ],
           }}
         >
           <CloseIcon />
@@ -56,9 +57,10 @@ BootstrapDialogTitle.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
 
-export default function ModalWindow({ open, handleClose, project }) {
+export default function ModalWindow({ open, handleClose, project })
+{
   // console.log("project = ", project);
-  const [showButton, setShowButton] = useState(true);
+  const [ showButton, setShowButton ] = useState(true);
   // const [showMessage, setShowMessage] = useState(false);
   const nodeRef = useRef(null);
 
@@ -82,10 +84,10 @@ export default function ModalWindow({ open, handleClose, project }) {
           }}
           onClose={handleClose}
           open={open}
-          // onClick={() => {
-          //   setShowMessage(true);
-          //   console.log("!!!!");
-          // }}
+        // onClick={() => {
+        //   setShowMessage(true);
+        //   console.log("!!!!");
+        // }}
         >
           <Box sx={{ maxWidth: "600px" }}>
             <BootstrapDialogTitle
